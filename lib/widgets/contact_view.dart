@@ -18,12 +18,19 @@ class _ContactViewState extends State<ContactView> {
       false; // whether or not a transaction is currently in progress
   bool dbDeleteResponse; // signifies whether or not the db succeeded
 
-  void _handleDeleteContactPress(BuildContext ctx) async {
-    print("Want to delete");
+  bool deletePressed = false;
+  bool deleteConfirmed = false;
+
+  final TextStyle overlayStyle =
+      TextStyle(fontFamily: "Montserrat", fontSize: 24, color: Colors.green);
+
+  final TextStyle appBarTitleStyle =
+      TextStyle(fontFamily: 'Montserrat', color: Colors.white, fontSize: 18.0);
+
+  void _handleDeleteConfirmation(BuildContext ctx) async {
     setState(() {
       waitingOnDBResponse = true;
     });
-
     FirestoreDB().deleteContactFromDB(widget.contact.id).then((res) {
       print("Respose received " + res.toString());
       setState(() {
@@ -31,17 +38,20 @@ class _ContactViewState extends State<ContactView> {
         dbDeleteResponse = res;
       });
     });
+  }
 
-    print(widget.contact.toMap().toString());
+  void _handleDeleteContactPress(BuildContext ctx) {
+    print("Want to delete");
+    setState(() {
+      deletePressed = true;
+    });
   }
 
   Widget _buildAppBar(BuildContext ctx) {
     return PreferredSize(
       preferredSize: Size.fromHeight(50),
       child: AppBar(
-        title: Text("View Contact",
-            style: TextStyle(
-                fontFamily: 'Montserrat', color: Colors.white, fontSize: 18.0)),
+        title: Text("View Homie", style: appBarTitleStyle),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.edit),
@@ -109,19 +119,16 @@ class _ContactViewState extends State<ContactView> {
   Widget _dbOverlay(BuildContext ctx) {
     Text displayText;
 
-    TextStyle style =
-        TextStyle(fontFamily: "Montserrat", fontSize: 24, color: Colors.green);
-
     if (waitingOnDBResponse) {
       displayText = Text(
         "Waiting for DB Response",
-        style: style,
+        style: overlayStyle,
       );
     } else {
       if (dbDeleteResponse) {
-        displayText = Text("Successfully deleted", style: style);
+        displayText = Text("Successfully deleted", style: overlayStyle);
       } else if (dbDeleteResponse == false) {
-        displayText = Text("Failed to delete contact", style: style);
+        displayText = Text("Failed to delete contact", style: overlayStyle);
       }
     }
 
@@ -137,6 +144,59 @@ class _ContactViewState extends State<ContactView> {
     );
   }
 
+  void _resetDeletePressed() {
+    setState(() {
+      deletePressed = false;
+    });
+  }
+
+  AlertDialog _buildDeleteConfBox(BuildContext ctx) {
+    final TextStyle confirm = TextStyle(
+        fontFamily: 'Montserrat', color: Colors.green, fontSize: 18.0);
+
+    final TextStyle deny =
+        TextStyle(fontFamily: 'Montserrat', color: Colors.red, fontSize: 18.0);
+
+    final TextStyle contentStyle = TextStyle(
+        fontFamily: 'Montserrat', color: Colors.white, fontSize: 14.0);
+
+    final TextStyle confirmTitleStyle =
+        TextStyle(fontFamily: 'Montserrat', color: Colors.teal, fontSize: 18.0);
+
+    return AlertDialog(
+      title: Text(
+        "Just makin' sure.",
+        style: confirmTitleStyle,
+      ),
+      backgroundColor: Colors.black54,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10),
+      ),
+      content: Text(
+        "Are you sure you want to forget about Mr. Broseph " +
+            widget.contact.lastName +
+            "?",
+        style: contentStyle,
+      ),
+      actions: <Widget>[
+        FlatButton(
+          child: Text(
+            "Don't Delete",
+            style: deny,
+          ),
+          onPressed: () => _resetDeletePressed(),
+        ),
+        FlatButton(
+          child: Text("Confirm", style: confirm),
+          onPressed: () {
+            _resetDeletePressed();
+            _handleDeleteConfirmation(ctx);
+          },
+        )
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext ctx) {
     bool displayingOverlay = false;
@@ -146,6 +206,10 @@ class _ContactViewState extends State<ContactView> {
     if (waitingOnDBResponse || dbDeleteResponse != null) {
       body.children.add(_dbOverlay(ctx));
       displayingOverlay = true;
+    } else if (deletePressed) {
+      body.children.add(
+        _buildDeleteConfBox(ctx),
+      );
     }
 
     return GestureDetector(

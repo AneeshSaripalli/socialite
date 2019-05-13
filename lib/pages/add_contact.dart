@@ -198,7 +198,7 @@ class _AddContactPageState extends State<AddContactPage> {
 
     return GestureDetector(
       onTap: () {
-        if (displayingOverlay) {
+        if (displayingOverlay && dbResponseSuccess != null) {
           Navigator.pop(ctx);
         }
       },

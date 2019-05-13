@@ -36,7 +36,7 @@ class _ContactPageState extends State<ContactPage> {
       preferredSize: Size.fromHeight(50),
       child: AppBar(
         title: Text(
-          "Contact List",
+          "Homie List",
           style: TextStyle(fontFamily: 'Montserrat', fontSize: 18.0),
         ),
         backgroundColor: Colors.teal,
