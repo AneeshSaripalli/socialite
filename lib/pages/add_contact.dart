@@ -169,7 +169,7 @@ class _AddContactPageState extends State<AddContactPage> {
       if (dbResponseSuccess) {
         displayText = Text("Successfully added", style: style);
       } else if (dbResponseSuccess == false) {
-        displayText = Text("Failed to upload contact", style: style);
+        displayText = Text("Failed to upload homeboy", style: style);
       }
     }
 

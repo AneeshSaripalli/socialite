@@ -6,6 +6,8 @@ import '../models/contact.dart';
 class ContactView extends StatefulWidget {
   final Contact contact;
 
+  final GlobalKey key = GlobalKey(debugLabel: "ContactViewDismissibleKey");
+
   ContactView({@required this.contact});
 
   @override
@@ -215,12 +217,25 @@ class _ContactViewState extends State<ContactView> {
     return GestureDetector(
       onTap: () {
         if (displayingOverlay) {
+          print("Popping off");
           Navigator.pop(ctx);
         }
       },
+      onHorizontalDragStart: (details) {
+        print("Popping cause swipe");
+        Navigator.pop(ctx);
+      },
       child: Scaffold(
         appBar: _buildAppBar(ctx),
-        body: body,
+        body: Dismissible(
+            key: new GlobalKey(),
+            direction: DismissDirection.startToEnd,
+            onDismissed: (dir) {
+              if (dir == DismissDirection.startToEnd) {
+                Navigator.pop(ctx);
+              }
+            },
+            child: body),
       ),
     );
   }
