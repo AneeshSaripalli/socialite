@@ -4,20 +4,24 @@ import 'package:socialite/style/text_styles.dart';
 import '../database/firestore/firestore.dart';
 import '../models/contact.dart';
 import '../widgets/info_field_multi_line.dart';
-import '../widgets/info_field_single_line.dart';
 
-class AddContact extends StatefulWidget {
+/// AddContactPage Class
+class AddContactPage extends StatefulWidget {
   @override
-  _AddContactState createState() => _AddContactState();
+  _AddContactPageState createState() => _AddContactPageState();
 }
 
-class _AddContactState extends State<AddContact> {
-  InfoFieldSingleLine _nameField;
-  InfoFieldSingleLine _phoneField;
-  InfoFieldMultiLine _descriptionField;
+/// State class for AddContact. Deals with TextField input & FirestoreDB transaction
+class _AddContactPageState extends State<AddContactPage> {
+  // input fields on screen.
+  InfoFieldMultiLine _nameField; // contains full name of contact
+  InfoFieldMultiLine _phoneField; // contains phone number for contact
+  InfoFieldMultiLine _descriptionField; // contains description of person
 
-  bool waitingOnDBResponse = false;
-  bool dbResponseSuccess;
+  // state variables related to FirestoreDB transaction status
+  bool waitingOnDBResponse =
+      false; // whether or not a transaction is currently in progress
+  bool dbResponseSuccess; // signifies whether or not the db succeeded
 
   _handleUploadPress(BuildContext context) async {
     setState(() {
@@ -57,33 +61,38 @@ class _AddContactState extends State<AddContact> {
   }
 
   @override
+  @mustCallSuper
   void initState() {
-    print("Recreating AddContact");
-
     _descriptionField = InfoFieldMultiLine(
       labelString: "Description",
       inputLabelString: "Enter Contact Description",
       hintString:
           "Met this bro at that Starbucks down the street. Likes surfing & strong espressos.",
+      textInputType: TextInputType.multiline,
       textCapitalization: TextCapitalization.sentences,
       helperString: "Put a lil something to help remember them",
+      prefixIcon: Icons.book,
     );
 
-    _phoneField = InfoFieldSingleLine(
+    _phoneField = InfoFieldMultiLine(
       inputLabelString: "Enter Phone Number.",
       labelString: "Phone #",
       textInputType: TextInputType.number,
       hintString: "5555555555",
       helperString: "A phone number if they've got one",
+      prefixIcon: Icons.phone,
     );
-    _nameField = InfoFieldSingleLine(
+    _nameField = InfoFieldMultiLine(
       inputLabelString: "Enter Name.",
       labelString: "Name",
       textInputType: TextInputType.text,
       hintString: "John Doe",
       helperString: "That there person's name",
       textCapitalization: TextCapitalization.words,
+      prefixIcon: Icons.person,
     );
+
+    super.initState();
   }
 
   Widget _buildSubmitButton(BuildContext context) {
@@ -93,7 +102,7 @@ class _AddContactState extends State<AddContact> {
         borderRadius: BorderRadius.circular(10.0),
       ),
       textColor: Colors.white70,
-      child: Icon(Icons.publish),
+      child: Icon(Icons.cloud_upload),
       onPressed: () => _handleUploadPress(context),
     );
   }
@@ -116,7 +125,7 @@ class _AddContactState extends State<AddContact> {
             child: _buildSubmitButton(context),
             height: 50.0,
           ),
-          padding: EdgeInsets.symmetric(horizontal: 50.0),
+          padding: EdgeInsets.symmetric(horizontal: 50.0, vertical: 20.0),
         ),
       ],
     );
@@ -180,9 +189,7 @@ class _AddContactState extends State<AddContact> {
   Widget build(BuildContext ctx) {
     bool displayingOverlay = false;
 
-    Stack body = Stack(
-      children: <Widget>[_buildInputForm(ctx)],
-    );
+    Stack body = Stack(children: <Widget>[_buildInputForm(ctx)]);
 
     if (waitingOnDBResponse || dbResponseSuccess != null) {
       body.children.add(_dbOverlay(ctx));

@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (ctx) => ContactPage(),
-        "/add_contact": (ctx) => AddContact(),
+        "/add_contact": (ctx) => AddContactPage(),
       },
     );
   }

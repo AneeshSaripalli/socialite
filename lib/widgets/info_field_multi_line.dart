@@ -7,22 +7,30 @@ class InfoFieldMultiLine extends StatefulWidget {
   final String hintString;
   final String helperString;
 
-  final int maxLength;
+  final IconData prefixIcon;
 
+  final TextInputType textInputType;
+
+  final int maxLength;
   final bool autocorrect;
 
   final TextCapitalization textCapitalization;
 
   String _infoData = "";
 
+  FocusNode nextFocus;
+
   InfoFieldMultiLine({
     @required this.labelString,
     @required this.inputLabelString,
+    @required this.prefixIcon,
     this.textCapitalization = TextCapitalization.none,
     this.autocorrect = false,
     this.maxLength = 200,
+    this.textInputType = TextInputType.text,
     this.helperString = 'Keep it short, this is just a demo.',
     this.hintString = 'Tell us about yourself',
+    this.nextFocus,
   });
 
   String get info {
@@ -44,7 +52,9 @@ class _InfoFieldStateMultiLine extends State<InfoFieldMultiLine> {
   }
 
   @override
-  void initState() {}
+  void initState() {
+    super.initState();
+  }
 
   Widget _buildMultiLine(
       BuildContext context, Widget descriptor, Widget input) {
@@ -66,7 +76,13 @@ class _InfoFieldStateMultiLine extends State<InfoFieldMultiLine> {
       onChanged: (String s) {
         onChange(s);
       },
-      keyboardType: TextInputType.multiline,
+      onSubmitted: (String submission) {
+        print("Submitted " + submission);
+        widget.nextFocus != null
+            ? FocusScope.of(context).requestFocus(widget.nextFocus)
+            : widget.nextFocus = null;
+      },
+      keyboardType: widget.textInputType,
       textCapitalization: widget.textCapitalization,
       autocorrect: widget.autocorrect,
       maxLines: null,
@@ -76,8 +92,8 @@ class _InfoFieldStateMultiLine extends State<InfoFieldMultiLine> {
         hintText: widget.hintString,
         helperText: widget.helperString,
         labelText: widget.labelString,
-        prefixIcon: const Icon(
-          Icons.person,
+        prefixIcon: Icon(
+          widget.prefixIcon,
           color: Colors.green,
         ),
       ),
