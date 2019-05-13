@@ -1,0 +1,1453 @@
+Launching lib/main.dart on SM G960U1 in debug mode...
+Initializing gradle...                                              0.7s
+Resolving dependencies...                                           3.0s
+Running Gradle task 'assembleDebug'...                          
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+Running Gradle task 'assembleDebug'...                              2.5s
+Built build\app\outputs\apk\debug\app-debug.apk.
+Syncing files to device SM G960U1...                             1,103ms
+
+🔥  To hot reload changes while running, press "r". To hot restart (and rebuild state), press "R".
+An Observatory debugger and profiler on SM G960U1 is available at: http://127.0.0.1:63836/X-eSsPm0WXM=/
+For a more detailed help message, press "h". To detach, press "d"; to quit, press "q".
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+I/flutter (18713): scheduleBuildFor() called for RawMaterialButton(dirty, state: _RawMaterialButtonState#f2405)
+I/flutter (18713): #0      debugPrintStack (package:flutter/src/foundation/assertions.dart:429:39)
+I/flutter (18713): #1      BuildOwner.scheduleBuildFor.<anonymous closure> (package:flutter/src/widgets/framework.dart:2129:9)
+I/flutter (18713): #2      BuildOwner.scheduleBuildFor (package:flutter/src/widgets/framework.dart:2143:6)
+I/flutter (18713): #3      Element.markNeedsBuild (package:flutter/src/widgets/framework.dart:3533:11)
+I/flutter (18713): #4      State.setState (package:flutter/src/widgets/framework.dart:1133:14)
+I/flutter (18713): #5      _RawMaterialButtonState._handleHighlightChanged (package:flutter/src/material/button.dart:171:7)
+I/flutter (18713): #6      _InkResponseState.updateHighlight (package:flutter/src/material/ink_well.dart:446:14)
+I/flutter (18713): #7      _InkResponseState._handleTapDown (package:flutter/src/material/ink_well.dart:501:5)
+I/flutter (18713): #8      TapGestureRecognizer._checkDown.<anonymous closure> (package:flutter/src/gestures/tap.dart:230:48)
+I/flutter (18713): #9      GestureRecognizer.invokeCallback (package:flutter/src/gestures/recognizer.dart:166:24)
+I/flutter (18713): #10     TapGestureRecognizer._checkDown (package:flutter/src/gestures/tap.dart:230:9)
+I/flutter (18713): #11     TapGestureRecognizer.acceptGesture (package:flutter/src/gestures/tap.dart:209:7)
+I/flutter (18713): #12     GestureArenaManager._resolveByDefault (package:flutter/src/gestures/arena.dart:250:25)
+I/flutter (18713): #13     GestureArenaManager._tryToResolveArena.<anonymous closure> (package:flutter/src/gestures/arena.dart:231:31)
+I/flutter (18713): (elided 10 frames from package dart:async)
+I/flutter (18713): ...dirty list is now: [RawMaterialButton(dirty, state: _RawMaterialButtonState#f2405)]
+I/flutter (18713): Push named /add_contact
+I/flutter (18713): scheduleBuildFor() called for Overlay-[LabeledGlobalKey<OverlayState>#26cc2](dirty, state: OverlayState#a743b(entries: [OverlayEntry#ff1a4(opaque: false; maintainState: false), OverlayEntry#34896(opaque: false; maintainState: true), OverlayEntry#4793a(opaque: false; maintainState: false), OverlayEntry#30282(opaque: false; maintainState: true)]))
+I/flutter (18713): #0      debugPrintStack (package:flutter/src/foundation/assertions.dart:429:39)
+I/flutter (18713): #1      BuildOwner.scheduleBuildFor.<anonymous closure> (package:flutter/src/widgets/framework.dart:2129:9)
+I/flutter (18713): #2      BuildOwner.scheduleBuildFor (package:flutter/src/widgets/framework.dart:2143:6)
+I/flutter (18713): #3      Element.markNeedsBuild (package:flutter/src/widgets/framework.dart:3533:11)
+I/flutter (18713): #4      State.setState (package:flutter/src/widgets/framework.dart:1133:14)
+I/flutter (18713): #5      OverlayState.insertAll (package:flutter/src/widgets/overlay.dart:346:5)
+I/flutter (18713): #6      OverlayRoute.install (package:flutter/src/widgets/routes.dart:43:24)
+I/flutter (18713): #7      TransitionRoute.install (package:flutter/src/widgets/routes.dart:180:11)
+I/flutter (18713): #8      ModalRoute.install (package:flutter/src/widgets/routes.dart:895:11)
+I/flutter (18713): #9      NavigatorState.pushReplacement (package:flutter/src/widgets/navigator.dart:1799:14)
+I/flutter (18713): #10     NavigatorState.pushReplacementNamed (package:flutter/src/widgets/navigator.dart:1664:12)
+I/flutter (18713): #11     Navigator.pushReplacementNamed (package:flutter/src/widgets/navigator.dart:932:34)
+I/flutter (18713): #12     ContactList._handleAddContactPress (package:socialite/pages/contact_list.dart:36:15)
+I/flutter (18713): #13     ContactList.build.<anonymous closure> (package:socialite/pages/contact_list.dart:59:26)
+I/flutter (18713): #14     _InkResponseState._handleTap (package:flutter/src/material/ink_well.dart:511:14)
+I/flutter (18713): #15     _InkResponseState.build.<anonymous closure> (package:flutter/src/material/ink_well.dart:566:30)
+I/flutter (18713): #16     GestureRecognizer.invokeCallback (package:flutter/src/gestures/recognizer.dart:166:24)
+I/flutter (18713): #17     TapGestureRecognizer._checkUp (package:flutter/src/gestures/tap.dart:240:9)
+I/flutter (18713): #18     TapGestureRecognizer.handlePrimaryPointer (package:flutter/src/gestures/tap.dart:177:9)
+I/flutter (18713): #19     PrimaryPointerGestureRecognizer.handleEvent (package:flutter/src/gestures/recognizer.dart:436:9)
+I/flutter (18713): #20     PointerRouter._dispatch (package:flutter/src/gestures/pointer_router.dart:73:12)
+I/flutter (18713): #21     PointerRouter.route (package:flutter/src/gestures/pointer_router.dart:101:11)
+I/flutter (18713): #22     _WidgetsFlutterBinding&BindingBase&GestureBinding.handleEvent (package:flutter/src/gestures/binding.dart:221:19)
+I/flutter (18713): #23     _WidgetsFlutterBinding&BindingBase&GestureBinding.dispatchEvent (package:flutter/src/gestures/binding.dart:199:22)
+I/flutter (18713): #24     _WidgetsFlutterBinding&BindingBase&GestureBinding._handlePointerEvent (package:flutter/src/gestures/binding.dart:156:7)
+I/flutter (18713): #25     _WidgetsFlutterBinding&BindingBase&GestureBinding._flushPointerEventQueue (package:flutter/src/gestures/binding.dart:102:7)
+I/flutter (18713): #26     _WidgetsFlutterBinding&BindingBase&GestureBinding._handlePointerDataPacket (package:flutter/src/gestures/binding.dart:86:7)
+I/flutter (18713): #30     _invoke1 (dart:ui/hooks.dart:233:10)
+I/flutter (18713): #31     _dispatchPointerDataPacket (dart:ui/hooks.dart:154:5)
+I/flutter (18713): (elided 3 frames from package dart:async)
+I/flutter (18713): ...dirty list is now: [RawMaterialButton(dirty, state: _RawMaterialButtonState#f2405), Overlay-[LabeledGlobalKey<OverlayState>#26cc2](dirty, state: OverlayState#a743b(entries: [OverlayEntry#ff1a4(opaque: false; maintainState: false), OverlayEntry#34896(opaque: false; maintainState: true), OverlayEntry#4793a(opaque: false; maintainState: false), OverlayEntry#30282(opaque: false; maintainState: true)]))]
+I/flutter (18713): scheduleBuildFor() called for Navigator-[GlobalObjectKey<NavigatorState> _WidgetsAppState#698f2](dirty, state: NavigatorState#2a9c7(tickers: tracking 2 tickers))
+I/flutter (18713): #0      debugPrintStack (package:flutter/src/foundation/assertions.dart:429:39)
+I/flutter (18713): #1      BuildOwner.scheduleBuildFor.<anonymous closure> (package:flutter/src/widgets/framework.dart:2129:9)
+I/flutter (18713): #2      BuildOwner.scheduleBuildFor (package:flutter/src/widgets/framework.dart:2143:6)
+I/flutter (18713): #3      Element.markNeedsBuild (package:flutter/src/widgets/framework.dart:3533:11)
+I/flutter (18713): #4      State.setState (package:flutter/src/widgets/framework.dart:1133:14)
+I/flutter (18713): #5      NavigatorState._cancelActivePointers (package:flutter/src/widgets/navigator.dart:2165:7)
+I/flutter (18713): #6      NavigatorState._afterNavigation (package:flutter/src/widgets/navigator.dart:1766:5)
+I/flutter (18713): #7      NavigatorState.pushReplacement (package:flutter/src/widgets/navigator.dart:1818:5)
+I/flutter (18713): #8      NavigatorState.pushReplacementNamed (package:flutter/src/widgets/navigator.dart:1664:12)
+I/flutter (18713): #9      Navigator.pushReplacementNamed (package:flutter/src/widgets/navigator.dart:932:34)
+I/flutter (18713): #10     ContactList._handleAddContactPress (package:socialite/pages/contact_list.dart:36:15)
+I/flutter (18713): #11     ContactList.build.<anonymous closure> (package:socialite/pages/contact_list.dart:59:26)
+I/flutter (18713): #12     _InkResponseState._handleTap (package:flutter/src/material/ink_well.dart:511:14)
+I/flutter (18713): #13     _InkResponseState.build.<anonymous closure> (package:flutter/src/material/ink_well.dart:566:30)
+I/flutter (18713): #14     GestureRecognizer.invokeCallback (package:flutter/src/gestures/recognizer.dart:166:24)
+I/flutter (18713): #15     TapGestureRecognizer._checkUp (package:flutter/src/gestures/tap.dart:240:9)
+I/flutter (18713): #16     TapGestureRecognizer.handlePrimaryPointer (package:flutter/src/gestures/tap.dart:177:9)
+I/flutter (18713): #17     PrimaryPointerGestureRecognizer.handleEvent (package:flutter/src/gestures/recognizer.dart:436:9)
+I/flutter (18713): #18     PointerRouter._dispatch (package:flutter/src/gestures/pointer_router.dart:73:12)
+I/flutter (18713): #19     PointerRouter.route (package:flutter/src/gestures/pointer_router.dart:101:11)
+I/flutter (18713): #20     _WidgetsFlutterBinding&BindingBase&GestureBinding.handleEvent (package:flutter/src/gestures/binding.dart:221:19)
+I/flutter (18713): #21     _WidgetsFlutterBinding&BindingBase&GestureBinding.dispatchEvent (package:flutter/src/gestures/binding.dart:199:22)
+I/flutter (18713): #22     _WidgetsFlutterBinding&BindingBase&GestureBinding._handlePointerEvent (package:flutter/src/gestures/binding.dart:156:7)
+I/flutter (18713): #23     _WidgetsFlutterBinding&BindingBase&GestureBinding._flushPointerEventQueue (package:flutter/src/gestures/binding.dart:102:7)
+I/flutter (18713): #24     _WidgetsFlutterBinding&BindingBase&GestureBinding._handlePointerDataPacket (package:flutter/src/gestures/binding.dart:86:7)
+I/flutter (18713): #28     _invoke1 (dart:ui/hooks.dart:233:10)
+I/flutter (18713): #29     _dispatchPointerDataPacket (dart:ui/hooks.dart:154:5)
+I/flutter (18713): (elided 3 frames from package dart:async)
+I/flutter (18713): ...dirty list is now: [RawMaterialButton(dirty, state: _RawMaterialButtonState#f2405), Overlay-[LabeledGlobalKey<OverlayState>#26cc2](dirty, state: OverlayState#a743b(entries: [OverlayEntry#ff1a4(opaque: false; maintainState: false), OverlayEntry#34896(opaque: false; maintainState: true), OverlayEntry#4793a(opaque: false; maintainState: false), OverlayEntry#30282(opaque: false; maintainState: true)])), Navigator-[GlobalObjectKey<NavigatorState> _WidgetsAppState#698f2](dirty, state: NavigatorState#2a9c7(tickers: tracking 2 tickers))]
+I/flutter (18713): Recreating AddContact
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+I/flutter (18713): scheduleBuildFor() called for _ModalScope<dynamic>-[LabeledGlobalKey<_ModalScopeState<dynamic>>#db091](dirty, state: _ModalScopeState<dynamic>#91d6b)
+I/flutter (18713): #0      debugPrintStack (package:flutter/src/foundation/assertions.dart:429:39)
+I/flutter (18713): #1      BuildOwner.scheduleBuildFor.<anonymous closure> (package:flutter/src/widgets/framework.dart:2129:9)
+I/flutter (18713): #2      BuildOwner.scheduleBuildFor (package:flutter/src/widgets/framework.dart:2143:6)
+I/flutter (18713): #3      Element.markNeedsBuild (package:flutter/src/widgets/framework.dart:3533:11)
+I/flutter (18713): #4      State.setState (package:flutter/src/widgets/framework.dart:1133:14)
+I/flutter (18713): #5      _ModalScopeState._routeSetState (package:flutter/src/widgets/routes.dart:618:5)
+I/flutter (18713): #6      ModalRoute.setState (package:flutter/src/widgets/routes.dart:717:30)
+I/flutter (18713): #7      ModalRoute.offstage= (package:flutter/src/widgets/routes.dart:1034:5)
+I/flutter (18713): #8      HeroController._startHeroTransition (package:flutter/src/widgets/heroes.dart:717:8)
+I/flutter (18713): #9      HeroController._maybeStartHeroTransition.<anonymous closure> (package:flutter/src/widgets/heroes.dart:687:11)
+I/flutter (18713): #10     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1012:15)
+I/flutter (18713): #11     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:960:9)
+I/flutter (18713): #12     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._handleDrawFrame (package:flutter/src/scheduler/binding.dart:864:5)
+I/flutter (18713): #16     _invoke (dart:ui/hooks.dart:219:10)
+I/flutter (18713): #17     _drawFrame (dart:ui/hooks.dart:178:3)
+I/flutter (18713): (elided 3 frames from package dart:async)
+I/flutter (18713): ...dirty list is now: [_ModalScope<dynamic>-[LabeledGlobalKey<_ModalScopeState<dynamic>>#db091](dirty, state: _ModalScopeState<dynamic>#91d6b)]
+I/flutter (18713): scheduleBuildFor() called for AnimatedBuilder(animation: Listenable.merge([AnimationController#79eb5(▶ 0.000; for MaterialPageRoute<dynamic>(/add_contact))➩ProxyAnimation, kAlwaysDismissedAnimation➩ProxyAnimation]), dirty, dependencies: [_LocalizationsScope-[GlobalKey#0587f], _InheritedTheme], state: _AnimatedState#dd142)
+I/flutter (18713): #0      debugPrintStack (package:flutter/src/foundation/assertions.dart:429:39)
+I/flutter (18713): #1      BuildOwner.scheduleBuildFor.<anonymous closure> (package:flutter/src/widgets/framework.dart:2129:9)
+I/flutter (18713): #2      BuildOwner.scheduleBuildFor (package:flutter/src/widgets/framework.dart:2143:6)
+I/flutter (18713): #3      Element.markNeedsBuild (package:flutter/src/widgets/framework.dart:3533:11)
+I/flutter (18713): #4      State.setState (package:flutter/src/widgets/framework.dart:1133:14)
+I/flutter (18713): #5      _AnimatedState._handleChange (package:flutter/src/widgets/transitions.dart:142:5)
+I/flutter (18713): #6      _ProxyAnimation&Animation&AnimationLazyListenerMixin&AnimationLocalListenersMixin.notifyListeners (package:flutter/src/animation/listener_helpers.dart:126:19)
+I/flutter (18713): #7      ProxyAnimation.parent= (package:flutter/src/animation/animations.dart:204:9)
+I/flutter (18713): #8      ModalRoute.offstage= (package:flutter/src/widgets/routes.dart:1037:21)
+I/flutter (18713): #9      HeroController._startHeroTransition (package:flutter/src/widgets/heroes.dart:717:8)
+I/flutter (18713): #10     HeroController._maybeStartHeroTransition.<anonymous closure> (package:flutter/src/widgets/heroes.dart:687:11)
+I/flutter (18713): #11     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1012:15)
+I/flutter (18713): #12     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:960:9)
+I/flutter (18713): #13     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._handleDrawFrame (package:flutter/src/scheduler/binding.dart:864:5)
+I/flutter (18713): #17     _invoke (dart:ui/hooks.dart:219:10)
+I/flutter (18713): #18     _drawFrame (dart:ui/hooks.dart:178:3)
+I/flutter (18713): (elided 3 frames from package dart:async)
+I/flutter (18713): ...dirty list is now: [_ModalScope<dynamic>-[LabeledGlobalKey<_ModalScopeState<dynamic>>#db091](dirty, state: _ModalScopeState<dynamic>#91d6b), AnimatedBuilder(animation: Listenable.merge([AnimationController#79eb5(▶ 0.000; for MaterialPageRoute<dynamic>(/add_contact))➩ProxyAnimation, kAlwaysDismissedAnimation➩ProxyAnimation]), dirty, dependencies: [_LocalizationsScope-[GlobalKey#0587f], _InheritedTheme], state: _AnimatedState#dd142)]
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+V/InputMethodManager(18713): Starting input: tba=com.example.socialite ic=io.flutter.plugin.editing.InputConnectionAdaptor@934f921 mNaviBarColor -855310 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager(18713): startInputInner - Id : 0
+I/InputMethodManager(18713): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport(18713): Input channel constructed: fd=114
+D/InputTransport(18713): Input channel destroyed: fd=93
+D/InputMethodManager(18713): SSI - flag : 0 Pid : 18713 view : com.example.socialite
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 1071) vi=Rect(0, 72 - 0, 1071) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+D/InputMethodManager(18713): HSIFW - flag : 0 Pid : 18713
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 144) vi=Rect(0, 72 - 0, 144) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+I/flutter (18713): scheduleBuildFor() called for SlideTransition(animation: AnimationController#79eb5(▶ 0.000; for MaterialPageRoute<dynamic>(/add_contact))➩ProxyAnimation➩CurveTween(curve: Cubic(0.40, 0.00, 0.20, 1.00))➩Tween<Offset>(Offset(0.0, 0.3) → Offset(0.0, 0.0))➩Offset(0.0, 0.3), dirty, state: _AnimatedState#872df)
+I/flutter (18713): #0      debugPrintStack (package:flutter/src/foundation/assertions.dart:429:39)
+I/flutter (18713): #1      BuildOwner.scheduleBuildFor.<anonymous closure> (package:flutter/src/widgets/framework.dart:2129:9)
+I/flutter (18713): #2      BuildOwner.scheduleBuildFor (package:flutter/src/widgets/framework.dart:2143:6)
+I/flutter (18713): #3      Element.markNeedsBuild (package:flutter/src/widgets/framework.dart:3533:11)
+I/flutter (18713): #4      State.setState (package:flutter/src/widgets/framework.dart:1133:14)
+I/flutter (18713): #5      _AnimatedState._handleChange (package:flutter/src/widgets/transitions.dart:142:5)
+I/flutter (18713): #6      _ProxyAnimation&Animation&AnimationLazyListenerMixin&AnimationLocalListenersMixin.notifyListeners (package:flutter/src/animation/listener_helpers.dart:126:19)
+I/flutter (18713): #7      ProxyAnimation.parent= (package:flutter/src/animation/animations.dart:204:9)
+I/flutter (18713): #8      ModalRoute.offstage= (package:flutter/src/widgets/routes.dart:1037:21)
+I/flutter (18713): #9      HeroController._startHeroTransition (package:flutter/src/widgets/heroes.dart:717:8)
+I/flutter (18713): #10     HeroController._maybeStartHeroTransition.<anonymous closure> (package:flutter/src/widgets/heroes.dart:687:11)
+I/flutter (18713): #11     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1012:15)
+I/flutter (18713): #12     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:960:9)
+I/flutter (18713): #13     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._handleDrawFrame (package:flutter/src/scheduler/binding.dart:864:5)
+I/flutter (18713): #17     _invoke (dart:ui/hooks.dart:219:10)
+I/flutter (18713): #18     _drawFrame (dart:ui/hooks.dart:178:3)
+I/flutter (18713): (elided 3 frames from package dart:async)
+I/flutter (18713): ...dirty list is now: [_ModalScope<dynamic>-[LabeledGlobalKey<_ModalScopeState<dynamic>>#db091](dirty, state: _ModalScopeState<dynamic>#91d6b), AnimatedBuilder(animation: Listenable.merge([AnimationController#79eb5(▶ 0.000; for MaterialPageRoute<dynamic>(/add_contact))➩ProxyAnimation, kAlwaysDismissedAnimation➩ProxyAnimation]), dirty, dependencies: [_LocalizationsScope-[GlobalKey#0587f], _InheritedTheme], state: _AnimatedState#dd142), SlideTransition(animation: AnimationController#79eb5(▶ 0.000; for MaterialPageRoute<dynamic>(/add_contact))➩ProxyAnimation➩CurveTween(curve: Cubic(0.40, 0.00, 0.20, 1.00))➩Tween<Offset>(Offset(0.0, 0.3) → Offset(0.0, 0.0))➩Offset(0.0, 0.3), dirty, state: _AnimatedState#872df)]
+I/flutter (18713): scheduleBuildFor() called for AnimatedBuilder(animation: Listenable.merge([AnimationController#79eb5(▶ 0.999; for MaterialPageRoute<dynamic>(/add_contact))➩ProxyAnimation, kAlwaysDismissedAnimation➩ProxyAnimation➩ProxyAnimation]), dirty, dependencies: [_LocalizationsScope-[GlobalKey#0587f], _InheritedTheme], state: _AnimatedState#dd142)
+I/flutter (18713): #0      debugPrintStack (package:flutter/src/foundation/assertions.dart:429:39)
+I/flutter (18713): #1      BuildOwner.scheduleBuildFor.<anonymous closure> (package:flutter/src/widgets/framework.dart:2129:9)
+I/flutter (18713): #2      BuildOwner.scheduleBuildFor (package:flutter/src/widgets/framework.dart:2143:6)
+I/flutter (18713): #3      Element.markNeedsBuild (package:flutter/src/widgets/framework.dart:3533:11)
+I/flutter (18713): #4      State.setState (package:flutter/src/widgets/framework.dart:1133:14)
+I/flutter (18713): #5      _AnimatedState._handleChange (package:flutter/src/widgets/transitions.dart:142:5)
+I/flutter (18713): #6      _ProxyAnimation&Animation&AnimationLazyListenerMixin&AnimationLocalListenersMixin.notifyListeners (package:flutter/src/animation/listener_helpers.dart:126:19)
+I/flutter (18713): #7      _AnimationController&Animation&AnimationEagerListenerMixin&AnimationLocalListenersMixin.notifyListeners (package:flutter/src/animation/listener_helpers.dart:126:19)
+I/flutter (18713): #8      AnimationController._tick (package:flutter/src/animation/animation_controller.dart:750:5)
+I/flutter (18713): #9      Ticker._tick (package:flutter/src/scheduler/ticker.dart:228:5)
+I/flutter (18713): #10     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1012:15)
+I/flutter (18713): #11     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleBeginFrame.<anonymous closure> (package:flutter/src/scheduler/binding.dart:928:11)
+I/flutter (18713): #12     __InternalLinkedHashMap&_HashVMBase&MapMixin&_LinkedHashMapMixin.forEach (dart:collection-patch/compact_hash.dart:367:8)
+I/flutter (18713): #13     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleBeginFrame (package:flutter/src/scheduler/binding.dart:926:17)
+I/flutter (18713): #14     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._handleBeginFrame (package:flutter/src/scheduler/binding.dart:856:5)
+I/flutter (18713): #18     _invoke1 (dart:ui/hooks.dart:233:10)
+I/flutter (18713): #19     _beginFrame (dart:ui/hooks.dart:172:3)
+I/flutter (18713): (elided 3 frames from package dart:async)
+I/flutter (18713): ...dirty list is now: [AnimatedBuilder(animation: Listenable.merge([AnimationController#79eb5(▶ 0.999; for MaterialPageRoute<dynamic>(/add_contact))➩ProxyAnimation, kAlwaysDismissedAnimation➩ProxyAnimation➩ProxyAnimation]), dirty, dependencies: [_LocalizationsScope-[GlobalKey#0587f], _InheritedTheme], state: _AnimatedState#dd142)]
+I/flutter (18713): scheduleBuildFor() called for SlideTransition(animation: AnimationController#79eb5(▶ 0.999; for MaterialPageRoute<dynamic>(/add_contact))➩ProxyAnimation➩CurveTween(curve: Cubic(0.40, 0.00, 0.20, 1.00))➩Tween<Offset>(Offset(0.0, 0.3) → Offset(0.0, 0.0))➩Offset(0.0, 0.0), dirty, state: _AnimatedState#872df)
+I/flutter (18713): #0      debugPrintStack (package:flutter/src/foundation/assertions.dart:429:39)
+I/flutter (18713): #1      BuildOwner.scheduleBuildFor.<anonymous closure> (package:flutter/src/widgets/framework.dart:2129:9)
+I/flutter (18713): #2      BuildOwner.scheduleBuildFor (package:flutter/src/widgets/framework.dart:2143:6)
+I/flutter (18713): #3      Element.markNeedsBuild (package:flutter/src/widgets/framework.dart:3533:11)
+I/flutter (18713): #4      State.setState (package:flutter/src/widgets/framework.dart:1133:14)
+I/flutter (18713): #5      _AnimatedState._handleChange (package:flutter/src/widgets/transitions.dart:142:5)
+I/flutter (18713): #6      _ProxyAnimation&Animation&AnimationLazyListenerMixin&AnimationLocalListenersMixin.notifyListeners (package:flutter/src/animation/listener_helpers.dart:126:19)
+I/flutter (18713): #7      _AnimationController&Animation&AnimationEagerListenerMixin&AnimationLocalListenersMixin.notifyListeners (package:flutter/src/animation/listener_helpers.dart:126:19)
+I/flutter (18713): #8      AnimationController._tick (package:flutter/src/animation/animation_controller.dart:750:5)
+I/flutter (18713): #9      Ticker._tick (package:flutter/src/scheduler/ticker.dart:228:5)
+I/flutter (18713): #10     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1012:15)
+I/flutter (18713): #11     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleBeginFrame.<anonymous closure> (package:flutter/src/scheduler/binding.dart:928:11)
+I/flutter (18713): #12     __InternalLinkedHashMap&_HashVMBase&MapMixin&_LinkedHashMapMixin.forEach (dart:collection-patch/compact_hash.dart:367:8)
+I/flutter (18713): #13     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleBeginFrame (package:flutter/src/scheduler/binding.dart:926:17)
+I/flutter (18713): #14     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._handleBeginFrame (package:flutter/src/scheduler/binding.dart:856:5)
+I/flutter (18713): #18     _invoke1 (dart:ui/hooks.dart:233:10)
+I/flutter (18713): #19     _beginFrame (dart:ui/hooks.dart:172:3)
+I/flutter (18713): (elided 3 frames from package dart:async)
+I/flutter (18713): ...dirty list is now: [AnimatedBuilder(animation: Listenable.merge([AnimationController#79eb5(▶ 0.999; for MaterialPageRoute<dynamic>(/add_contact))➩ProxyAnimation, kAlwaysDismissedAnimation➩ProxyAnimation➩ProxyAnimation]), dirty, dependencies: [_LocalizationsScope-[GlobalKey#0587f], _InheritedTheme], state: _AnimatedState#dd142), SlideTransition(animation: AnimationController#79eb5(▶ 0.999; for MaterialPageRoute<dynamic>(/add_contact))➩ProxyAnimation➩CurveTween(curve: Cubic(0.40, 0.00, 0.20, 1.00))➩Tween<Offset>(Offset(0.0, 0.3) → Offset(0.0, 0.0))➩Offset(0.0, 0.0), dirty, state: _AnimatedState#872df)]
+I/flutter (18713): scheduleBuildFor() called for AnimatedBuilder(animation: Listenable.merge([AnimationController#79eb5(⏭ 1.000; paused; for MaterialPageRoute<dynamic>(/add_contact))➩ProxyAnimation, kAlwaysDismissedAnimation➩ProxyAnimation➩ProxyAnimation]), dirty, dependencies: [_LocalizationsScope-[GlobalKey#0587f], _InheritedTheme], state: _AnimatedState#dd142)
+I/flutter (18713): #0      debugPrintStack (package:flutter/src/foundation/assertions.dart:429:39)
+I/flutter (18713): #1      BuildOwner.scheduleBuildFor.<anonymous closure> (package:flutter/src/widgets/framework.dart:2129:9)
+I/flutter (18713): #2      BuildOwner.scheduleBuildFor (package:flutter/src/widgets/framework.dart:2143:6)
+I/flutter (18713): #3      Element.markNeedsBuild (package:flutter/src/widgets/framework.dart:3533:11)
+I/flutter (18713): #4      State.setState (package:flutter/src/widgets/framework.dart:1133:14)
+I/flutter (18713): #5      _AnimatedState._handleChange (package:flutter/src/widgets/transitions.dart:142:5)
+I/flutter (18713): #6      _ProxyAnimation&Animation&AnimationLazyListenerMixin&AnimationLocalListenersMixin.notifyListeners (package:flutter/src/animation/listener_helpers.dart:126:19)
+I/flutter (18713): #7      _AnimationController&Animation&AnimationEagerListenerMixin&AnimationLocalListenersMixin.notifyListeners (package:flutter/src/animation/listener_helpers.dart:126:19)
+I/flutter (18713): #8      AnimationController._tick (package:flutter/src/animation/animation_controller.dart:750:5)
+I/flutter (18713): #9      Ticker._tick (package:flutter/src/scheduler/ticker.dart:228:5)
+I/flutter (18713): #10     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1012:15)
+I/flutter (18713): #11     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleBeginFrame.<anonymous closure> (package:flutter/src/scheduler/binding.dart:928:11)
+I/flutter (18713): #12     __InternalLinkedHashMap&_HashVMBase&MapMixin&_LinkedHashMapMixin.forEach (dart:collection-patch/compact_hash.dart:367:8)
+I/flutter (18713): #13     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleBeginFrame (package:flutter/src/scheduler/binding.dart:926:17)
+I/flutter (18713): #14     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._handleBeginFrame (package:flutter/src/scheduler/binding.dart:856:5)
+I/flutter (18713): #18     _invoke1 (dart:ui/hooks.dart:233:10)
+I/flutter (18713): #19     _beginFrame (dart:ui/hooks.dart:172:3)
+I/flutter (18713): (elided 3 frames from package dart:async)
+I/flutter (18713): ...dirty list is now: [AnimatedBuilder(animation: Listenable.merge([AnimationController#79eb5(⏭ 1.000; paused; for MaterialPageRoute<dynamic>(/add_contact))➩ProxyAnimation, kAlwaysDismissedAnimation➩ProxyAnimation➩ProxyAnimation]), dirty, dependencies: [_LocalizationsScope-[GlobalKey#0587f], _InheritedTheme], state: _AnimatedState#dd142)]
+I/flutter (18713): scheduleBuildFor() called for SlideTransition(animation: AnimationController#79eb5(⏭ 1.000; paused; for MaterialPageRoute<dynamic>(/add_contact))➩ProxyAnimation➩CurveTween(curve: Cubic(0.40, 0.00, 0.20, 1.00))➩Tween<Offset>(Offset(0.0, 0.3) → Offset(0.0, 0.0))➩Offset(0.0, 0.0), dirty, state: _AnimatedState#872df)
+I/flutter (18713): #0      debugPrintStack (package:flutter/src/foundation/assertions.dart:429:39)
+I/flutter (18713): #1      BuildOwner.scheduleBuildFor.<anonymous closure> (package:flutter/src/widgets/framework.dart:2129:9)
+I/flutter (18713): #2      BuildOwner.scheduleBuildFor (package:flutter/src/widgets/framework.dart:2143:6)
+I/flutter (18713): #3      Element.markNeedsBuild (package:flutter/src/widgets/framework.dart:3533:11)
+I/flutter (18713): #4      State.setState (package:flutter/src/widgets/framework.dart:1133:14)
+I/flutter (18713): #5      _AnimatedState._handleChange (package:flutter/src/widgets/transitions.dart:142:5)
+I/flutter (18713): #6      _ProxyAnimation&Animation&AnimationLazyListenerMixin&AnimationLocalListenersMixin.notifyListeners (package:flutter/src/animation/listener_helpers.dart:126:19)
+I/flutter (18713): #7      _AnimationController&Animation&AnimationEagerListenerMixin&AnimationLocalListenersMixin.notifyListeners (package:flutter/src/animation/listener_helpers.dart:126:19)
+I/flutter (18713): #8      AnimationController._tick (package:flutter/src/animation/animation_controller.dart:750:5)
+I/flutter (18713): #9      Ticker._tick (package:flutter/src/scheduler/ticker.dart:228:5)
+I/flutter (18713): #10     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1012:15)
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+V/InputMethodManager(18713): Starting input: tba=com.example.socialite ic=io.flutter.plugin.editing.InputConnectionAdaptor@ffc5146 mNaviBarColor -855310 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager(18713): startInputInner - Id : 0
+I/InputMethodManager(18713): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport(18713): Input channel constructed: fd=113
+D/InputTransport(18713): Input channel destroyed: fd=114
+D/InputMethodManager(18713): SSI - flag : 0 Pid : 18713 view : com.example.socialite
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 1071) vi=Rect(0, 72 - 0, 1071) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+D/InputMethodManager(18713): HSIFW - flag : 0 Pid : 18713
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 144) vi=Rect(0, 72 - 0, 144) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+I/flutter (18713): #11     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleBeginFrame.<anonymous closure> (package:flutter/src/scheduler/binding.dart:928:11)
+I/flutter (18713): #12     __InternalLinkedHashMap&_HashVMBase&MapMixin&_LinkedHashMapMixin.forEach (dart:collection-patch/compact_hash.dart:367:8)
+I/flutter (18713): #13     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleBeginFrame (package:flutter/src/scheduler/binding.dart:926:17)
+I/flutter (18713): #14     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._handleBeginFrame (package:flutter/src/scheduler/binding.dart:856:5)
+I/flutter (18713): #18     _invoke1 (dart:ui/hooks.dart:233:10)
+I/flutter (18713): #19     _beginFrame (dart:ui/hooks.dart:172:3)
+I/flutter (18713): (elided 3 frames from package dart:async)
+I/flutter (18713): ...dirty list is now: [AnimatedBuilder(animation: Listenable.merge([AnimationController#79eb5(⏭ 1.000; paused; for MaterialPageRoute<dynamic>(/add_contact))➩ProxyAnimation, kAlwaysDismissedAnimation➩ProxyAnimation➩ProxyAnimation]), dirty, dependencies: [_LocalizationsScope-[GlobalKey#0587f], _InheritedTheme], state: _AnimatedState#dd142), SlideTransition(animation: AnimationController#79eb5(⏭ 1.000; paused; for MaterialPageRoute<dynamic>(/add_contact))➩ProxyAnimation➩CurveTween(curve: Cubic(0.40, 0.00, 0.20, 1.00))➩Tween<Offset>(Offset(0.0, 0.3) → Offset(0.0, 0.0))➩Offset(0.0, 0.0), dirty, state: _AnimatedState#872df)]
+I/flutter (18713): scheduleBuildFor() called for Overlay-[LabeledGlobalKey<OverlayState>#26cc2](dirty, state: OverlayState#a743b(entries: [OverlayEntry#ff1a4(opaque: false; maintainState: false), OverlayEntry#34896(opaque: false; maintainState: true), OverlayEntry#4793a(opaque: true; maintainState: false), OverlayEntry#30282(opaque: false; maintainState: true)]))
+I/flutter (18713): #0      debugPrintStack (package:flutter/src/foundation/assertions.dart:429:39)
+I/flutter (18713): #1      BuildOwner.scheduleBuildFor.<anonymous closure> (package:flutter/src/widgets/framework.dart:2129:9)
+I/flutter (18713): #2      BuildOwner.scheduleBuildFor (package:flutter/src/widgets/framework.dart:2143:6)
+I/flutter (18713): #3      Element.markNeedsBuild (package:flutter/src/widgets/framework.dart:3533:11)
+I/flutter (18713): #4      State.setState (package:flutter/src/widgets/framework.dart:1133:14)
+I/flutter (18713): #5      OverlayState._didChangeEntryOpacity (package:flutter/src/widgets/overlay.dart:439:5)
+I/flutter (18713): #6      OverlayEntry.opaque= (package:flutter/src/widgets/overlay.dart:90:14)
+I/flutter (18713): #7      TransitionRoute._handleStatusChanged (package:flutter/src/widgets/routes.dart:152:32)
+I/flutter (18713): #8      _AnimationController&Animation&AnimationEagerListenerMixin&AnimationLocalListenersMixin&AnimationLocalStatusListenersMixin.notifyStatusListeners (package:flutter/src/animation/listener_helpers.dart:192:19)
+I/flutter (18713): #9      AnimationController._checkStatusChanged (package:flutter/src/animation/animation_controller.dart:735:7)
+I/flutter (18713): #10     AnimationController._tick (package:flutter/src/animation/animation_controller.dart:751:5)
+I/flutter (18713): #11     Ticker._tick (package:flutter/src/scheduler/ticker.dart:228:5)
+I/flutter (18713): #12     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1012:15)
+I/flutter (18713): #13     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleBeginFrame.<anonymous closure> (package:flutter/src/scheduler/binding.dart:928:11)
+I/flutter (18713): #14     __InternalLinkedHashMap&_HashVMBase&MapMixin&_LinkedHashMapMixin.forEach (dart:collection-patch/compact_hash.dart:367:8)
+I/flutter (18713): #15     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleBeginFrame (package:flutter/src/scheduler/binding.dart:926:17)
+I/flutter (18713): #16     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._handleBeginFrame (package:flutter/src/scheduler/binding.dart:856:5)
+I/flutter (18713): #20     _invoke1 (dart:ui/hooks.dart:233:10)
+I/flutter (18713): #21     _beginFrame (dart:ui/hooks.dart:172:3)
+I/flutter (18713): (elided 3 frames from package dart:async)
+I/flutter (18713): ...dirty list is now: [AnimatedBuilder(animation: Listenable.merge([AnimationController#79eb5(⏭ 1.000; paused; for MaterialPageRoute<dynamic>(/add_contact))➩ProxyAnimation, kAlwaysDismissedAnimation➩ProxyAnimation➩ProxyAnimation]), dirty, dependencies: [_LocalizationsScope-[GlobalKey#0587f], _InheritedTheme], state: _AnimatedState#dd142), SlideTransition(animation: AnimationController#79eb5(⏭ 1.000; paused; for MaterialPageRoute<dynamic>(/add_contact))➩ProxyAnimation➩CurveTween(curve: Cubic(0.40, 0.00, 0.20, 1.00))➩Tween<Offset>(Offset(0.0, 0.3) → Offset(0.0, 0.0))➩Offset(0.0, 0.0), dirty, state: _AnimatedState#872df), Overlay-[LabeledGlobalKey<OverlayState>#26cc2](dirty, state: OverlayState#a743b(entries: [OverlayEntry#ff1a4(opaque: false; maintainState: false), OverlayEntry#34896(opaque: false; maintainState: true), OverlayEntry#4793a(opaque: true; maintainState: false), OverlayEntry#30282(opaque: false; maintainState: true)]))]
+I/flutter (18713): scheduleBuildFor() called for _ModalScope<dynamic>-[LabeledGlobalKey<_ModalScopeState<dynamic>>#db091](dirty, state: _ModalScopeState<dynamic>#91d6b)
+I/flutter (18713): #0      debugPrintStack (package:flutter/src/foundation/assertions.dart:429:39)
+I/flutter (18713): #1      BuildOwner.scheduleBuildFor.<anonymous closure> (package:flutter/src/widgets/framework.dart:2129:9)
+I/flutter (18713): #2      BuildOwner.scheduleBuildFor (package:flutter/src/widgets/framework.dart:2143:6)
+I/flutter (18713): #3      Element.markNeedsBuild (package:flutter/src/widgets/framework.dart:3533:11)
+I/flutter (18713): #4      State.setState (package:flutter/src/widgets/framework.dart:1133:14)
+I/flutter (18713): #5      _ModalScopeState._routeSetState (package:flutter/src/widgets/routes.dart:618:5)
+I/flutter (18713): #6      ModalRoute.setState (package:flutter/src/widgets/routes.dart:717:30)
+I/flutter (18713): #7      ModalRoute.changedInternalState (package:flutter/src/widgets/routes.dart:1188:5)
+I/flutter (18713): #8      TransitionRoute._handleStatusChanged (package:flutter/src/widgets/routes.dart:170:5)
+I/flutter (18713): #9      _AnimationController&Animation&AnimationEagerListenerMixin&AnimationLocalListenersMixin&AnimationLocalStatusListenersMixin.notifyStatusListeners (package:flutter/src/animation/listener_helpers.dart:192:19)
+I/flutter (18713): #10     AnimationController._checkStatusChanged (package:flutter/src/animation/animation_controller.dart:735:7)
+I/flutter (18713): #11     AnimationController._tick (package:flutter/src/animation/animation_controller.dart:751:5)
+I/flutter (18713): #12     Ticker._tick (package:flutter/src/scheduler/ticker.dart:228:5)
+I/flutter (18713): #13     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1012:15)
+I/flutter (18713): #14     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleBeginFrame.<anonymous closure> (package:flutter/src/scheduler/binding.dart:928:11)
+I/flutter (18713): #15     __InternalLinkedHashMap&_HashVMBase&MapMixin&_LinkedHashMapMixin.forEach (dart:collection-patch/compact_hash.dart:367:8)
+I/flutter (18713): #16     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleBeginFrame (package:flutter/src/scheduler/binding.dart:926:17)
+I/flutter (18713): #17     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._handleBeginFrame (package:flutter/src/scheduler/binding.dart:856:5)
+I/flutter (18713): #21     _invoke1 (dart:ui/hooks.dart:233:10)
+I/flutter (18713): #22     _beginFrame (dart:ui/hooks.dart:172:3)
+I/flutter (18713): (elided 3 frames from package dart:async)
+I/flutter (18713): ...dirty list is now: [AnimatedBuilder(animation: Listenable.merge([AnimationController#79eb5(⏭ 1.000; paused; for MaterialPageRoute<dynamic>(/add_contact))➩ProxyAnimation, kAlwaysDismissedAnimation➩ProxyAnimation➩ProxyAnimation]), dirty, dependencies: [_LocalizationsScope-[GlobalKey#0587f], _InheritedTheme], state: _AnimatedState#dd142), SlideTransition(animation: AnimationController#79eb5(⏭ 1.000; paused; for MaterialPageRoute<dynamic>(/add_contact))➩ProxyAnimation➩CurveTween(curve: Cubic(0.40, 0.00, 0.20, 1.00))➩Tween<Offset>(Offset(0.0, 0.3) → Offset(0.0, 0.0))➩Offset(0.0, 0.0), dirty, state: _AnimatedState#872df), Overlay-[LabeledGlobalKey<OverlayState>#26cc2](dirty, state: OverlayState#a743b(entries: [OverlayEntry#ff1a4(opaque: false; maintainState: false), OverlayEntry#34896(opaque: false; maintainState: true), OverlayEntry#4793a(opaque: true; maintainState: false), OverlayEntry#30282(opaque: false; maintainState: true)])), _ModalScope<dynamic>-[LabeledGlobalKey<_ModalScopeState<dy
+I/flutter (18713): scheduleBuildFor() called for _OverlayEntry-[LabeledGlobalKey<_OverlayEntryState>#ceacc](dirty, state: _OverlayEntryState#afc7b)
+I/flutter (18713): #0      debugPrintStack (package:flutter/src/foundation/assertions.dart:429:39)
+I/flutter (18713): #1      BuildOwner.scheduleBuildFor.<anonymous closure> (package:flutter/src/widgets/framework.dart:2129:9)
+I/flutter (18713): #2      BuildOwner.scheduleBuildFor (package:flutter/src/widgets/framework.dart:2143:6)
+I/flutter (18713): #3      Element.markNeedsBuild (package:flutter/src/widgets/framework.dart:3533:11)
+I/flutter (18713): #4      State.setState (package:flutter/src/widgets/framework.dart:1133:14)
+I/flutter (18713): #5      _OverlayEntryState._markNeedsBuild (package:flutter/src/widgets/overlay.dart:174:5)
+I/flutter (18713): #6      OverlayEntry.markNeedsBuild (package:flutter/src/widgets/overlay.dart:149:24)
+I/flutter (18713): #7      ModalRoute.changedInternalState (package:flutter/src/widgets/routes.dart:1189:19)
+I/flutter (18713): #8      TransitionRoute._handleStatusChanged (package:flutter/src/widgets/routes.dart:170:5)
+I/flutter (18713): #9      _AnimationController&Animation&AnimationEagerListenerMixin&AnimationLocalListenersMixin&AnimationLocalStatusListenersMixin.notifyStatusListeners (package:flutter/src/animation/listener_helpers.dart:192:19)
+I/flutter (18713): #10     AnimationController._checkStatusChanged (package:flutter/src/animation/animation_controller.dart:735:7)
+I/flutter (18713): #11     AnimationController._tick (package:flutter/src/animation/animation_controller.dart:751:5)
+I/flutter (18713): #12     Ticker._tick (package:flutter/src/scheduler/ticker.dart:228:5)
+I/flutter (18713): #13     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1012:15)
+I/flutter (18713): #14     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleBeginFrame.<anonymous closure> (package:flutter/src/scheduler/binding.dart:928:11)
+I/flutter (18713): #15     __InternalLinkedHashMap&_HashVMBase&MapMixin&_LinkedHashMapMixin.forEach (dart:collection-patch/compact_hash.dart:367:8)
+I/flutter (18713): #16     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleBeginFrame (package:flutter/src/scheduler/binding.dart:926:17)
+I/flutter (18713): #17     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._handleBeginFrame (package:flutter/src/scheduler/binding.dart:856:5)
+I/flutter (18713): #21     _invoke1 (dart:ui/hooks.dart:233:10)
+I/flutter (18713): #22     _beginFrame (dart:ui/hooks.dart:172:3)
+I/flutter (18713): (elided 3 frames from package dart:async)
+I/flutter (18713): ...dirty list is now: [AnimatedBuilder(animation: Listenable.merge([AnimationController#79eb5(⏭ 1.000; paused; for MaterialPageRoute<dynamic>(/add_contact))➩ProxyAnimation, kAlwaysDismissedAnimation➩ProxyAnimation➩ProxyAnimation]), dirty, dependencies: [_LocalizationsScope-[GlobalKey#0587f], _InheritedTheme], state: _AnimatedState#dd142), SlideTransition(animation: AnimationController#79eb5(⏭ 1.000; paused; for MaterialPageRoute<dynamic>(/add_contact))➩ProxyAnimation➩CurveTween(curve: Cubic(0.40, 0.00, 0.20, 1.00))➩Tween<Offset>(Offset(0.0, 0.3) → Offset(0.0, 0.0))➩Offset(0.0, 0.0), dirty, state: _AnimatedState#872df), Overlay-[LabeledGlobalKey<OverlayState>#26cc2](dirty, state: OverlayState#a743b(entries: [OverlayEntry#ff1a4(opaque: false; maintainState: false), OverlayEntry#34896(opaque: false; maintainState: true), OverlayEntry#4793a(opaque: true; maintainState: false), OverlayEntry#30282(opaque: false; maintainState: true)])), _ModalScope<dynamic>-[LabeledGlobalKey<_ModalScopeState<dy
+I/flutter (18713): scheduleBuildFor() called for AnimatedBuilder(animation: Listenable.merge([FocusNode#b6b25, TextEditingController#cc661(TextEditingValue(text: ┤├, selection: TextSelection(baseOffset: 0, extentOffset: 0, affinity: TextAffinity.downstream, isDirectional: false), composing: TextRange(start: -1, end: -1)))]), dirty, state: _AnimatedState#3f94e)
+I/flutter (18713): #0      debugPrintStack (package:flutter/src/foundation/assertions.dart:429:39)
+I/flutter (18713): #1      BuildOwner.scheduleBuildFor.<anonymous closure> (package:flutter/src/widgets/framework.dart:2129:9)
+I/flutter (18713): #2      BuildOwner.scheduleBuildFor (package:flutter/src/widgets/framework.dart:2143:6)
+I/flutter (18713): #3      Element.markNeedsBuild (package:flutter/src/widgets/framework.dart:3533:11)
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+V/InputMethodManager(18713): Starting input: tba=com.example.socialite ic=io.flutter.plugin.editing.InputConnectionAdaptor@1561f07 mNaviBarColor -855310 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager(18713): startInputInner - Id : 0
+I/InputMethodManager(18713): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport(18713): Input channel constructed: fd=114
+D/InputTransport(18713): Input channel destroyed: fd=113
+D/InputMethodManager(18713): SSI - flag : 0 Pid : 18713 view : com.example.socialite
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 924) vi=Rect(0, 72 - 0, 924) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+D/InputMethodManager(18713): HSIFW - flag : 0 Pid : 18713
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 144) vi=Rect(0, 72 - 0, 144) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+V/InputMethodManager(18713): Starting input: tba=com.example.socialite ic=io.flutter.plugin.editing.InputConnectionAdaptor@f47065d mNaviBarColor -855310 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager(18713): startInputInner - Id : 0
+I/InputMethodManager(18713): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport(18713): Input channel constructed: fd=94
+D/InputTransport(18713): Input channel destroyed: fd=114
+D/InputMethodManager(18713): SSI - flag : 0 Pid : 18713 view : com.example.socialite
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 924) vi=Rect(0, 72 - 0, 924) or=1
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+D/InputMethodManager(18713): HSIFW - flag : 0 Pid : 18713
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 144) vi=Rect(0, 72 - 0, 144) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+V/InputMethodManager(18713): Starting input: tba=com.example.socialite ic=io.flutter.plugin.editing.InputConnectionAdaptor@e1c3bd2 mNaviBarColor -855310 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager(18713): startInputInner - Id : 0
+I/InputMethodManager(18713): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport(18713): Input channel constructed: fd=114
+D/InputTransport(18713): Input channel destroyed: fd=94
+D/InputMethodManager(18713): SSI - flag : 0 Pid : 18713 view : com.example.socialite
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 924) vi=Rect(0, 72 - 0, 924) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+D/InputMethodManager(18713): HSIFW - flag : 0 Pid : 18713
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 144) vi=Rect(0, 72 - 0, 144) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+I/flutter (18713): #4      State.setState (package:flutter/src/widgets/framework.dart:1133:14)
+I/flutter (18713): #5      _AnimatedState._handleChange (package:flutter/src/widgets/transitions.dart:142:5)
+I/flutter (18713): #6      ChangeNotifier.notifyListeners (package:flutter/src/foundation/change_notifier.dart:206:21)
+I/flutter (18713): #7      ValueNotifier.value= (package:flutter/src/foundation/change_notifier.dart:270:5)
+I/flutter (18713): #8      TextEditingController.selection= (package:flutter/src/widgets/editable_text.dart:166:5)
+I/flutter (18713): #9      EditableTextState._handleSelectionChanged (package:flutter/src/widgets/editable_text.dart:1118:23)
+I/flutter (18713): #10     RenderEditable.selectPositionAt (package:flutter/src/rendering/editable.dart:1403:9)
+I/flutter (18713): #11     RenderEditable.selectPosition (package:flutter/src/rendering/editable.dart:1375:5)
+I/flutter (18713): #12     _TextFieldState._handleSingleTapUp (package:flutter/src/material/text_field.dart:686:27)
+I/flutter (18713): #13     _TextSelectionGestureDetectorState._handleTapUp (package:flutter/src/widgets/text_selection.dart:806:16)
+I/flutter (18713): #14     TapGestureRecognizer._checkUp.<anonymous closure> (package:flutter/src/gestures/tap.dart:238:46)
+I/flutter (18713): #15     GestureRecognizer.invokeCallback (package:flutter/src/gestures/recognizer.dart:166:24)
+I/flutter (18713): #16     TapGestureRecognizer._checkUp (package:flutter/src/gestures/tap.dart:238:9)
+I/flutter (18713): #17     TapGestureRecognizer.acceptGesture (package:flutter/src/gestures/tap.dart:211:7)
+I/flutter (18713): #18     GestureArenaManager.sweep (package:flutter/src/gestures/arena.dart:156:27)
+I/flutter (18713): #19     _WidgetsFlutterBinding&BindingBase&GestureBinding.handleEvent (package:flutter/src/gestures/binding.dart:225:20)
+I/flutter (18713): #20     _WidgetsFlutterBinding&BindingBase&GestureBinding.dispatchEvent (package:flutter/src/gestures/binding.dart:199:22)
+I/flutter (18713): #21     _WidgetsFlutterBinding&BindingBase&GestureBinding._handlePointerEvent (package:flutter/src/gestures/binding.dart:156:7)
+I/flutter (18713): #22     _WidgetsFlutterBinding&BindingBase&GestureBinding._flushPointerEventQueue (package:flutter/src/gestures/binding.dart:102:7)
+I/flutter (18713): #23     _WidgetsFlutterBinding&BindingBase&GestureBinding._handlePointerDataPacket (package:flutter/src/gestures/binding.dart:86:7)
+I/flutter (18713): #27     _invoke1 (dart:ui/hooks.dart:233:10)
+I/flutter (18713): #28     _dispatchPointerDataPacket (dart:ui/hooks.dart:154:5)
+I/flutter (18713): (elided 3 frames from package dart:async)
+I/flutter (18713): ...dirty list is now: [AnimatedBuilder(animation: Listenable.merge([FocusNode#b6b25, TextEditingController#cc661(TextEditingValue(text: ┤├, selection: TextSelection(baseOffset: 0, extentOffset: 0, affinity: TextAffinity.downstream, isDirectional: false), composing: TextRange(start: -1, end: -1)))]), dirty, state: _AnimatedState#3f94e)]
+I/flutter (18713): scheduleBuildFor() called for EditableText-[LabeledGlobalKey<EditableTextState>#f847c](controller: TextEditingController#cc661(TextEditingValue(text: ┤├, selection: TextSelection(baseOffset: 0, extentOffset: 0, affinity: TextAffinity.downstream, isDirectional: false), composing: TextRange(start: -1, end: -1))), focusNode: FocusNode#b6b25, autocorrect: false, debugLabel: (englishLike subhead 2014).merge(whiteMountainView subhead), inherit: false, color: Color(0xffffffff), family: Roboto, size: 16.0, weight: 400, baseline: alphabetic, decoration: TextDecoration.none, textAlign: start, keyboardType: TextInputType(name: TextInputType.text, signed: null, decimal: null), dirty, dependencies: [MediaQuery, Directionality, _FocusScopeMarker], state: EditableTextState#88ef7(tickers: tracking 2 tickers))
+I/flutter (18713): #0      debugPrintStack (package:flutter/src/foundation/assertions.dart:429:39)
+I/flutter (18713): #1      BuildOwner.scheduleBuildFor.<anonymous closure> (package:flutter/src/widgets/framework.dart:2129:9)
+I/flutter (18713): #2      BuildOwner.scheduleBuildFor (package:flutter/src/widgets/framework.dart:2143:6)
+I/flutter (18713): #3      Element.markNeedsBuild (package:flutter/src/widgets/framework.dart:3533:11)
+I/flutter (18713): #4      State.setState (package:flutter/src/widgets/framework.dart:1133:14)
+I/flutter (18713): #5      EditableTextState._didChangeTextEditingValue (package:flutter/src/widgets/editable_text.dart:1313:5)
+I/flutter (18713): #6      ChangeNotifier.notifyListeners (package:flutter/src/foundation/change_notifier.dart:206:21)
+I/flutter (18713): #7      ValueNotifier.value= (package:flutter/src/foundation/change_notifier.dart:270:5)
+I/flutter (18713): #8      TextEditingController.selection= (package:flutter/src/widgets/editable_text.dart:166:5)
+I/flutter (18713): #9      EditableTextState._handleSelectionChanged (package:flutter/src/widgets/editable_text.dart:1118:23)
+I/flutter (18713): #10     RenderEditable.selectPositionAt (package:flutter/src/rendering/editable.dart:1403:9)
+I/flutter (18713): #11     RenderEditable.selectPosition (package:flutter/src/rendering/editable.dart:1375:5)
+I/flutter (18713): #12     _TextFieldState._handleSingleTapUp (package:flutter/src/material/text_field.dart:686:27)
+I/flutter (18713): #13     _TextSelectionGestureDetectorState._handleTapUp (package:flutter/src/widgets/text_selection.dart:806:16)
+I/flutter (18713): #14     TapGestureRecognizer._checkUp.<anonymous closure> (package:flutter/src/gestures/tap.dart:238:46)
+I/flutter (18713): #15     GestureRecognizer.invokeCallback (package:flutter/src/gestures/recognizer.dart:166:24)
+I/flutter (18713): #16     TapGestureRecognizer._checkUp (package:flutter/src/gestures/tap.dart:238:9)
+I/flutter (18713): #17     TapGestureRecognizer.acceptGesture (package:flutter/src/gestures/tap.dart:211:7)
+I/flutter (18713): #18     GestureArenaManager.sweep (package:flutter/src/gestures/arena.dart:156:27)
+I/flutter (18713): #19     _WidgetsFlutterBinding&BindingBase&GestureBinding.handleEvent (package:flutter/src/gestures/binding.dart:225:20)
+I/flutter (18713): #20     _WidgetsFlutterBinding&BindingBase&GestureBinding.dispatchEvent (package:flutter/src/gestures/binding.dart:199:22)
+I/flutter (18713): #21     _WidgetsFlutterBinding&BindingBase&GestureBinding._handlePointerEvent (package:flutter/src/gestures/binding.dart:156:7)
+I/flutter (18713): #22     _WidgetsFlutterBinding&BindingBase&GestureBinding._flushPointerEventQueue (package:flutter/src/gestures/binding.dart:102:7)
+I/flutter (18713): #23     _WidgetsFlutterBinding&BindingBase&GestureBinding._handlePointerDataPacket (package:flutter/src/gestures/binding.dart:86:7)
+I/flutter (18713): #27     _invoke1 (dart:ui/hooks.dart:233:10)
+I/flutter (18713): #28     _dispatchPointerDataPacket (dart:ui/hooks.dart:154:5)
+I/flutter (18713): (elided 3 frames from package dart:async)
+I/flutter (18713): ...dirty list is now: [AnimatedBuilder(animation: Listenable.merge([FocusNode#b6b25, TextEditingController#cc661(TextEditingValue(text: ┤├, selection: TextSelection(baseOffset: 0, extentOffset: 0, affinity: TextAffinity.downstream, isDirectional: false), composing: TextRange(start: -1, end: -1)))]), dirty, state: _AnimatedState#3f94e), EditableText-[LabeledGlobalKey<EditableTextState>#f847c](controller: TextEditingController#cc661(TextEditingValue(text: ┤├, selection: TextSelection(baseOffset: 0, extentOffset: 0, affinity: TextAffinity.downstream, isDirectional: false), composing: TextRange(start: -1, end: -1))), focusNode: FocusNode#b6b25, autocorrect: false, debugLabel: (englishLike subhead 2014).merge(whiteMountainView subhead), inherit: false, color: Color(0xffffffff), family: Roboto, size: 16.0, weight: 400, baseline: alphabetic, decoration: TextDecoration.none, textAlign: start, keyboardType: TextInputType(name: TextInputType.text, signed: null, decimal: null), dirty, dependencies: [MediaQuery,
+I/flutter (18713): scheduleBuildFor() called for Icon(IconData(U+0E7FD), color: MaterialColor(primary value: Color(0xff4caf50)), dirty, dependencies: [Directionality, IconTheme])
+I/flutter (18713): #0      debugPrintStack (package:flutter/src/foundation/assertions.dart:429:39)
+I/flutter (18713): #1      BuildOwner.scheduleBuildFor.<anonymous closure> (package:flutter/src/widgets/framework.dart:2129:9)
+I/flutter (18713): #2      BuildOwner.scheduleBuildFor (package:flutter/src/widgets/framework.dart:2143:6)
+I/flutter (18713): #3      Element.markNeedsBuild (package:flutter/src/widgets/framework.dart:3533:11)
+I/flutter (18713): #4      Element.didChangeDependencies (package:flutter/src/widgets/framework.dart:3371:5)
+I/flutter (18713): #5      InheritedElement.notifyDependent (package:flutter/src/widgets/framework.dart:4254:15)
+I/flutter (18713): #6      InheritedElement.notifyClients (package:flutter/src/widgets/framework.dart:4293:7)
+I/flutter (18713): #7      ProxyElement.updated (package:flutter/src/widgets/framework.dart:4016:5)
+I/flutter (18713): #8      InheritedElement.updated (package:flutter/src/widgets/framework.dart:4266:13)
+I/flutter (18713): #9      ProxyElement.update (package:flutter/src/widgets/framework.dart:4004:5)
+I/flutter (18713): #10     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #11     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #12     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #13     StatelessElement.update (package:flutter/src/widgets/framework.dart:3796:5)
+I/flutter (18713): #14     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #15     SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #16     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #17     SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #18     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #19     _RenderDecorationElement._updateChild (package:flutter/src/material/input_decorator.dart:1358:30)
+I/flutter (18713): #20     _RenderDecorationElement.update (package:flutter/src/material/input_decorator.dart:1379:5)
+I/flutter (18713): #21     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #22     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #23     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #24     StatefulElement.update (package:flutter/src/widgets/framework.dart:3894:5)
+I/flutter (18713): #25     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #26     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #27     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #28     BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:2278:33)
+I/flutter (18713): #29     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding&PaintingBinding&SemanticsBinding&RendererBinding&WidgetsBinding.drawFrame (package:flutter/src/widgets/binding.dart:700:20)
+I/flutter (18713): #30     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding&PaintingBinding&SemanticsBinding&RendererBinding._handlePersistentFrameCallback (package:flutter/src/rendering/binding.dart:286:5)
+I/flutter (18713): #31     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1012:15)
+I/flutter (18713): #32     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:952:9)
+I/flutter (18713): #33     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._handleDrawFrame (package:flutter/src/scheduler/binding.dart:864:5)
+I/flutter (18713): #37     _invoke (dart:ui/hooks.dart:219:10)
+I/flutter (18713): #38     _drawFrame (dart:ui/hooks.dart:178:3)
+I/flutter (18713): (elided 3 frames from package dart:async)
+I/flutter (18713): ...dirty list is now: [AnimatedBuilder(animation: Listenable.merge([FocusNode#b6b25(FOCUSED), TextEditingController#cc661(TextEditingValue(text: ┤├, selection: TextSelection(baseOffset: 0, extentOffset: 0, affinity: TextAffinity.downstream, isDirectional: false), composing: TextRange(start: -1, end: -1)))]), state: _AnimatedState#3f94e), EditableText-[LabeledGlobalKey<EditableTextState>#f847c](controller: TextEditingController#cc661(TextEditingValue(text: ┤├, selection: TextSelection(baseOffset: 0, extentOffset: 0, affinity: TextAffinity.downstream, isDirectional: false), composing: TextRange(start: -1, end: -1))), focusNode: FocusNode#b6b25(FOCUSED), autocorrect: false, debugLabel: (englishLike subhead 2014).merge(whiteMountainView subhead), inherit: false, color: Color(0xffffffff), family: Roboto, size: 16.0, weight: 400, baseline: alphabetic, decoration: TextDecoration.none, textAlign: start, keyboardType: TextInputType(name: TextInputType.text, signed: null, decimal: null), dirty, dependencies: [
+I/flutter (18713): scheduleBuildFor() called for InputDecorator(decoration: InputDecoration(labelText: "Name", helperText: "That there person's name", hintText: "John Doe", hintMaxLines: "1", prefixIcon: Icon(IconData(U+0E7FD), color: MaterialColor(primary value: Color(0xff4caf50))), border: OutlineInputBorder(), alignLabelWithHint: false), isFocused: true, isEmpty: true, dirty, dependencies: [_LocalizationsScope-[GlobalKey#0587f], Directionality, _InheritedTheme], state: _InputDecoratorState#7b006(tickers: tracking 2 tickers))
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+V/InputMethodManager(18713): Starting input: tba=com.example.socialite ic=io.flutter.plugin.editing.InputConnectionAdaptor@2aba4a3 mNaviBarColor -855310 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager(18713): startInputInner - Id : 0
+I/InputMethodManager(18713): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport(18713): Input channel constructed: fd=113
+D/InputTransport(18713): Input channel destroyed: fd=114
+D/InputMethodManager(18713): SSI - flag : 0 Pid : 18713 view : com.example.socialite
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 924) vi=Rect(0, 72 - 0, 924) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/InputMethodManager(18713): HSIFW - flag : 0 Pid : 18713
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 144) vi=Rect(0, 72 - 0, 144) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+V/InputMethodManager(18713): Starting input: tba=com.example.socialite ic=io.flutter.plugin.editing.InputConnectionAdaptor@850f3a0 mNaviBarColor -855310 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager(18713): startInputInner - Id : 0
+I/InputMethodManager(18713): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport(18713): Input channel constructed: fd=114
+D/InputTransport(18713): Input channel destroyed: fd=113
+D/InputMethodManager(18713): SSI - flag : 0 Pid : 18713 view : com.example.socialite
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 924) vi=Rect(0, 72 - 0, 924) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+D/InputMethodManager(18713): HSIFW - flag : 0 Pid : 18713
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 144) vi=Rect(0, 72 - 0, 144) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+V/InputMethodManager(18713): Starting input: tba=com.example.socialite ic=io.flutter.plugin.editing.InputConnectionAdaptor@272ab59 mNaviBarColor -855310 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager(18713): startInputInner - Id : 0
+I/InputMethodManager(18713): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport(18713): Input channel constructed: fd=94
+D/InputTransport(18713): Input channel destroyed: fd=114
+D/InputMethodManager(18713): SSI - flag : 0 Pid : 18713 view : com.example.socialite
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 924) vi=Rect(0, 72 - 0, 924) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+I/flutter (18713): Creating info field
+D/InputMethodManager(18713): HSIFW - flag : 0 Pid : 18713
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 144) vi=Rect(0, 72 - 0, 144) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+V/InputMethodManager(18713): Starting input: tba=com.example.socialite ic=io.flutter.plugin.editing.InputConnectionAdaptor@ade431e mNaviBarColor -855310 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager(18713): startInputInner - Id : 0
+I/InputMethodManager(18713): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport(18713): Input channel constructed: fd=113
+D/InputTransport(18713): Input channel destroyed: fd=94
+D/InputMethodManager(18713): SSI - flag : 0 Pid : 18713 view : com.example.socialite
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 924) vi=Rect(0, 72 - 0, 924) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+D/InputMethodManager(18713): HSIFW - flag : 0 Pid : 18713
+I/flutter (18713): #0      debugPrintStack (package:flutter/src/foundation/assertions.dart:429:39)
+I/flutter (18713): #1      BuildOwner.scheduleBuildFor.<anonymous closure> (package:flutter/src/widgets/framework.dart:2129:9)
+I/flutter (18713): #2      BuildOwner.scheduleBuildFor (package:flutter/src/widgets/framework.dart:2143:6)
+I/flutter (18713): #3      Element.markNeedsBuild (package:flutter/src/widgets/framework.dart:3533:11)
+I/flutter (18713): #4      State.setState (package:flutter/src/widgets/framework.dart:1133:14)
+I/flutter (18713): #5      _InputDecoratorState._handleChange (package:flutter/src/material/input_decorator.dart:1678:5)
+I/flutter (18713): #6      _AnimationController&Animation&AnimationEagerListenerMixin&AnimationLocalListenersMixin.notifyListeners (package:flutter/src/animation/listener_helpers.dart:126:19)
+I/flutter (18713): #7      AnimationController._tick (package:flutter/src/animation/animation_controller.dart:750:5)
+I/flutter (18713): #8      Ticker._tick (package:flutter/src/scheduler/ticker.dart:228:5)
+I/flutter (18713): #9      _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1012:15)
+I/flutter (18713): #10     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleBeginFrame.<anonymous closure> (package:flutter/src/scheduler/binding.dart:928:11)
+I/flutter (18713): #11     __InternalLinkedHashMap&_HashVMBase&MapMixin&_LinkedHashMapMixin.forEach (dart:collection-patch/compact_hash.dart:367:8)
+I/flutter (18713): #12     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleBeginFrame (package:flutter/src/scheduler/binding.dart:926:17)
+I/flutter (18713): #13     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._handleBeginFrame (package:flutter/src/scheduler/binding.dart:856:5)
+I/flutter (18713): #17     _invoke1 (dart:ui/hooks.dart:233:10)
+I/flutter (18713): #18     _beginFrame (dart:ui/hooks.dart:172:3)
+I/flutter (18713): (elided 3 frames from package dart:async)
+I/flutter (18713): ...dirty list is now: [InputDecorator(decoration: InputDecoration(labelText: "Name", helperText: "That there person's name", hintText: "John Doe", hintMaxLines: "1", prefixIcon: Icon(IconData(U+0E7FD), color: MaterialColor(primary value: Color(0xff4caf50))), border: OutlineInputBorder(), alignLabelWithHint: false), isFocused: true, isEmpty: true, dirty, dependencies: [_LocalizationsScope-[GlobalKey#0587f], Directionality, _InheritedTheme], state: _InputDecoratorState#7b006(tickers: tracking 2 tickers))]
+I/flutter (18713): scheduleBuildFor() called for AnimatedDefaultTextStyle(duration: 200ms, debugLabel: ((englishLike subhead 2014).merge(whiteMountainView subhead)).copyWith, inherit: false, color: Color(0xff64ffda), family: Roboto, size: 16.0, weight: 400, baseline: alphabetic, decoration: TextDecoration.none, softWrap: wrapping at box width, overflow: clip, dirty, state: _AnimatedDefaultTextStyleState#04640(ticker active))
+I/flutter (18713): #0      debugPrintStack (package:flutter/src/foundation/assertions.dart:429:39)
+I/flutter (18713): #1      BuildOwner.scheduleBuildFor.<anonymous closure> (package:flutter/src/widgets/framework.dart:2129:9)
+I/flutter (18713): #2      BuildOwner.scheduleBuildFor (package:flutter/src/widgets/framework.dart:2143:6)
+I/flutter (18713): #3      Element.markNeedsBuild (package:flutter/src/widgets/framework.dart:3533:11)
+I/flutter (18713): #4      State.setState (package:flutter/src/widgets/framework.dart:1133:14)
+I/flutter (18713): #5      AnimatedWidgetBaseState._handleAnimationChanged (package:flutter/src/widgets/implicit_animations.dart:438:5)
+I/flutter (18713): #6      _AnimationController&Animation&AnimationEagerListenerMixin&AnimationLocalListenersMixin.notifyListeners (package:flutter/src/animation/listener_helpers.dart:126:19)
+I/flutter (18713): #7      AnimationController._tick (package:flutter/src/animation/animation_controller.dart:750:5)
+I/flutter (18713): #8      Ticker._tick (package:flutter/src/scheduler/ticker.dart:228:5)
+I/flutter (18713): #9      _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1012:15)
+I/flutter (18713): #10     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleBeginFrame.<anonymous closure> (package:flutter/src/scheduler/binding.dart:928:11)
+I/flutter (18713): #11     __InternalLinkedHashMap&_HashVMBase&MapMixin&_LinkedHashMapMixin.forEach (dart:collection-patch/compact_hash.dart:367:8)
+I/flutter (18713): #12     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleBeginFrame (package:flutter/src/scheduler/binding.dart:926:17)
+I/flutter (18713): #13     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._handleBeginFrame (package:flutter/src/scheduler/binding.dart:856:5)
+I/flutter (18713): #17     _invoke1 (dart:ui/hooks.dart:233:10)
+I/flutter (18713): #18     _beginFrame (dart:ui/hooks.dart:172:3)
+I/flutter (18713): (elided 3 frames from package dart:async)
+I/flutter (18713): ...dirty list is now: [InputDecorator(decoration: InputDecoration(labelText: "Name", helperText: "That there person's name", hintText: "John Doe", hintMaxLines: "1", prefixIcon: Icon(IconData(U+0E7FD), color: MaterialColor(primary value: Color(0xff4caf50))), border: OutlineInputBorder(), alignLabelWithHint: false), isFocused: true, isEmpty: true, dirty, dependencies: [_LocalizationsScope-[GlobalKey#0587f], Directionality, _InheritedTheme], state: _InputDecoratorState#7b006(tickers: tracking 2 tickers)), AnimatedDefaultTextStyle(duration: 200ms, debugLabel: ((englishLike subhead 2014).merge(whiteMountainView subhead)).copyWith, inherit: false, color: Color(0xff64ffda), family: Roboto, size: 16.0, weight: 400, baseline: alphabetic, decoration: TextDecoration.none, softWrap: wrapping at box width, overflow: clip, dirty, state: _AnimatedDefaultTextStyleState#04640(ticker active))]
+I/flutter (18713): scheduleBuildFor() called for Text("Name", textAlign: start, overflow: ellipsis, dirty, dependencies: [MediaQuery, DefaultTextStyle])
+I/flutter (18713): #0      debugPrintStack (package:flutter/src/foundation/assertions.dart:429:39)
+I/flutter (18713): #1      BuildOwner.scheduleBuildFor.<anonymous closure> (package:flutter/src/widgets/framework.dart:2129:9)
+I/flutter (18713): #2      BuildOwner.scheduleBuildFor (package:flutter/src/widgets/framework.dart:2143:6)
+I/flutter (18713): #3      Element.markNeedsBuild (package:flutter/src/widgets/framework.dart:3533:11)
+I/flutter (18713): #4      Element.didChangeDependencies (package:flutter/src/widgets/framework.dart:3371:5)
+I/flutter (18713): #5      InheritedElement.notifyDependent (package:flutter/src/widgets/framework.dart:4254:15)
+I/flutter (18713): #6      InheritedElement.notifyClients (package:flutter/src/widgets/framework.dart:4293:7)
+I/flutter (18713): #7      ProxyElement.updated (package:flutter/src/widgets/framework.dart:4016:5)
+I/flutter (18713): #8      InheritedElement.updated (package:flutter/src/widgets/framework.dart:4266:13)
+I/flutter (18713): #9      ProxyElement.update (package:flutter/src/widgets/framework.dart:4004:5)
+I/flutter (18713): #10     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #11     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #12     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #13     StatefulElement.update (package:flutter/src/widgets/framework.dart:3894:5)
+I/flutter (18713): #14     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #15     SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #16     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #17     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #18     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #19     StatefulElement.update (package:flutter/src/widgets/framework.dart:3894:5)
+I/flutter (18713): #20     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #21     SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #22     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #23     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #24     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #25     StatefulElement.update (package:flutter/src/widgets/framework.dart:3894:5)
+I/flutter (18713): #26     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #27     _RenderDecorationElement._updateChild (package:flutter/src/material/input_decorator.dart:1358:30)
+I/flutter (18713): #28     _RenderDecorationElement.update (package:flutter/src/material/input_decorator.dart:1375:5)
+I/flutter (18713): #29     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #30     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #31     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #32     BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:2278:33)
+I/flutter (18713): #33     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding&PaintingBinding&SemanticsBinding&RendererBinding&WidgetsBinding.drawFrame (package:flutter/src/widgets/binding.dart:700:20)
+I/flutter (18713): #34     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding&PaintingBinding&SemanticsBinding&RendererBinding._handlePersistentFrameCallback (package:flutter/src/rendering/binding.dart:286:5)
+I/flutter (18713): #35     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1012:15)
+I/flutter (18713): #36     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:952:9)
+I/flutter (18713): #37     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._handleDrawFrame (package:flutter/src/scheduler/binding.dart:864:5)
+I/flutter (18713): #41     _invoke (dart:ui/hooks.dart:219:10)
+I/flutter (18713): #42     _drawFrame (dart:ui/hooks.dart:178:3)
+I/flutter (18713): (elided 3 frames from package dart:async)
+I/flutter (18713): ...dirty list is now: [InputDecorator(decoration: InputDecoration(labelText: "Name", helperText: "That there person's name", hintText: "John Doe", hintMaxLines: "1", prefixIcon: Icon(IconData(U+0E7FD), color: MaterialColor(primary value: Color(0xff4caf50))), border: OutlineInputBorder(), alignLabelWithHint: false), isFocused: true, isEmpty: true, dependencies: [_LocalizationsScope-[GlobalKey#0587f], Directionality, _InheritedTheme], state: _InputDecoratorState#7b006(tickers: tracking 2 tickers)), AnimatedDefaultTextStyle(duration: 200ms, debugLabel: ((englishLike subhead 2014).merge(whiteMountainView subhead)).copyWith, inherit: false, color: Color(0xff64ffda), family: Roboto, size: 16.0, weight: 400, baseline: alphabetic, decoration: TextDecoration.none, softWrap: wrapping at box width, overflow: clip, state: _AnimatedDefaultTextStyleState#04640(ticker active)), Text("Name", textAlign: start, overflow: ellipsis, dirty, dependencies: [MediaQuery, DefaultTextStyle])]
+I/flutter (18713): scheduleBuildFor() called for WidgetsApp-[GlobalObjectKey _MaterialAppState#58e7e](dirty, state: _WidgetsAppState#698f2)
+I/flutter (18713): #0      debugPrintStack (package:flutter/src/foundation/assertions.dart:429:39)
+I/flutter (18713): #1      BuildOwner.scheduleBuildFor.<anonymous closure> (package:flutter/src/widgets/framework.dart:2129:9)
+I/flutter (18713): #2      BuildOwner.scheduleBuildFor (package:flutter/src/widgets/framework.dart:2143:6)
+I/flutter (18713): #3      Element.markNeedsBuild (package:flutter/src/widgets/framework.dart:3533:11)
+I/flutter (18713): #4      State.setState (package:flutter/src/widgets/framework.dart:1133:14)
+I/flutter (18713): #5      _WidgetsAppState.didChangeMetrics (package:flutter/src/widgets/app.dart:1008:5)
+I/flutter (18713): #6      _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding&PaintingBinding&SemanticsBinding&RendererBinding&WidgetsBinding.handleMetricsChanged (package:flutter/src/widgets/binding.dart:404:16)
+I/flutter (18713): #10     _invoke (dart:ui/hooks.dart:219:10)
+I/flutter (18713): #11     _updateWindowMetrics (dart:ui/hooks.dart:45:3)
+I/flutter (18713): (elided 3 frames from package dart:async)
+I/flutter (18713): ...dirty list is now: [WidgetsApp-[GlobalObjectKey _MaterialAppState#58e7e](dirty, state: _WidgetsAppState#698f2)]
+I/flutter (18713): scheduleBuildFor() called for InputDecorator(decoration: InputDecoration(labelText: "Name", helperText: "That there person's name", hintText: "John Doe", hintMaxLines: "1", prefixIcon: Icon(IconData(U+0E7FD), color: MaterialColor(primary value: Color(0xff4caf50))), border: OutlineInputBorder(), alignLabelWithHint: false), isFocused: true, isEmpty: true, dirty, dependencies: [_LocalizationsScope-[GlobalKey#0587f], Directionality, _InheritedTheme], state: _InputDecoratorState#7b006(tickers: tracking 2 tickers))
+I/flutter (18713): #0      debugPrintStack (package:flutter/src/foundation/assertions.dart:429:39)
+I/flutter (18713): #1      BuildOwner.scheduleBuildFor.<anonymous closure> (package:flutter/src/widgets/framework.dart:2129:9)
+I/flutter (18713): #2      BuildOwner.scheduleBuildFor (package:flutter/src/widgets/framework.dart:2143:6)
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 144) vi=Rect(0, 72 - 0, 144) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+V/InputMethodManager(18713): Starting input: tba=com.example.socialite ic=io.flutter.plugin.editing.InputConnectionAdaptor@49e7ff mNaviBarColor -855310 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager(18713): startInputInner - Id : 0
+I/InputMethodManager(18713): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport(18713): Input channel constructed: fd=114
+D/InputTransport(18713): Input channel destroyed: fd=113
+D/InputMethodManager(18713): SSI - flag : 0 Pid : 18713 view : com.example.socialite
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 924) vi=Rect(0, 72 - 0, 924) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/InputMethodManager(18713): HSIFW - flag : 0 Pid : 18713
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+V/InputMethodManager(18713): Starting input: tba=com.example.socialite ic=io.flutter.plugin.editing.InputConnectionAdaptor@261a9cc mNaviBarColor -855310 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager(18713): startInputInner - Id : 0
+I/InputMethodManager(18713): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport(18713): Input channel constructed: fd=113
+D/InputTransport(18713): Input channel destroyed: fd=114
+D/InputMethodManager(18713): SSI - flag : 0 Pid : 18713 view : com.example.socialite
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 144) vi=Rect(0, 72 - 0, 144) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 924) vi=Rect(0, 72 - 0, 924) or=1
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/InputMethodManager(18713): HSIFW - flag : 0 Pid : 18713
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+V/InputMethodManager(18713): Starting input: tba=com.example.socialite ic=io.flutter.plugin.editing.InputConnectionAdaptor@519a415 mNaviBarColor -855310 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager(18713): startInputInner - Id : 0
+I/InputMethodManager(18713): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport(18713): Input channel constructed: fd=114
+D/InputTransport(18713): Input channel destroyed: fd=113
+D/InputMethodManager(18713): SSI - flag : 0 Pid : 18713 view : com.example.socialite
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+D/InputMethodManager(18713): HSIFW - flag : 0 Pid : 18713
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 144) vi=Rect(0, 72 - 0, 144) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+V/InputMethodManager(18713): Starting input: tba=com.example.socialite ic=io.flutter.plugin.editing.InputConnectionAdaptor@927732a mNaviBarColor -855310 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager(18713): startInputInner - Id : 0
+I/InputMethodManager(18713): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport(18713): Input channel constructed: fd=113
+D/InputTransport(18713): Input channel destroyed: fd=114
+D/InputMethodManager(18713): SSI - flag : 0 Pid : 18713 view : com.example.socialite
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 924) vi=Rect(0, 72 - 0, 924) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+D/InputMethodManager(18713): HSIFW - flag : 0 Pid : 18713
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 144) vi=Rect(0, 72 - 0, 144) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+V/InputMethodManager(18713): Starting input: tba=com.example.socialite ic=io.flutter.plugin.editing.InputConnectionAdaptor@75f051b mNaviBarColor -855310 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager(18713): startInputInner - Id : 0
+I/InputMethodManager(18713): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport(18713): Input channel constructed: fd=94
+D/InputTransport(18713): Input channel destroyed: fd=113
+D/InputMethodManager(18713): SSI - flag : 0 Pid : 18713 view : com.example.socialite
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+I/flutter (18713): #3      Element.markNeedsBuild (package:flutter/src/widgets/framework.dart:3533:11)
+I/flutter (18713): #4      State.setState (package:flutter/src/widgets/framework.dart:1133:14)
+I/flutter (18713): #5      _InputDecoratorState._handleChange (package:flutter/src/material/input_decorator.dart:1678:5)
+I/flutter (18713): #6      _AnimationController&Animation&AnimationEagerListenerMixin&AnimationLocalListenersMixin.notifyListeners (package:flutter/src/animation/listener_helpers.dart:126:19)
+I/flutter (18713): #7      AnimationController._tick (package:flutter/src/animation/animation_controller.dart:750:5)
+I/flutter (18713): #8      Ticker._tick (package:flutter/src/scheduler/ticker.dart:228:5)
+I/flutter (18713): #9      _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1012:15)
+I/flutter (18713): #10     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleBeginFrame.<anonymous closure> (package:flutter/src/scheduler/binding.dart:928:11)
+I/flutter (18713): #11     __InternalLinkedHashMap&_HashVMBase&MapMixin&_LinkedHashMapMixin.forEach (dart:collection-patch/compact_hash.dart:367:8)
+I/flutter (18713): #12     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleBeginFrame (package:flutter/src/scheduler/binding.dart:926:17)
+I/flutter (18713): #13     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._handleBeginFrame (package:flutter/src/scheduler/binding.dart:856:5)
+I/flutter (18713): #17     _invoke1 (dart:ui/hooks.dart:233:10)
+I/flutter (18713): #18     _beginFrame (dart:ui/hooks.dart:172:3)
+I/flutter (18713): (elided 3 frames from package dart:async)
+I/flutter (18713): ...dirty list is now: [WidgetsApp-[GlobalObjectKey _MaterialAppState#58e7e](dirty, state: _WidgetsAppState#698f2), InputDecorator(decoration: InputDecoration(labelText: "Name", helperText: "That there person's name", hintText: "John Doe", hintMaxLines: "1", prefixIcon: Icon(IconData(U+0E7FD), color: MaterialColor(primary value: Color(0xff4caf50))), border: OutlineInputBorder(), alignLabelWithHint: false), isFocused: true, isEmpty: true, dirty, dependencies: [_LocalizationsScope-[GlobalKey#0587f], Directionality, _InheritedTheme], state: _InputDecoratorState#7b006(tickers: tracking 2 tickers))]
+I/flutter (18713): scheduleBuildFor() called for AnimatedDefaultTextStyle(duration: 200ms, debugLabel: ((englishLike subhead 2014).merge(whiteMountainView subhead)).copyWith, inherit: false, color: Color(0xff64ffda), family: Roboto, size: 16.0, weight: 400, baseline: alphabetic, decoration: TextDecoration.none, softWrap: wrapping at box width, overflow: clip, dirty, state: _AnimatedDefaultTextStyleState#04640(ticker active))
+I/flutter (18713): #0      debugPrintStack (package:flutter/src/foundation/assertions.dart:429:39)
+I/flutter (18713): #1      BuildOwner.scheduleBuildFor.<anonymous closure> (package:flutter/src/widgets/framework.dart:2129:9)
+I/flutter (18713): #2      BuildOwner.scheduleBuildFor (package:flutter/src/widgets/framework.dart:2143:6)
+I/flutter (18713): #3      Element.markNeedsBuild (package:flutter/src/widgets/framework.dart:3533:11)
+I/flutter (18713): #4      State.setState (package:flutter/src/widgets/framework.dart:1133:14)
+I/flutter (18713): #5      AnimatedWidgetBaseState._handleAnimationChanged (package:flutter/src/widgets/implicit_animations.dart:438:5)
+I/flutter (18713): #6      _AnimationController&Animation&AnimationEagerListenerMixin&AnimationLocalListenersMixin.notifyListeners (package:flutter/src/animation/listener_helpers.dart:126:19)
+I/flutter (18713): #7      AnimationController._tick (package:flutter/src/animation/animation_controller.dart:750:5)
+I/flutter (18713): #8      Ticker._tick (package:flutter/src/scheduler/ticker.dart:228:5)
+I/flutter (18713): #9      _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1012:15)
+I/flutter (18713): #10     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleBeginFrame.<anonymous closure> (package:flutter/src/scheduler/binding.dart:928:11)
+I/flutter (18713): #11     __InternalLinkedHashMap&_HashVMBase&MapMixin&_LinkedHashMapMixin.forEach (dart:collection-patch/compact_hash.dart:367:8)
+I/flutter (18713): #12     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleBeginFrame (package:flutter/src/scheduler/binding.dart:926:17)
+I/flutter (18713): #13     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._handleBeginFrame (package:flutter/src/scheduler/binding.dart:856:5)
+I/flutter (18713): #17     _invoke1 (dart:ui/hooks.dart:233:10)
+I/flutter (18713): #18     _beginFrame (dart:ui/hooks.dart:172:3)
+I/flutter (18713): (elided 3 frames from package dart:async)
+I/flutter (18713): ...dirty list is now: [WidgetsApp-[GlobalObjectKey _MaterialAppState#58e7e](dirty, state: _WidgetsAppState#698f2), InputDecorator(decoration: InputDecoration(labelText: "Name", helperText: "That there person's name", hintText: "John Doe", hintMaxLines: "1", prefixIcon: Icon(IconData(U+0E7FD), color: MaterialColor(primary value: Color(0xff4caf50))), border: OutlineInputBorder(), alignLabelWithHint: false), isFocused: true, isEmpty: true, dirty, dependencies: [_LocalizationsScope-[GlobalKey#0587f], Directionality, _InheritedTheme], state: _InputDecoratorState#7b006(tickers: tracking 2 tickers)), AnimatedDefaultTextStyle(duration: 200ms, debugLabel: ((englishLike subhead 2014).merge(whiteMountainView subhead)).copyWith, inherit: false, color: Color(0xff64ffda), family: Roboto, size: 16.0, weight: 400, baseline: alphabetic, decoration: TextDecoration.none, softWrap: wrapping at box width, overflow: clip, dirty, state: _AnimatedDefaultTextStyleState#04640(ticker active))]
+I/flutter (18713): scheduleBuildFor() called for Scaffold(dirty, dependencies: [_LocalizationsScope-[GlobalKey#0587f], Directionality, _InheritedTheme, MediaQuery], state: ScaffoldState#cb989(tickers: tracking 1 ticker))
+I/flutter (18713): #0      debugPrintStack (package:flutter/src/foundation/assertions.dart:429:39)
+I/flutter (18713): #1      BuildOwner.scheduleBuildFor.<anonymous closure> (package:flutter/src/widgets/framework.dart:2129:9)
+I/flutter (18713): #2      BuildOwner.scheduleBuildFor (package:flutter/src/widgets/framework.dart:2143:6)
+I/flutter (18713): #3      Element.markNeedsBuild (package:flutter/src/widgets/framework.dart:3533:11)
+I/flutter (18713): #4      Element.didChangeDependencies (package:flutter/src/widgets/framework.dart:3371:5)
+I/flutter (18713): #5      StatefulElement.didChangeDependencies (package:flutter/src/widgets/framework.dart:3975:11)
+I/flutter (18713): #6      InheritedElement.notifyDependent (package:flutter/src/widgets/framework.dart:4254:15)
+I/flutter (18713): #7      InheritedElement.notifyClients (package:flutter/src/widgets/framework.dart:4293:7)
+I/flutter (18713): #8      ProxyElement.updated (package:flutter/src/widgets/framework.dart:4016:5)
+I/flutter (18713): #9      InheritedElement.updated (package:flutter/src/widgets/framework.dart:4266:13)
+I/flutter (18713): #10     ProxyElement.update (package:flutter/src/widgets/framework.dart:4004:5)
+I/flutter (18713): #11     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #12     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #13     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #14     BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:2278:33)
+I/flutter (18713): #15     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding&PaintingBinding&SemanticsBinding&RendererBinding&WidgetsBinding.drawFrame (package:flutter/src/widgets/binding.dart:700:20)
+I/flutter (18713): #16     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding&PaintingBinding&SemanticsBinding&RendererBinding._handlePersistentFrameCallback (package:flutter/src/rendering/binding.dart:286:5)
+I/flutter (18713): #17     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1012:15)
+I/flutter (18713): #18     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:952:9)
+I/flutter (18713): #19     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._handleDrawFrame (package:flutter/src/scheduler/binding.dart:864:5)
+I/flutter (18713): #23     _invoke (dart:ui/hooks.dart:219:10)
+I/flutter (18713): #24     _drawFrame (dart:ui/hooks.dart:178:3)
+I/flutter (18713): (elided 3 frames from package dart:async)
+I/flutter (18713): ...dirty list is now: [WidgetsApp-[GlobalObjectKey _MaterialAppState#58e7e](state: _WidgetsAppState#698f2), InputDecorator(decoration: InputDecoration(labelText: "Name", helperText: "That there person's name", hintText: "John Doe", hintMaxLines: "1", prefixIcon: Icon(IconData(U+0E7FD), color: MaterialColor(primary value: Color(0xff4caf50))), border: OutlineInputBorder(), alignLabelWithHint: false), isFocused: true, isEmpty: true, dirty, dependencies: [_LocalizationsScope-[GlobalKey#0587f], Directionality, _InheritedTheme], state: _InputDecoratorState#7b006(tickers: tracking 2 tickers)), AnimatedDefaultTextStyle(duration: 200ms, debugLabel: ((englishLike subhead 2014).merge(whiteMountainView subhead)).copyWith, inherit: false, color: Color(0xff64ffda), family: Roboto, size: 16.0, weight: 400, baseline: alphabetic, decoration: TextDecoration.none, softWrap: wrapping at box width, overflow: clip, dirty, state: _AnimatedDefaultTextStyleState#04640(ticker active)), Scaffold(dirty, dependencies: [_LocalizationsSco
+I/flutter (18713): scheduleBuildFor() called for Builder(dirty, dependencies: [MediaQuery])
+I/flutter (18713): #0      debugPrintStack (package:flutter/src/foundation/assertions.dart:429:39)
+I/flutter (18713): #1      BuildOwner.scheduleBuildFor.<anonymous closure> (package:flutter/src/widgets/framework.dart:2129:9)
+I/flutter (18713): #2      BuildOwner.scheduleBuildFor (package:flutter/src/widgets/framework.dart:2143:6)
+I/flutter (18713): #3      Element.markNeedsBuild (package:flutter/src/widgets/framework.dart:3533:11)
+I/flutter (18713): #4      Element.didChangeDependencies (package:flutter/src/widgets/framework.dart:3371:5)
+I/flutter (18713): #5      InheritedElement.notifyDependent (package:flutter/src/widgets/framework.dart:4254:15)
+I/flutter (18713): #6      InheritedElement.notifyClients (package:flutter/src/widgets/framework.dart:4293:7)
+I/flutter (18713): #7      ProxyElement.updated (package:flutter/src/widgets/framework.dart:4016:5)
+I/flutter (18713): #8      InheritedElement.updated (package:flutter/src/widgets/framework.dart:4266:13)
+I/flutter (18713): #9      ProxyElement.update (package:flutter/src/widgets/framework.dart:4004:5)
+I/flutter (18713): #10     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #11     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #12     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #13     BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:2278:33)
+I/flutter (18713): #14     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding&PaintingBinding&SemanticsBinding&RendererBinding&WidgetsBinding.drawFrame (package:flutter/src/widgets/binding.dart:700:20)
+I/flutter (18713): #15     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding&PaintingBinding&SemanticsBinding&RendererBinding._handlePersistentFrameCallback (package:flutter/src/rendering/binding.dart:286:5)
+I/flutter (18713): #16     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1012:15)
+I/flutter (18713): #17     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:952:9)
+I/flutter (18713): #18     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._handleDrawFrame (package:flutter/src/scheduler/binding.dart:864:5)
+I/flutter (18713): #22     _invoke (dart:ui/hooks.dart:219:10)
+I/flutter (18713): #23     _drawFrame (dart:ui/hooks.dart:178:3)
+I/flutter (18713): (elided 3 frames from package dart:async)
+I/flutter (18713): ...dirty list is now: [WidgetsApp-[GlobalObjectKey _MaterialAppState#58e7e](state: _WidgetsAppState#698f2), InputDecorator(decoration: InputDecoration(labelText: "Name", helperText: "That there person's name", hintText: "John Doe", hintMaxLines: "1", prefixIcon: Icon(IconData(U+0E7FD), color: MaterialColor(primary value: Color(0xff4caf50))), border: OutlineInputBorder(), alignLabelWithHint: false), isFocused: true, isEmpty: true, dirty, dependencies: [_LocalizationsScope-[GlobalKey#0587f], Directionality, _InheritedTheme], state: _InputDecoratorState#7b006(tickers: tracking 2 tickers)), AnimatedDefaultTextStyle(duration: 200ms, debugLabel: ((englishLike subhead 2014).merge(whiteMountainView subhead)).copyWith, inherit: false, color: Color(0xff64ffda), family: Roboto, size: 16.0, weight: 400, baseline: alphabetic, decoration: TextDecoration.none, softWrap: wrapping at box width, overflow: clip, dirty, state: _AnimatedDefaultTextStyleState#04640(ticker active)), Scaffold(dirty, dependencies: [_LocalizationsSco
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 924) vi=Rect(0, 72 - 0, 924) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/InputMethodManager(18713): SSI - flag : 0 Pid : 18713 view : com.example.socialite
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+D/InputMethodManager(18713): HSIFW - flag : 0 Pid : 18713
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+V/InputMethodManager(18713): Starting input: tba=com.example.socialite ic=io.flutter.plugin.editing.InputConnectionAdaptor@4e596b8 mNaviBarColor -855310 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager(18713): startInputInner - Id : 0
+I/InputMethodManager(18713): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport(18713): Input channel constructed: fd=113
+D/InputTransport(18713): Input channel destroyed: fd=94
+D/InputMethodManager(18713): SSI - flag : 0 Pid : 18713 view : com.example.socialite
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 144) vi=Rect(0, 72 - 0, 144) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 924) vi=Rect(0, 72 - 0, 924) or=1
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+D/InputMethodManager(18713): HSIFW - flag : 0 Pid : 18713
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 144) vi=Rect(0, 72 - 0, 144) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+V/InputMethodManager(18713): Starting input: tba=com.example.socialite ic=io.flutter.plugin.editing.InputConnectionAdaptor@3fd6c91 mNaviBarColor -855310 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager(18713): startInputInner - Id : 0
+I/InputMethodManager(18713): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport(18713): Input channel constructed: fd=94
+D/InputTransport(18713): Input channel destroyed: fd=113
+D/InputMethodManager(18713): SSI - flag : 0 Pid : 18713 view : com.example.socialite
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 924) vi=Rect(0, 72 - 0, 924) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/InputMethodManager(18713): HSIFW - flag : 0 Pid : 18713
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 144) vi=Rect(0, 72 - 0, 144) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+V/InputMethodManager(18713): Starting input: tba=com.example.socialite ic=io.flutter.plugin.editing.InputConnectionAdaptor@32197f6 mNaviBarColor -855310 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager(18713): startInputInner - Id : 0
+I/InputMethodManager(18713): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport(18713): Input channel constructed: fd=114
+D/InputTransport(18713): Input channel destroyed: fd=94
+D/InputMethodManager(18713): SSI - flag : 0 Pid : 18713 view : com.example.socialite
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 924) vi=Rect(0, 72 - 0, 924) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+D/InputMethodManager(18713): HSIFW - flag : 0 Pid : 18713
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 144) vi=Rect(0, 72 - 0, 144) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+I/flutter (18713): scheduleBuildFor() called for _ModalScope<dynamic>-[LabeledGlobalKey<_ModalScopeState<dynamic>>#db091](dirty, state: _ModalScopeState<dynamic>#91d6b)
+I/flutter (18713): #0      debugPrintStack (package:flutter/src/foundation/assertions.dart:429:39)
+I/flutter (18713): #1      BuildOwner.scheduleBuildFor.<anonymous closure> (package:flutter/src/widgets/framework.dart:2129:9)
+I/flutter (18713): #2      BuildOwner.scheduleBuildFor (package:flutter/src/widgets/framework.dart:2143:6)
+I/flutter (18713): #3      Element.markNeedsBuild (package:flutter/src/widgets/framework.dart:3533:11)
+I/flutter (18713): #4      State.setState (package:flutter/src/widgets/framework.dart:1133:14)
+I/flutter (18713): #5      _ModalScopeState._forceRebuildPage (package:flutter/src/widgets/routes.dart:610:5)
+I/flutter (18713): #6      ModalRoute.changedExternalState (package:flutter/src/widgets/routes.dart:1196:30)
+I/flutter (18713): #7      NavigatorState.didUpdateWidget (package:flutter/src/widgets/navigator.dart:1545:13)
+I/flutter (18713): #8      StatefulElement.update (package:flutter/src/widgets/framework.dart:3879:58)
+I/flutter (18713): #9      Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #10     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #11     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #12     ProxyElement.update (package:flutter/src/widgets/framework.dart:4006:5)
+I/flutter (18713): #13     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #14     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #15     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #16     ProxyElement.update (package:flutter/src/widgets/framework.dart:4006:5)
+I/flutter (18713): #17     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #18     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #19     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #20     ProxyElement.update (package:flutter/src/widgets/framework.dart:4006:5)
+I/flutter (18713): #21     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #22     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #23     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #24     StatelessElement.update (package:flutter/src/widgets/framework.dart:3796:5)
+I/flutter (18713): #25     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #26     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #27     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #28     ProxyElement.update (package:flutter/src/widgets/framework.dart:4006:5)
+I/flutter (18713): #29     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #30     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #31     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #32     StatelessElement.update (package:flutter/src/widgets/framework.dart:3796:5)
+I/flutter (18713): #33     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #34     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #35     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #36     StatefulElement.update (package:flutter/src/widgets/framework.dart:3894:5)
+I/flutter (18713): #37     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #38     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #39     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #40     StatelessElement.update (package:flutter/src/widgets/framework.dart:3796:5)
+I/flutter (18713): #41     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #42     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #43     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #44     ProxyElement.update (package:flutter/src/widgets/framework.dart:4006:5)
+I/flutter (18713): #45     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #46     SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #47     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #48     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #49     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #50     StatelessElement.update (package:flutter/src/widgets/framework.dart:3796:5)
+I/flutter (18713): #51     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #52     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #53     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #54     StatelessElement.update (package:flutter/src/widgets/framework.dart:3796:5)
+I/flutter (18713): #55     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #56     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #57     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #58     StatelessElement.update (package:flutter/src/widgets/framework.dart:3796:5)
+I/flutter (18713): #59     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #60     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #61     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #62     ProxyElement.update (package:flutter/src/widgets/framework.dart:4006:5)
+I/flutter (18713): #63     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #64     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #65     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #66     ProxyElement.update (package:flutter/src/widgets/framework.dart:4006:5)
+I/flutter (18713): #67     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #68     SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #69     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #70     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #71     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #72     StatefulElement.update (package:flutter/src/widgets/framework.dart:3894:5)
+I/flutter (18713): #73     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #74     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #75     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #76     ProxyElement.update (package:flutter/src/widgets/framework.dart:4006:5)
+I/flutter (18713): #77     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #78     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #79     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #80     BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:2278:33)
+I/flutter (18713): #81     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding&PaintingBinding&SemanticsBinding&RendererBinding&WidgetsBinding.drawFrame (package:flutter/src/widgets/binding.dart:700:20)
+I/flutter (18713): #82     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding&PaintingBinding&SemanticsBinding&RendererBinding._handlePersistentFrameCallback (package:flutter/src/rendering/binding.dart:286:5)
+I/flutter (18713): #83     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1012:15)
+I/flutter (18713): #84     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:952:9)
+I/flutter (18713): #85     _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._handleDrawFrame (package:flutter/src/scheduler/binding.dart:864:5)
+I/flutter (18713): #89     _invoke (dart:ui/hooks.dart:219:10)
+I/flutter (18713): #90     _drawFrame (dart:ui/hooks.dart:178:3)
+I/flutter (18713): (elided 3 frames from package dart:async)
+I/flutter (18713): ...dirty list is now: [WidgetsApp-[GlobalObjectKey _MaterialAppState#58e7e](state: _WidgetsAppState#698f2), InputDecorator(decoration: InputDecoration(labelText: "Name", helperText: "That there person's name", hintText: "John Doe", hintMaxLines: "1", prefixIcon: Icon(IconData(U+0E7FD), color: MaterialColor(primary value: Color(0xff4caf50))), border: OutlineInputBorder(), alignLabelWithHint: false), isFocused: true, isEmpty: true, dirty, dependencies: [_LocalizationsScope-[GlobalKey#0587f], Directionality, _InheritedTheme], state: _InputDecoratorState#7b006(tickers: tracking 2 tickers)), AnimatedDefaultTextStyle(duration: 200ms, debugLabel: ((englishLike subhead 2014).merge(whiteMountainView subhead)).copyWith, inherit: false, color: Color(0xff64ffda), family: Roboto, size: 16.0, weight: 400, baseline: alphabetic, decoration: TextDecoration.none, softWrap: wrapping at box width, overflow: clip, dirty, state: _AnimatedDefaultTextStyleState#04640(ticker active)), Scaffold(dirty, dependencies: [_LocalizationsSco
+I/flutter (18713): scheduleBuildFor() called for SafeArea(avoid left padding, avoid top padding, avoid right padding, avoid bottom padding, dirty, dependencies: [MediaQuery])
+I/flutter (18713): #0      debugPrintStack (package:flutter/src/foundation/assertions.dart:429:39)
+I/flutter (18713): #1      BuildOwner.scheduleBuildFor.<anonymous closure> (package:flutter/src/widgets/framework.dart:2129:9)
+I/flutter (18713): #2      BuildOwner.scheduleBuildFor (package:flutter/src/widgets/framework.dart:2143:6)
+I/flutter (18713): #3      Element.markNeedsBuild (package:flutter/src/widgets/framework.dart:3533:11)
+I/flutter (18713): #4      Element.didChangeDependencies (package:flutter/src/widgets/framework.dart:3371:5)
+I/flutter (18713): #5      InheritedElement.notifyDependent (package:flutter/src/widgets/framework.dart:4254:15)
+I/flutter (18713): #6      InheritedElement.notifyClients (package:flutter/src/widgets/framework.dart:4293:7)
+I/flutter (18713): #7      ProxyElement.updated (package:flutter/src/widgets/framework.dart:4016:5)
+I/flutter (18713): #8      InheritedElement.updated (package:flutter/src/widgets/framework.dart:4266:13)
+I/flutter (18713): #9      ProxyElement.update (package:flutter/src/widgets/framework.dart:4004:5)
+I/flutter (18713): #10     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #11     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #12     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #13     ProxyElement.update (package:flutter/src/widgets/framework.dart:4006:5)
+I/flutter (18713): #14     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #15     RenderObjectElement.updateChildren (package:flutter/src/widgets/framework.dart:4601:32)
+I/flutter (18713): #16     MultiChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4992:17)
+I/flutter (18713): #17     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #18     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #19     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #20     StatefulElement.update (package:flutter/src/widgets/framework.dart:3894:5)
+I/flutter (18713): #21     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #22     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #23     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #24     ProxyElement.update (package:flutter/src/widgets/framework.dart:4006:5)
+I/flutter (18713): #25     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #26     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #27     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #28     StatefulElement.update (package:flutter/src/widgets/framework.dart:3894:5)
+I/flutter (18713): #29     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #30     SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #31     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #32     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #33     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #34     StatelessElement.update (package:flutter/src/widgets/framework.dart:3796:5)
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+V/InputMethodManager(18713): Starting input: tba=com.example.socialite ic=io.flutter.plugin.editing.InputConnectionAdaptor@fded7f7 mNaviBarColor -855310 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager(18713): startInputInner - Id : 0
+I/InputMethodManager(18713): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport(18713): Input channel constructed: fd=113
+D/InputTransport(18713): Input channel destroyed: fd=114
+D/InputMethodManager(18713): SSI - flag : 0 Pid : 18713 view : com.example.socialite
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 924) vi=Rect(0, 72 - 0, 924) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+D/InputMethodManager(18713): HSIFW - flag : 0 Pid : 18713
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 144) vi=Rect(0, 72 - 0, 144) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+V/InputMethodManager(18713): Starting input: tba=com.example.socialite ic=io.flutter.plugin.editing.InputConnectionAdaptor@7b96664 mNaviBarColor -855310 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager(18713): startInputInner - Id : 0
+I/InputMethodManager(18713): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport(18713): Input channel constructed: fd=94
+D/InputTransport(18713): Input channel destroyed: fd=113
+D/InputMethodManager(18713): SSI - flag : 0 Pid : 18713 view : com.example.socialite
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 924) vi=Rect(0, 72 - 0, 924) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+D/InputMethodManager(18713): HSIFW - flag : 0 Pid : 18713
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 144) vi=Rect(0, 72 - 0, 144) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+V/InputMethodManager(18713): Starting input: tba=com.example.socialite ic=io.flutter.plugin.editing.InputConnectionAdaptor@c7b40cd mNaviBarColor -855310 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager(18713): startInputInner - Id : 0
+I/InputMethodManager(18713): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport(18713): Input channel constructed: fd=114
+D/InputTransport(18713): Input channel destroyed: fd=94
+D/InputMethodManager(18713): SSI - flag : 0 Pid : 18713 view : com.example.socialite
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 924) vi=Rect(0, 72 - 0, 924) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/InputMethodManager(18713): SSI - flag : 0 Pid : 18713 view : com.example.socialite
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+D/InputMethodManager(18713): HSIFW - flag : 0 Pid : 18713
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+I/flutter (18713): #35     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #36     SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #37     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #38     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 144) vi=Rect(0, 72 - 0, 144) or=1
+I/flutter (18713): #39     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #40     StatefulElement.update (package:flutter/src/widgets/framework.dart:3894:5)
+I/flutter (18713): #41     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #42     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #43     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #44     StatefulElement.update (package:flutter/src/widgets/framework.dart:3894:5)
+I/flutter (18713): #45     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #46     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #47     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #48     ProxyElement.update (package:flutter/src/widgets/framework.dart:4006:5)
+I/flutter (18713): #49     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #50     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #51     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #52     ProxyElement.update (package:flutter/src/widgets/framework.dart:4006:5)
+I/flutter (18713): #53     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #54     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #55     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #56     StatefulElement.update (package:flutter/src/widgets/framework.dart:3894:5)
+I/flutter (18713): #57     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #58     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #59     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #60     StatefulElement.update (package:flutter/src/widgets/framework.dart:3894:5)
+I/flutter (18713): #61     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #62     SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #63     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #64     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #65     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #66     StatelessElement.update (package:flutter/src/widgets/framework.dart:3796:5)
+I/flutter (18713): #67     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #68     SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #69     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #70     SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #71     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #72     SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #73     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #74     SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #75     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #76     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #77     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #78     StatefulElement.update (package:flutter/src/widgets/framework.dart:3894:5)
+I/flutter (18713): #79     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #80     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #81     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #82     StatelessElement.update (package:flutter/src/widgets/framework.dart:3796:5)
+I/flutter (18713): #83     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #84     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #85     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #86     StatefulElement.update (package:flutter/src/widgets/framework.dart:3894:5)
+I/flutter (18713): #87     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #88     SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #89     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #90     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #91     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #92     ProxyElement.update (package:flutter/src/widgets/framework.dart:4006:5)
+I/flutter (18713): #93     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #94     SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #95     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #96     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #97     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #98     StatefulElement.update (package:flutter/src/widgets/framework.dart:3894:5)
+I/flutter (18713): #99     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #100    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #101    Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #102    StatelessElement.update (package:flutter/src/widgets/framework.dart:3796:5)
+I/flutter (18713): #103    Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #104    SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #105    Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #106    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #107    Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #108    ProxyElement.update (package:flutter/src/widgets/framework.dart:4006:5)
+I/flutter (18713): #109    Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #110    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #111    Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #112    BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:2278:33)
+I/flutter (18713): #113    _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding&PaintingBinding&SemanticsBinding&RendererBinding&WidgetsBinding.drawFrame (package:flutter/src/widgets/binding.dart:700:20)
+I/flutter (18713): #114    _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding&PaintingBinding&SemanticsBinding&RendererBinding._handlePersistentFrameCallback (package:flutter/src/rendering/binding.dart:286:5)
+I/flutter (18713): #115    _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1012:15)
+I/flutter (18713): #116    _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:952:9)
+I/flutter (18713): #117    _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._handleDrawFrame (package:flutter/src/scheduler/binding.dart:864:5)
+I/flutter (18713): #121    _invoke (dart:ui/hooks.dart:219:10)
+I/flutter (18713): #122    _drawFrame (dart:ui/hooks.dart:178:3)
+I/flutter (18713): (elided 3 frames from package dart:async)
+I/flutter (18713): ...dirty list is now: [WidgetsApp-[GlobalObjectKey _MaterialAppState#58e7e](state: _WidgetsAppState#698f2), Builder(dependencies: [MediaQuery]), _ModalScope<dynamic>-[LabeledGlobalKey<_ModalScopeState<dynamic>>#db091](state: _ModalScopeState<dynamic>#91d6b), Scaffold(dependencies: [_LocalizationsScope-[GlobalKey#0587f], Directionality, _InheritedTheme, MediaQuery], state: ScaffoldState#cb989(tickers: tracking 1 ticker)), InputDecorator(decoration: InputDecoration(labelText: "Name", helperText: "That there person's name", hintText: "John Doe", hintMaxLines: "1", prefixIcon: Icon(IconData(U+0E7FD), color: MaterialColor(primary value: Color(0xff4caf50))), border: OutlineInputBorder(), alignLabelWithHint: false), isFocused: true, isEmpty: true, dirty, dependencies: [_LocalizationsScope-[GlobalKey#0587f], Directionality, _InheritedTheme], state: _InputDecoratorState#7b006(tickers: tracking 2 tickers)), AnimatedDefaultTextStyle(duration: 200ms, debugLabel: ((englishLike subhead 2014).merge(whiteMountainView subhea
+I/flutter (18713): scheduleBuildFor() called for Text("Add Contact", inherit: true, color: Color(0xb3ffffff), family: Montserrat, size: 20.0, dirty, dependencies: [MediaQuery, DefaultTextStyle])
+I/flutter (18713): #0      debugPrintStack (package:flutter/src/foundation/assertions.dart:429:39)
+I/flutter (18713): #1      BuildOwner.scheduleBuildFor.<anonymous closure> (package:flutter/src/widgets/framework.dart:2129:9)
+I/flutter (18713): #2      BuildOwner.scheduleBuildFor (package:flutter/src/widgets/framework.dart:2143:6)
+I/flutter (18713): #3      Element.markNeedsBuild (package:flutter/src/widgets/framework.dart:3533:11)
+I/flutter (18713): #4      Element.didChangeDependencies (package:flutter/src/widgets/framework.dart:3371:5)
+I/flutter (18713): #5      InheritedElement.notifyDependent (package:flutter/src/widgets/framework.dart:4254:15)
+I/flutter (18713): #6      InheritedElement.notifyClients (package:flutter/src/widgets/framework.dart:4293:7)
+I/flutter (18713): #7      ProxyElement.updated (package:flutter/src/widgets/framework.dart:4016:5)
+I/flutter (18713): #8      InheritedElement.updated (package:flutter/src/widgets/framework.dart:4266:13)
+I/flutter (18713): #9      ProxyElement.update (package:flutter/src/widgets/framework.dart:4004:5)
+I/flutter (18713): #10     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #11     SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #12     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #13     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #14     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #15     StatelessElement.update (package:flutter/src/widgets/framework.dart:3796:5)
+I/flutter (18713): #16     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #17     SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #18     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #19     SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #20     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #21     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #22     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #23     ProxyElement.update (package:flutter/src/widgets/framework.dart:4006:5)
+I/flutter (18713): #24     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #25     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #26     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #27     StatefulElement.update (package:flutter/src/widgets/framework.dart:3894:5)
+I/flutter (18713): #28     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #29     SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #30     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #31     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #32     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #33     StatelessElement.update (package:flutter/src/widgets/framework.dart:3796:5)
+I/flutter (18713): #34     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #35     SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #36     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+V/InputMethodManager(18713): Starting input: tba=com.example.socialite ic=io.flutter.plugin.editing.InputConnectionAdaptor@9c73d82 mNaviBarColor -855310 mIsGetNaviBarColorSuccess true , NavVisible : true , NavTrans : false
+D/InputMethodManager(18713): startInputInner - Id : 0
+I/InputMethodManager(18713): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputTransport(18713): Input channel constructed: fd=94
+D/InputTransport(18713): Input channel destroyed: fd=114
+D/InputMethodManager(18713): SSI - flag : 0 Pid : 18713 view : com.example.socialite
+D/InputMethodManager(18713): prepareNavigationBarInfo() DecorView@4df056c[MainActivity]
+D/InputMethodManager(18713): getNavigationBarColor() -855310
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 0
+D/InputMethodManager(18713): HSIFW - flag : 0 Pid : 18713
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 924) vi=Rect(0, 72 - 0, 924) or=1
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): MSG_RESIZED: frame=Rect(0, 0 - 1080, 2220) ci=Rect(0, 72 - 0, 144) vi=Rect(0, 72 - 0, 144) or=1
+I/flutter (18713): Creating info field
+D/ViewRootImpl@7117c79[MainActivity](18713): Relayout returned: old=[0,0][1080,2220] new=[0,0][1080,2220] result=0x1 surface={valid=true 524627091456} changed=false
+D/ViewRootImpl@7117c79[MainActivity](18713): ViewPostIme pointer 1
+I/flutter (18713): Creating info field
+I/flutter (18713): Creating info field
+I/flutter (18713): #37     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #38     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #39     StatefulElement.update (package:flutter/src/widgets/framework.dart:3894:5)
+I/flutter (18713): #40     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #41     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #42     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #43     StatefulElement.update (package:flutter/src/widgets/framework.dart:3894:5)
+I/flutter (18713): #44     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #45     SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #46     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #47     SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #48     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #49     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #50     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #51     StatefulElement.update (package:flutter/src/widgets/framework.dart:3894:5)
+I/flutter (18713): #52     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #53     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #54     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #55     StatelessElement.update (package:flutter/src/widgets/framework.dart:3796:5)
+I/flutter (18713): #56     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #57     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #58     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #59     ProxyElement.update (package:flutter/src/widgets/framework.dart:4006:5)
+I/flutter (18713): #60     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #61     SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #62     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #63     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #64     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #65     ProxyElement.update (package:flutter/src/widgets/framework.dart:4006:5)
+I/flutter (18713): #66     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #67     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #68     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #69     ProxyElement.update (package:flutter/src/widgets/framework.dart:4006:5)
+I/flutter (18713): #70     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #71     RenderObjectElement.updateChildren (package:flutter/src/widgets/framework.dart:4601:32)
+I/flutter (18713): #72     MultiChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4992:17)
+I/flutter (18713): #73     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #74     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #75     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #76     StatefulElement.update (package:flutter/src/widgets/framework.dart:3894:5)
+I/flutter (18713): #77     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #78     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #79     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #80     ProxyElement.update (package:flutter/src/widgets/framework.dart:4006:5)
+I/flutter (18713): #81     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #82     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #83     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #84     StatefulElement.update (package:flutter/src/widgets/framework.dart:3894:5)
+I/flutter (18713): #85     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #86     SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #87     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #88     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #89     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #90     StatelessElement.update (package:flutter/src/widgets/framework.dart:3796:5)
+I/flutter (18713): #91     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #92     SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #93     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #94     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #95     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #96     StatefulElement.update (package:flutter/src/widgets/framework.dart:3894:5)
+I/flutter (18713): #97     Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #98     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #99     Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #100    StatefulElement.update (package:flutter/src/widgets/framework.dart:3894:5)
+I/flutter (18713): #101    Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #102    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #103    Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #104    ProxyElement.update (package:flutter/src/widgets/framework.dart:4006:5)
+I/flutter (18713): #105    Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #106    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #107    Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #108    ProxyElement.update (package:flutter/src/widgets/framework.dart:4006:5)
+I/flutter (18713): #109    Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #110    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #111    Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #112    StatefulElement.update (package:flutter/src/widgets/framework.dart:3894:5)
+I/flutter (18713): #113    Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #114    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #115    Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #116    StatefulElement.update (package:flutter/src/widgets/framework.dart:3894:5)
+I/flutter (18713): #117    Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #118    SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #119    Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #120    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #121    Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #122    StatelessElement.update (package:flutter/src/widgets/framework.dart:3796:5)
+I/flutter (18713): #123    Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #124    SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #125    Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #126    SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #127    Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #128    SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #129    Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #130    SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #131    Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #132    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #133    Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #134    StatefulElement.update (package:flutter/src/widgets/framework.dart:3894:5)
+I/flutter (18713): #135    Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #136    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #137    Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #138    StatelessElement.update (package:flutter/src/widgets/framework.dart:3796:5)
+I/flutter (18713): #139    Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #140    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #141    Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #142    StatefulElement.update (package:flutter/src/widgets/framework.dart:3894:5)
+I/flutter (18713): #143    Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #144    SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #145    Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #146    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #147    Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #148    ProxyElement.update (package:flutter/src/widgets/framework.dart:4006:5)
+I/flutter (18713): #149    Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #150    SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #151    Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #152    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #153    Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #154    StatefulElement.update (package:flutter/src/widgets/framework.dart:3894:5)
+I/flutter (18713): #155    Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #156    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #157    Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #158    StatelessElement.update (package:flutter/src/widgets/framework.dart:3796:5)
+I/flutter (18713): #159    Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #160    SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4883:14)
+I/flutter (18713): #161    Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #162    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #163    Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #164    ProxyElement.update (package:flutter/src/widgets/framework.dart:4006:5)
+I/flutter (18713): #165    Element.updateChild (package:flutter/src/widgets/framework.dart:2753:15)
+I/flutter (18713): #166    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3750:16)
+I/flutter (18713): #167    Element.rebuild (package:flutter/src/widgets/framework.dart:3565:5)
+I/flutter (18713): #168    BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:2278:33)
+I/flutter (18713): #169    _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding&PaintingBinding&SemanticsBinding&RendererBinding&WidgetsBinding.drawFrame (package:flutter/src/widgets/binding.dart:700:20)
+I/flutter (18713): #170    _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding&PaintingBinding&SemanticsBinding&RendererBinding._handlePersistentFrameCallback (package:flutter/src/rendering/binding.dart:286:5)
+I/flutter (18713): #171    _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1012:15)
+I/flutter (18713): #172    _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:952:9)
+I/flutter (18713): #173    _WidgetsFlutterBinding&BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._handleDrawFrame (package:flutter/src/scheduler/binding.dart:864:5)
+I/flutter (18713): #177    _invoke (dart:ui/hooks.dart:219:10)
+I/flutter (18713): #178    _drawFrame (dart:ui/hooks.dart:178:3)
+I/flutter (18713): (elided 3 frames from package dart:async)
+I/flutter (18713): ...dirty list is now: [WidgetsApp-[GlobalObjectKey _MaterialAppState#58e7e](state: _WidgetsAppState#698f2), Builder(dependencies: [MediaQuery]), _ModalScope<dynamic>-[LabeledGlobalKey<_ModalScopeState<dynamic>>#db091](state: _ModalScopeState<dynamic>#91d6b), Scaffold(dependencies: [_LocalizationsScope-[GlobalKey#0587f], Directionality, _InheritedTheme, MediaQuery], state: ScaffoldState#cb989(tickers: tracking 1 ticker)), InputDecorator(decoration: InputDecoration(labelText: "Name", helperText: "That there person's name", hintText: "John Doe", hintMaxLines: "1", prefixIcon: Icon(IconData(U+0E7FD), color: MaterialColor(primary value: Color(0xff4caf50))), border: OutlineInputBorder(), alignLabelWithHint: false), isFocused: true, isEmpty: true, dirty, dependencies: [_LocalizationsScope-[GlobalKey#0587f], Directionality, _InheritedTheme], state: _InputDecoratorState#7b006(tickers: tracking 2 tickers)), AnimatedDefaultTextStyle(duration: 200ms, debugLabel: ((englishLike subhead 2014).merge(whiteMountainView subhea
+Terminate batch job (Y/N)? 
