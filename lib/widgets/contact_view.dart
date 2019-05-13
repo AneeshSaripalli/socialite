@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:socialite/database/firestore/firestore.dart';
+import 'package:socialite/pages/modify_contact.dart';
 
 import '../models/contact.dart';
 
-class ContactView extends StatefulWidget {
+class ContactViewPage extends StatefulWidget {
   final Contact contact;
 
   final GlobalKey key = GlobalKey(debugLabel: "ContactViewDismissibleKey");
 
-  ContactView({@required this.contact});
+  ContactViewPage({@required this.contact});
 
   @override
-  State<ContactView> createState() => _ContactViewState();
+  State<ContactViewPage> createState() => _ContactViewPageState();
 }
 
-class _ContactViewState extends State<ContactView> {
+class _ContactViewPageState extends State<ContactViewPage> {
   // state variables related to FirestoreDB transaction status
   bool waitingOnDBResponse =
       false; // whether or not a transaction is currently in progress
@@ -42,6 +43,14 @@ class _ContactViewState extends State<ContactView> {
     });
   }
 
+  void _handleEditBtnPress(BuildContext ctx) {
+    print("want to edit");
+    Navigator.push(
+        ctx,
+        MaterialPageRoute(
+            builder: (ctx) => ModifyContactPage(contact: widget.contact)));
+  }
+
   void _handleDeleteContactPress(BuildContext ctx) {
     print("Want to delete");
     setState(() {
@@ -57,9 +66,7 @@ class _ContactViewState extends State<ContactView> {
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.edit),
-            onPressed: () {
-              print("Want to edit");
-            },
+            onPressed: () => _handleEditBtnPress(ctx),
           ),
           IconButton(
             icon: Icon(Icons.delete),

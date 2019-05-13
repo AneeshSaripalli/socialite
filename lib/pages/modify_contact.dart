@@ -6,13 +6,17 @@ import '../models/contact.dart';
 import '../widgets/info_field_multi_line.dart';
 
 /// AddContactPage Class
-class AddContactPage extends StatefulWidget {
+class ModifyContactPage extends StatefulWidget {
+  final Contact contact;
+
+  ModifyContactPage({this.contact});
+
   @override
-  _AddContactPageState createState() => _AddContactPageState();
+  _ModifyContactPageState createState() => _ModifyContactPageState();
 }
 
 /// State class for AddContact. Deals with TextField input & FirestoreDB transaction
-class _AddContactPageState extends State<AddContactPage> {
+class _ModifyContactPageState extends State<ModifyContactPage> {
   // input fields on screen.
   InfoFieldMultiLine _nameField; // contains full name of contact
   InfoFieldMultiLine _phoneField; // contains phone number for contact
@@ -30,6 +34,8 @@ class _AddContactPageState extends State<AddContactPage> {
 
     var nameSplit = _nameField.info.split(" ");
 
+    print(_nameField.info);
+
     String firstName, lastName;
     firstName = nameSplit.length != 0 ? nameSplit[0] : null;
     lastName = nameSplit.length > 0 ? nameSplit[1] : null;
@@ -37,7 +43,9 @@ class _AddContactPageState extends State<AddContactPage> {
     String phoneNumber = _phoneField.info;
     String desc = _descriptionField.info;
 
-    String contactID = FirestoreDB().generateContactID();
+    String contactID = widget.contact == null
+        ? FirestoreDB().generateContactID()
+        : widget.contact.id;
 
     Contact contact = Contact(
       description: desc,
@@ -46,6 +54,8 @@ class _AddContactPageState extends State<AddContactPage> {
       id: contactID,
       phoneNumber: phoneNumber,
     );
+
+    print(contact.toMap());
 
     FirestoreDB().pushContactToContactsList(contact).then((ref) {
       setState(() {
@@ -60,9 +70,41 @@ class _AddContactPageState extends State<AddContactPage> {
     });
   }
 
-  @override
-  @mustCallSuper
-  void initState() {
+  void _initializeInputFieldsWithInitialValues() {
+    _descriptionField = InfoFieldMultiLine(
+      labelString: "Description",
+      inputLabelString: "Enter Contact Description",
+      hintString:
+          "Met this bro at that Starbucks down the street. Likes surfing & strong espressos.",
+      textInputType: TextInputType.multiline,
+      textCapitalization: TextCapitalization.sentences,
+      helperString: "Put a lil something to help remember them",
+      prefixIcon: Icons.book,
+      initialText: widget.contact.description,
+    );
+
+    _phoneField = InfoFieldMultiLine(
+      inputLabelString: "Enter Phone Number.",
+      labelString: "Phone #",
+      textInputType: TextInputType.number,
+      hintString: "5555555555",
+      helperString: "A phone number if they've got one",
+      prefixIcon: Icons.phone,
+      initialText: widget.contact.phoneNumber,
+    );
+    _nameField = InfoFieldMultiLine(
+      inputLabelString: "Enter Name.",
+      labelString: "Name",
+      textInputType: TextInputType.text,
+      hintString: "John Doe",
+      helperString: "That there person's name",
+      textCapitalization: TextCapitalization.words,
+      prefixIcon: Icons.person,
+      initialText: widget.contact.firstName + " " + widget.contact.lastName,
+    );
+  }
+
+  void _initialInputFieldsWithoutInitialValues() {
     _descriptionField = InfoFieldMultiLine(
       labelString: "Description",
       inputLabelString: "Enter Contact Description",
@@ -91,18 +133,28 @@ class _AddContactPageState extends State<AddContactPage> {
       textCapitalization: TextCapitalization.words,
       prefixIcon: Icons.person,
     );
+  }
+
+  @override
+  @mustCallSuper
+  void initState() {
+    widget.contact == null
+        ? _initialInputFieldsWithoutInitialValues()
+        : _initializeInputFieldsWithInitialValues();
 
     super.initState();
   }
 
   Widget _buildSubmitButton(BuildContext context) {
+    IconData iconImg = widget.contact == null ? Icons.cloud_upload : Icons.edit;
+
     return RaisedButton(
       color: Colors.teal,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.0),
       ),
       textColor: Colors.white70,
-      child: Icon(Icons.cloud_upload),
+      child: Icon(iconImg),
       onPressed: () => _handleUploadPress(context),
     );
   }
@@ -167,7 +219,9 @@ class _AddContactPageState extends State<AddContactPage> {
       );
     } else {
       if (dbResponseSuccess) {
-        displayText = Text("Successfully added", style: style);
+        displayText = widget.contact == null
+            ? Text("Successfully added", style: style)
+            : Text("Successfully edited", style: style);
       } else if (dbResponseSuccess == false) {
         displayText = Text("Failed to upload homeboy", style: style);
       }

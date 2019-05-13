@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:socialite/pages/contact_page.dart';
 
-import "pages/add_contact.dart";
+import "pages/modify_contact.dart";
 
 void main() => runApp(MyApp());
 
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (ctx) => ContactPage(),
-        "/add_contact": (ctx) => AddContactPage(),
+        "/add_contact": (ctx) => ModifyContactPage(),
       },
     );
   }

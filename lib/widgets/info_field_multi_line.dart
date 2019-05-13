@@ -6,6 +6,7 @@ class InfoFieldMultiLine extends StatefulWidget {
   final String inputLabelString;
   final String hintString;
   final String helperString;
+  final String initialText;
 
   final IconData prefixIcon;
 
@@ -30,6 +31,7 @@ class InfoFieldMultiLine extends StatefulWidget {
     this.textInputType = TextInputType.text,
     this.helperString = 'Keep it short, this is just a demo.',
     this.hintString = 'Tell us about yourself',
+    this.initialText = "",
     this.nextFocus,
   });
 
@@ -44,6 +46,8 @@ class InfoFieldMultiLine extends StatefulWidget {
 }
 
 class _InfoFieldStateMultiLine extends State<InfoFieldMultiLine> {
+  TextEditingController _controller;
+
   void onChange(String newString) {
     setState(() {
       print("new value " + newString);
@@ -53,6 +57,8 @@ class _InfoFieldStateMultiLine extends State<InfoFieldMultiLine> {
 
   @override
   void initState() {
+    _controller = TextEditingController(text: widget.initialText);
+    widget._infoData = widget.initialText;
     super.initState();
   }
 
@@ -73,6 +79,7 @@ class _InfoFieldStateMultiLine extends State<InfoFieldMultiLine> {
   Widget build(BuildContext context) {
     final Widget descriptor = Text(widget.labelString, style: TextStyles.label);
     final Widget input = TextField(
+      controller: _controller,
       onChanged: (String s) {
         onChange(s);
       },
