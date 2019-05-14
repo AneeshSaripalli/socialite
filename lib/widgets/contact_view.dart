@@ -166,18 +166,6 @@ class _ContactViewPageState extends State<ContactViewPage> {
   }
 
   AlertDialog _buildDeleteConfBox(BuildContext ctx) {
-    final TextStyle confirm = TextStyle(
-        fontFamily: 'Montserrat', color: Colors.green, fontSize: 18.0);
-
-    final TextStyle deny =
-        TextStyle(fontFamily: 'Montserrat', color: Colors.red, fontSize: 18.0);
-
-    final TextStyle contentStyle = TextStyle(
-        fontFamily: 'Montserrat', color: Colors.white, fontSize: 14.0);
-
-    final TextStyle confirmTitleStyle =
-        TextStyle(fontFamily: 'Montserrat', color: Colors.teal, fontSize: 18.0);
-
     return AlertDialog(
       title: Text(
         "Just makin' sure.",
@@ -191,7 +179,7 @@ class _ContactViewPageState extends State<ContactViewPage> {
         "Are you sure you want to forget about Mr. Broseph " +
             widget.contact.lastName +
             "?",
-        style: contentStyle,
+        style: confirmContentStyle,
       ),
       actions: <Widget>[
         FlatButton(
@@ -241,6 +229,12 @@ class _ContactViewPageState extends State<ContactViewPage> {
       onTap: () {
         if (displayingOverlay) {
           Navigator.pop(ctx);
+        } else {
+          if (deletePressed) {
+            setState(() {
+              deletePressed = false;
+            });
+          }
         }
       },
       child: Scaffold(

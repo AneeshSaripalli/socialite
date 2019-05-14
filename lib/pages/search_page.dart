@@ -60,13 +60,18 @@ class _ContactSearchPageState extends State<ContactSearchPage> {
     return SearchTile(contact: contact, googleId: widget.googleId);
   }
 
+  final int alpha = 150;
+
   ListView _buildListView(BuildContext ctx) {
     final array = [
-      Colors.yellow,
-      Colors.pink,
-      Colors.green,
-      Colors.teal,
-      Colors.red
+      Colors.green.withAlpha(alpha),
+      Colors.yellow.withAlpha(alpha),
+      Colors.pink.withAlpha(alpha),
+      Colors.teal.withAlpha(alpha),
+      Colors.deepPurple.withAlpha(alpha),
+      Colors.orange.withAlpha(alpha),
+      Colors.red.withAlpha(alpha),
+      Colors.blue.withAlpha(alpha),
     ];
 
     return ListView.builder(
@@ -74,10 +79,10 @@ class _ContactSearchPageState extends State<ContactSearchPage> {
         itemBuilder: (BuildContext context, int index) {
           Color gradientColor = array[index % array.length];
 
-          return Container(
-              margin: EdgeInsets.all(10.0),
+          return Column(children: <Widget>[
+            Container(
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10.0),
+                borderRadius: BorderRadius.circular(7.0),
                 border: Border.all(color: Colors.white54),
                 gradient:
                     LinearGradient(colors: [Colors.black87, gradientColor]),
@@ -86,7 +91,12 @@ class _ContactSearchPageState extends State<ContactSearchPage> {
                 children: <Widget>[
                   _buildListTile(ctx, index),
                 ],
-              ));
+              ),
+            ),
+            SizedBox(
+              height: 4,
+            )
+          ]);
         });
   }
 
@@ -103,7 +113,9 @@ class _ContactSearchPageState extends State<ContactSearchPage> {
 
   Widget _buildBody(BuildContext ctx) {
     return Container(
-      alignment: Alignment.center,
+      alignment: Alignment.topLeft,
+      decoration: BoxDecoration(
+          gradient: LinearGradient(colors: [Colors.black12, Colors.black87])),
       margin: EdgeInsets.only(top: 50, bottom: 10.0),
       child: Column(children: <Widget>[
         Text(
@@ -112,7 +124,6 @@ class _ContactSearchPageState extends State<ContactSearchPage> {
         ),
         SizedBox(height: 10),
         Container(
-          padding: EdgeInsets.all(5.0),
           child: SearchBar(
             onChanged: _handleSearchTextChange,
           ),

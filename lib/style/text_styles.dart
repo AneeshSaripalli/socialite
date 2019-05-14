@@ -23,3 +23,15 @@ final TextStyle searchTileLastNameStyle =
 
 final TextStyle searchTileFirstNameStyle =
     TextStyle(fontFamily: 'Montserrat', color: Colors.white70, fontSize: 18.0);
+
+final TextStyle confirm =
+    TextStyle(fontFamily: 'Montserrat', color: Colors.green, fontSize: 18.0);
+
+final TextStyle deny =
+    TextStyle(fontFamily: 'Montserrat', color: Colors.red, fontSize: 18.0);
+
+final TextStyle confirmTitleStyle =
+    TextStyle(fontFamily: 'Montserrat', color: Colors.teal, fontSize: 18.0);
+
+final TextStyle confirmContentStyle =
+    TextStyle(fontFamily: 'Montserrat', color: Colors.white, fontSize: 14.0);
