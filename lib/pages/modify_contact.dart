@@ -36,6 +36,8 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
 
     print(_nameField.info);
 
+    String name = _nameField.info;
+
     String firstName, lastName;
     firstName = nameSplit.length != 0 ? nameSplit[0] : null;
     lastName = nameSplit.length > 0 ? nameSplit[1] : null;
@@ -48,6 +50,7 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
         : widget.contact.id;
 
     Contact contact = Contact(
+      name: name,
       description: desc,
       firstName: firstName,
       lastName: lastName,

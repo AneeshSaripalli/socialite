@@ -212,6 +212,16 @@ class _ContactViewPageState extends State<ContactViewPage> {
 
     Stack body = Stack(children: <Widget>[_buildBody(ctx)]);
 
+    Dismissible contactView = Dismissible(
+        key: new GlobalKey(),
+        direction: DismissDirection.startToEnd,
+        onDismissed: (dir) {
+          if (dir == DismissDirection.startToEnd) {
+            Navigator.pop(ctx);
+          }
+        },
+        child: body);
+
     if (waitingOnDBResponse || dbDeleteResponse != null) {
       body.children.add(_dbOverlay(ctx));
       displayingOverlay = true;
@@ -228,21 +238,9 @@ class _ContactViewPageState extends State<ContactViewPage> {
           Navigator.pop(ctx);
         }
       },
-      onHorizontalDragStart: (details) {
-        print("Popping cause swipe");
-        Navigator.pop(ctx);
-      },
       child: Scaffold(
         appBar: _buildAppBar(ctx),
-        body: Dismissible(
-            key: new GlobalKey(),
-            direction: DismissDirection.startToEnd,
-            onDismissed: (dir) {
-              if (dir == DismissDirection.startToEnd) {
-                Navigator.pop(ctx);
-              }
-            },
-            child: body),
+        body: contactView,
       ),
     );
   }

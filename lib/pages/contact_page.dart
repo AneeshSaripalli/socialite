@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:random_string/random_string.dart';
 import 'package:socialite/database/firestore/firestore.dart';
 import 'package:socialite/widgets/contact_list.dart';
+import 'package:socialite/widgets/search_bar.dart';
 
 import '../models/contact.dart';
 
@@ -14,7 +15,10 @@ class ContactPage extends StatefulWidget {
 
 class _ContactPageState extends State<ContactPage> {
   List<Contact> contactList;
+  List<Contact> displayList;
   bool needToRefresh = true;
+
+  String searchText = "";
 
   List<Contact> genRandomContacts(int length) {
     List<Contact> cList = List<Contact>();
@@ -25,6 +29,7 @@ class _ContactPageState extends State<ContactPage> {
           lastName: randomString(10),
           firstName: randomString(10),
           id: randomString(10),
+          name: randomString(20),
           phoneNumber: randomString(10)));
     }
 
@@ -46,20 +51,18 @@ class _ContactPageState extends State<ContactPage> {
 
   void _handleAddContactPress(BuildContext ctx) {
     Navigator.pushNamed(ctx, '/add_contact').then((value) {
-      setState(() {
-        needToRefresh = true;
-        _syncContactList();
-      });
+      print("Refreshing contact list after popping overlay");
+      _updateContactList();
     });
   }
 
   FloatingActionButton _buildAddContactBtn(BuildContext ctx) {
     return FloatingActionButton(
       onPressed: () => _handleAddContactPress(ctx),
-      backgroundColor: Colors.teal,
+      backgroundColor: Colors.black54,
       child: Icon(
         Icons.add,
-        color: Colors.white70,
+        color: Colors.teal,
       ),
     );
   }
@@ -77,6 +80,16 @@ class _ContactPageState extends State<ContactPage> {
   @override
   void initState() {
     _syncContactList();
+    super.initState();
+  }
+
+  void _handleSearchTextChange(String queryText) {
+    print(queryText);
+    setState(() {
+      print("Setting searchText to " + queryText);
+      searchText = queryText;
+      _updateFilterList();
+    });
   }
 
   Widget _buildBody(BuildContext ctx) {
@@ -86,7 +99,13 @@ class _ContactPageState extends State<ContactPage> {
       optionalContactList =
           Center(child: Container(child: CircularProgressIndicator()));
     } else {
-      optionalContactList = ContactList(contacts: contactList);
+      optionalContactList = Column(children: <Widget>[
+        Container(
+          child: SearchBar(onChanged: _handleSearchTextChange),
+          margin: EdgeInsets.only(bottom: 10, top: 5, left: 3, right: 3),
+        ),
+        Expanded(child: ContactList(contacts: displayList))
+      ]);
     }
 
     return Container(
@@ -95,6 +114,26 @@ class _ContactPageState extends State<ContactPage> {
           gradient: LinearGradient(colors: [Colors.black, Colors.teal]),
         ),
         child: optionalContactList);
+  }
+
+  bool _filterFunction(Contact c) {
+    final bool firstName =
+        c.firstName.toLowerCase().contains(searchText.toLowerCase());
+    final bool lastName =
+        c.lastName.toLowerCase().contains(searchText.toLowerCase());
+    final bool phoneNumber =
+        c.phoneNumber.toLowerCase().contains(searchText.toLowerCase());
+
+    return firstName || lastName || phoneNumber;
+  }
+
+  void _updateFilterList() {
+    print("Filtering with search " + searchText);
+    List<Contact> filterList =
+        this.contactList.where((c) => _filterFunction(c)).toList();
+    setState(() {
+      displayList = filterList;
+    });
   }
 
   Future<void> _updateContactList() async {
@@ -107,6 +146,7 @@ class _ContactPageState extends State<ContactPage> {
 
     setState(() {
       this.contactList = contactList;
+      _updateFilterList();
     });
   }
 
@@ -119,22 +159,15 @@ class _ContactPageState extends State<ContactPage> {
   Widget build(BuildContext ctx) {
     _syncContactList();
 
-    return GestureDetector(
-      onDoubleTap: () {
-        setState(() {
-          needToRefresh = true;
-        });
-      },
-      child: Scaffold(
-        appBar: _buildAppBar(ctx),
-        body: RefreshIndicator(
-          child: _buildBody(ctx),
-          onRefresh: () {
-            return _updateContactList();
-          },
-        ),
-        floatingActionButton: _buildAddContactBtn(ctx),
+    return Scaffold(
+      appBar: _buildAppBar(ctx),
+      body: RefreshIndicator(
+        child: _buildBody(ctx),
+        onRefresh: () {
+          return _updateContactList();
+        },
       ),
+      floatingActionButton: _buildAddContactBtn(ctx),
     );
   }
 }

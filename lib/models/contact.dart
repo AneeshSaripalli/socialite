@@ -3,12 +3,14 @@ import "package:flutter/material.dart";
 class Contact {
   final String firstName;
   final String lastName;
+  final String name;
   final String description;
   final String phoneNumber;
   final String id;
 
   Contact(
       {@required this.id,
+      @required this.name,
       @required this.firstName,
       @required this.lastName,
       @required this.description,
@@ -21,6 +23,7 @@ class Contact {
           lastName: data['lname'],
           description: data['desc'],
           phoneNumber: data['number'],
+          name: data['name'],
         );
 
   Map<String, dynamic> toMap() {
@@ -30,6 +33,7 @@ class Contact {
       "lname": lastName,
       "desc": description,
       "number": phoneNumber,
+      "name": name,
     };
   }
 }

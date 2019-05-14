@@ -7,7 +7,7 @@ import '../../models/contact.dart';
 class FirestoreDB {
   static final FirestoreDB _singleton = FirestoreDB._internal();
 
-  FirestoreDB._internal() {}
+  FirestoreDB._internal();
 
   final CollectionReference contacts =
       Firestore.instance.collection('contacts');
