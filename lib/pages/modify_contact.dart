@@ -204,10 +204,15 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
   bool _evaluateDataChanged() {
     bool changed = false;
 
-    changed |= _initialDesc != _descriptionField.info;
-    changed |= _initialEmail != _emailField.info;
-    changed |= _initialName != _nameField.info;
-    changed |= _initialPhone != _phoneField.info;
+    final bool descChanged = _initialDesc != _descriptionField.info;
+    final bool emailChanged = _initialEmail != _emailField.info;
+    final bool nameChanged = _initialName != _nameField.info;
+    final bool phoneChanged = _initialPhone != _phoneField.info;
+
+    print(
+        "Desc $descChanged, Email $emailChanged, Name $nameChanged, Phone $phoneChanged");
+
+    changed = descChanged || emailChanged || nameChanged || phoneChanged;
 
     return changed;
   }
@@ -306,8 +311,9 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
 
   Future<bool> _handleOnWillPop(BuildContext ctx) async {
     bool response;
-    if (!displayBackConfirmation) {
+    if (_evaluateDataChanged() && !displayBackConfirmation) {
       setState(() {
+        dataChanged = true;
         displayBackConfirmation = true;
       });
 
@@ -325,6 +331,10 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
         "Just checkin'",
         style: confirmTitleStyle,
       ),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10),
+      ),
+      backgroundColor: Colors.black87,
       content: Text(
         "You have some unsaved changes. Are you sure you want to leave?",
         style: confirmContentStyle,
