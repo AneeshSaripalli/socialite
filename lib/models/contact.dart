@@ -7,6 +7,7 @@ class Contact {
   final String description;
   final String phoneNumber;
   final String id;
+  final String email;
 
   Contact(
       {@required this.id,
@@ -14,7 +15,8 @@ class Contact {
       @required this.firstName,
       @required this.lastName,
       @required this.description,
-      @required this.phoneNumber});
+      @required this.phoneNumber,
+      @required this.email});
 
   Contact.fromMap(Map<String, dynamic> data)
       : this(
@@ -24,6 +26,7 @@ class Contact {
           description: data['desc'],
           phoneNumber: data['number'],
           name: data['name'],
+          email: data['email'],
         );
 
   Map<String, dynamic> toMap() {
@@ -34,6 +37,7 @@ class Contact {
       "desc": description,
       "number": phoneNumber,
       "name": name,
+      "email": email,
     };
   }
 }

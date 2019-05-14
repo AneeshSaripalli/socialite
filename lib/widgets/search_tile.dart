@@ -38,26 +38,22 @@ class SearchTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext ctx) {
-    ImageProvider img = imgURL == null
-        ? AssetImage('assets/images/unknown_contact_1.png')
-        : NetworkImage(imgURL);
-
     return RaisedButton(
       color: Colors.transparent,
       onPressed: () => _handleContactBtnPress(ctx),
       child: ListTile(
-        dense: true,
         title: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             CircleAvatar(
                 radius: iconRadius,
                 backgroundImage:
-                    AssetImage("assets/images/unknown_contact_2.png")),
+                    AssetImage("assets/images/unknown_contact_1.png")),
             SizedBox(
               width: buffer,
             ),
-            Text(contact.lastName, style: searchTileLastNameStyle),
-            Text(", " + contact.firstName, style: searchTileFirstNameStyle),
+            Text(contact.firstName + " " + contact.lastName,
+                style: searchTileLastNameStyle),
           ],
         ),
         subtitle: Row(children: <Widget>[
@@ -68,8 +64,9 @@ class SearchTile extends StatelessWidget {
               style: TextStyle(
                   fontFamily: 'Montserrat',
                   fontSize: 14.0,
-                  color: Colors.white,
-                  decoration: TextDecoration.underline)),
+                  color: Colors.white70,
+                  decoration: TextDecoration.underline,
+                  decorationStyle: TextDecorationStyle.solid)),
         ]),
       ),
     );

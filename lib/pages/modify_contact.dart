@@ -23,6 +23,7 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
   InfoFieldMultiLine _nameField; // contains full name of contact
   InfoFieldMultiLine _phoneField; // contains phone number for contact
   InfoFieldMultiLine _descriptionField; // contains description of person
+  InfoFieldMultiLine _emailField;
 
   // state variables related to FirestoreDB transaction status
   bool waitingOnDBResponse =
@@ -51,6 +52,8 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
         ? FirestoreDB().generateContactID()
         : widget.contact.id;
 
+    String email = _emailField.info;
+
     Contact contact = Contact(
       name: name,
       description: desc,
@@ -58,6 +61,7 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
       lastName: lastName,
       id: contactID,
       phoneNumber: phoneNumber,
+      email: email,
     );
 
     print(contact.toMap());
@@ -109,6 +113,16 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
       prefixIcon: Icons.person,
       initialText: widget.contact.firstName + " " + widget.contact.lastName,
     );
+    _emailField = InfoFieldMultiLine(
+      inputLabelString: "Enter Email.",
+      labelString: "Email",
+      textInputType: TextInputType.emailAddress,
+      hintString: "johndoe@gmail.com",
+      helperString: "Homie's email",
+      textCapitalization: TextCapitalization.words,
+      prefixIcon: Icons.email,
+      initialText: widget.contact.email,
+    );
   }
 
   void _initialInputFieldsWithoutInitialValues() {
@@ -139,6 +153,15 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
       helperString: "That there person's name",
       textCapitalization: TextCapitalization.words,
       prefixIcon: Icons.person,
+    );
+    _emailField = InfoFieldMultiLine(
+      inputLabelString: "Enter Email.",
+      labelString: "Email",
+      textInputType: TextInputType.text,
+      hintString: "johndoe@gmail.com",
+      helperString: "Homie's email",
+      textCapitalization: TextCapitalization.words,
+      prefixIcon: Icons.email,
     );
   }
 
@@ -171,14 +194,26 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
       children: <Widget>[
         Container(
           child: _nameField,
-          margin: EdgeInsets.only(top: 10),
           padding: EdgeInsets.all(5),
         ),
         Divider(color: Colors.white70),
-        _phoneField,
+        SizedBox(height: 10),
+        Container(
+          child: _phoneField,
+          padding: EdgeInsets.all(5),
+        ),
         Divider(color: Colors.white70),
         SizedBox(height: 10),
-        _descriptionField,
+        Container(
+          child: _emailField,
+          padding: EdgeInsets.all(5),
+        ),
+        Divider(color: Colors.white70),
+        SizedBox(height: 10),
+        Container(
+          child: _descriptionField,
+          padding: EdgeInsets.all(5),
+        ),
         Container(
           child: SizedBox(
             child: _buildSubmitButton(context),
