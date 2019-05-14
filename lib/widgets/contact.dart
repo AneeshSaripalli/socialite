@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../models/contact.dart';
 
 import './contact_view.dart';
+import '../models/contact.dart';
 
 class ContactWidget extends StatelessWidget {
   final Contact contact;
@@ -11,7 +11,7 @@ class ContactWidget extends StatelessWidget {
 
   _handleContactPress(BuildContext ctx) {
     Navigator.push(ctx,
-        MaterialPageRoute(builder: (ctx) => ContactView(contact: contact)));
+        MaterialPageRoute(builder: (ctx) => ContactViewPage(contact: contact)));
   }
 
   @override

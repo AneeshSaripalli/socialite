@@ -13,7 +13,7 @@ class ContactPage extends StatefulWidget {
 }
 
 class _ContactPageState extends State<ContactPage> {
-  List<Contact> contactList = [];
+  List<Contact> contactList;
   bool needToRefresh = true;
 
   List<Contact> genRandomContacts(int length) {
@@ -36,7 +36,7 @@ class _ContactPageState extends State<ContactPage> {
       preferredSize: Size.fromHeight(50),
       child: AppBar(
         title: Text(
-          "Contact List",
+          "Homie List",
           style: TextStyle(fontFamily: 'Montserrat', fontSize: 18.0),
         ),
         backgroundColor: Colors.teal,
@@ -45,7 +45,12 @@ class _ContactPageState extends State<ContactPage> {
   }
 
   void _handleAddContactPress(BuildContext ctx) {
-    Navigator.pushNamed(ctx, '/add_contact');
+    Navigator.pushNamed(ctx, '/add_contact').then((value) {
+      setState(() {
+        needToRefresh = true;
+        _syncContactList();
+      });
+    });
   }
 
   FloatingActionButton _buildAddContactBtn(BuildContext ctx) {
@@ -77,12 +82,11 @@ class _ContactPageState extends State<ContactPage> {
   Widget _buildBody(BuildContext ctx) {
     Widget optionalContactList;
 
-    if (contactList.length == 0) {
+    if (contactList == null) {
       optionalContactList =
           Center(child: Container(child: CircularProgressIndicator()));
     } else {
-      optionalContactList =
-          ContactList(contacts: contactList.length == 0 ? [] : contactList);
+      optionalContactList = ContactList(contacts: contactList);
     }
 
     return Container(

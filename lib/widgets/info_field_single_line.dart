@@ -7,16 +7,20 @@ class InfoFieldSingleLine extends StatefulWidget {
   final String hintString;
   final String helperString;
 
-  final TextInputType textInputType;
-  final bool autocorrect;
-
   final TextCapitalization textCapitalization;
+
+  final TextInputType textInputType;
+
+  final IconData prefixIcon;
+
+  final bool autocorrect;
 
   String _infoData = "";
 
   InfoFieldSingleLine({
     @required this.labelString,
     @required this.inputLabelString,
+    @required this.prefixIcon,
     this.textInputType = TextInputType.text,
     this.textCapitalization = TextCapitalization.none,
     this.autocorrect = false,
@@ -71,8 +75,8 @@ class _InfoFieldState extends State<InfoFieldSingleLine> {
           hintText: widget.hintString,
           helperText: widget.helperString,
           labelText: widget.labelString,
-          prefixIcon: const Icon(
-            Icons.person,
+          prefixIcon: Icon(
+            widget.prefixIcon,
             color: Colors.green,
           ),
         ),
@@ -80,8 +84,8 @@ class _InfoFieldState extends State<InfoFieldSingleLine> {
     );
 
     final Widget sep = Container(
-        height: 50.0,
-        width: 3.0,
+        height: 30.0,
+        width: 2.0,
         color: Colors.teal,
         margin: const EdgeInsets.symmetric(horizontal: 12.0));
 
