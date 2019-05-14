@@ -23,6 +23,12 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
   InfoFieldMultiLine _nameField; // contains full name of contact
   InfoFieldMultiLine _phoneField; // contains phone number for contact
   InfoFieldMultiLine _descriptionField; // contains description of person
+  InfoFieldMultiLine _emailField;
+
+  String _initialName;
+  String _initialPhone;
+  String _initialDesc;
+  String _initialEmail;
 
   // state variables related to FirestoreDB transaction status
   bool waitingOnDBResponse =
@@ -30,6 +36,8 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
   bool dbResponseSuccess; // signifies whether or not the db succeeded
 
   bool dataChanged = false;
+
+  bool displayBackConfirmation = false;
 
   _handleUploadPress(BuildContext context) async {
     setState(() {
@@ -51,6 +59,8 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
         ? FirestoreDB().generateContactID()
         : widget.contact.id;
 
+    String email = _emailField.info;
+
     Contact contact = Contact(
       name: name,
       description: desc,
@@ -58,9 +68,8 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
       lastName: lastName,
       id: contactID,
       phoneNumber: phoneNumber,
+      email: email,
     );
-
-    print(contact.toMap());
 
     FirestoreDB()
         .pushContactToContactsList(contact, widget.googleId)
@@ -78,6 +87,11 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
   }
 
   void _initializeInputFieldsWithInitialValues() {
+    _initialName = widget.contact.name;
+    _initialPhone = widget.contact.phoneNumber;
+    _initialDesc = widget.contact.description;
+    _initialEmail = widget.contact.email;
+
     _descriptionField = InfoFieldMultiLine(
       labelString: "Description",
       inputLabelString: "Enter Contact Description",
@@ -109,9 +123,21 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
       prefixIcon: Icons.person,
       initialText: widget.contact.firstName + " " + widget.contact.lastName,
     );
+    _emailField = InfoFieldMultiLine(
+      inputLabelString: "Enter Email.",
+      labelString: "Email",
+      textInputType: TextInputType.emailAddress,
+      hintString: "johndoe@gmail.com",
+      helperString: "Homie's email",
+      textCapitalization: TextCapitalization.words,
+      prefixIcon: Icons.email,
+      initialText: widget.contact.email,
+    );
   }
 
   void _initialInputFieldsWithoutInitialValues() {
+    _initialPhone = _initialName = _initialEmail = _initialDesc = "";
+
     _descriptionField = InfoFieldMultiLine(
       labelString: "Description",
       inputLabelString: "Enter Contact Description",
@@ -140,6 +166,15 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
       textCapitalization: TextCapitalization.words,
       prefixIcon: Icons.person,
     );
+    _emailField = InfoFieldMultiLine(
+      inputLabelString: "Enter Email.",
+      labelString: "Email",
+      textInputType: TextInputType.text,
+      hintString: "johndoe@gmail.com",
+      helperString: "Homie's email",
+      textCapitalization: TextCapitalization.words,
+      prefixIcon: Icons.email,
+    );
   }
 
   @override
@@ -166,19 +201,47 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
     );
   }
 
+  bool _evaluateDataChanged() {
+    bool changed = false;
+
+    final bool descChanged = _initialDesc != _descriptionField.info;
+    final bool emailChanged = _initialEmail != _emailField.info;
+    final bool nameChanged = _initialName != _nameField.info;
+    final bool phoneChanged = _initialPhone != _phoneField.info;
+
+    print(
+        "Desc $descChanged, Email $emailChanged, Name $nameChanged, Phone $phoneChanged");
+
+    changed = descChanged || emailChanged || nameChanged || phoneChanged;
+
+    return changed;
+  }
+
   Widget _buildInputForm(BuildContext context) {
     return ListView(
       children: <Widget>[
         Container(
           child: _nameField,
-          margin: EdgeInsets.only(top: 10),
           padding: EdgeInsets.all(5),
         ),
         Divider(color: Colors.white70),
-        _phoneField,
+        SizedBox(height: 10),
+        Container(
+          child: _phoneField,
+          padding: EdgeInsets.all(5),
+        ),
         Divider(color: Colors.white70),
         SizedBox(height: 10),
-        _descriptionField,
+        Container(
+          child: _emailField,
+          padding: EdgeInsets.all(5),
+        ),
+        Divider(color: Colors.white70),
+        SizedBox(height: 10),
+        Container(
+          child: _descriptionField,
+          padding: EdgeInsets.all(5),
+        ),
         Container(
           child: SizedBox(
             child: _buildSubmitButton(context),
@@ -246,6 +309,55 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
     );
   }
 
+  Future<bool> _handleOnWillPop(BuildContext ctx) async {
+    bool response;
+    if (_evaluateDataChanged() && !displayBackConfirmation) {
+      setState(() {
+        dataChanged = true;
+        displayBackConfirmation = true;
+      });
+
+      response = false;
+    } else {
+      response = true;
+    }
+
+    return response;
+  }
+
+  AlertDialog _buildUnsavedChangesWarning(BuildContext ctx) {
+    return AlertDialog(
+      title: Text(
+        "Just checkin'",
+        style: confirmTitleStyle,
+      ),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10),
+      ),
+      backgroundColor: Colors.black87,
+      content: Text(
+        "You have some unsaved changes. Are you sure you want to leave?",
+        style: confirmContentStyle,
+      ),
+      actions: <Widget>[
+        FlatButton(
+          child: Text("Leave anyway", style: deny),
+          onPressed: () {
+            Navigator.of(ctx).pop(false);
+          },
+        ),
+        FlatButton(
+          child: Text("Stay", style: confirm),
+          onPressed: () {
+            setState(() {
+              displayBackConfirmation = false;
+            });
+          },
+        )
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext ctx) {
     bool displayingOverlay = false;
@@ -257,16 +369,25 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
       displayingOverlay = true;
     }
 
-    return GestureDetector(
-      onTap: () {
-        if (displayingOverlay && dbResponseSuccess != null) {
-          Navigator.of(ctx).pop(dataChanged);
-        }
-      },
-      child: Scaffold(
-        appBar: _buildAppBar(ctx),
-        body: body,
-      ),
-    );
+    if (displayBackConfirmation) {
+      AlertDialog confirmBack = _buildUnsavedChangesWarning(ctx);
+      body.children.add(confirmBack);
+    }
+
+    return WillPopScope(
+        onWillPop: () {
+          return _handleOnWillPop(ctx);
+        },
+        child: GestureDetector(
+          onTap: () {
+            if (displayingOverlay && dbResponseSuccess != null) {
+              Navigator.of(ctx).pop(dataChanged);
+            }
+          },
+          child: Scaffold(
+            appBar: _buildAppBar(ctx),
+            body: body,
+          ),
+        ));
   }
 }
