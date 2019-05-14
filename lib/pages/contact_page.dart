@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:random_string/random_string.dart';
 import 'package:socialite/database/firestore/firestore.dart';
+import 'package:socialite/pages/search_page.dart';
 import 'package:socialite/widgets/contact_list.dart';
-import 'package:socialite/widgets/search_bar.dart';
 
 import '../models/contact.dart';
 
@@ -15,10 +15,7 @@ class ContactPage extends StatefulWidget {
 
 class _ContactPageState extends State<ContactPage> {
   List<Contact> contactList;
-  List<Contact> displayList;
   bool needToRefresh = true;
-
-  String searchText = "";
 
   List<Contact> genRandomContacts(int length) {
     List<Contact> cList = List<Contact>();
@@ -44,14 +41,29 @@ class _ContactPageState extends State<ContactPage> {
           "Homie List",
           style: TextStyle(fontFamily: 'Montserrat', fontSize: 18.0),
         ),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () {
+              print("Fuzzy search pressed");
+              _handleSearchPress(ctx);
+            },
+          )
+        ],
         backgroundColor: Colors.teal,
       ),
     );
   }
 
+  void _handleSearchPress(BuildContext ctx) {
+    Navigator.push(
+        ctx,
+        MaterialPageRoute(
+            builder: (ctx) => ContactSearchPage(contactList: contactList)));
+  }
+
   void _handleAddContactPress(BuildContext ctx) {
     Navigator.pushNamed(ctx, '/add_contact').then((value) {
-      print("Refreshing contact list after popping overlay");
       _updateContactList();
     });
   }
@@ -83,15 +95,6 @@ class _ContactPageState extends State<ContactPage> {
     super.initState();
   }
 
-  void _handleSearchTextChange(String queryText) {
-    print(queryText);
-    setState(() {
-      print("Setting searchText to " + queryText);
-      searchText = queryText;
-      _updateFilterList();
-    });
-  }
-
   Widget _buildBody(BuildContext ctx) {
     Widget optionalContactList;
 
@@ -99,13 +102,7 @@ class _ContactPageState extends State<ContactPage> {
       optionalContactList =
           Center(child: Container(child: CircularProgressIndicator()));
     } else {
-      optionalContactList = Column(children: <Widget>[
-        Container(
-          child: SearchBar(onChanged: _handleSearchTextChange),
-          margin: EdgeInsets.only(bottom: 10, top: 5, left: 3, right: 3),
-        ),
-        Expanded(child: ContactList(contacts: displayList))
-      ]);
+      optionalContactList = ContactList(contacts: contactList);
     }
 
     return Container(
@@ -116,29 +113,7 @@ class _ContactPageState extends State<ContactPage> {
         child: optionalContactList);
   }
 
-  bool _filterFunction(Contact c) {
-    final bool firstName =
-        c.firstName.toLowerCase().contains(searchText.toLowerCase());
-    final bool lastName =
-        c.lastName.toLowerCase().contains(searchText.toLowerCase());
-    final bool phoneNumber =
-        c.phoneNumber.toLowerCase().contains(searchText.toLowerCase());
-
-    return firstName || lastName || phoneNumber;
-  }
-
-  void _updateFilterList() {
-    print("Filtering with search " + searchText);
-    List<Contact> filterList =
-        this.contactList.where((c) => _filterFunction(c)).toList();
-    setState(() {
-      displayList = filterList;
-    });
-  }
-
   Future<void> _updateContactList() async {
-    print("Update contact list called");
-
     List<Map<String, dynamic>> dbData = await FirestoreDB().getContactsFromDB();
     List<Contact> contactList = dbData.map((record) {
       return Contact.fromMap(record);
@@ -146,7 +121,6 @@ class _ContactPageState extends State<ContactPage> {
 
     setState(() {
       this.contactList = contactList;
-      _updateFilterList();
     });
   }
 
