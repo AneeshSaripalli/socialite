@@ -8,8 +8,12 @@ class ContactViewPage extends StatefulWidget {
   final Contact contact;
 
   final GlobalKey key = GlobalKey(debugLabel: "ContactViewDismissibleKey");
+  final String googleId;
 
-  ContactViewPage({@required this.contact});
+  final VoidCallback editCallback;
+
+  ContactViewPage(
+      {@required this.contact, @required this.googleId, this.editCallback});
 
   @override
   State<ContactViewPage> createState() => _ContactViewPageState();
@@ -45,10 +49,14 @@ class _ContactViewPageState extends State<ContactViewPage> {
 
   void _handleEditBtnPress(BuildContext ctx) {
     print("want to edit");
+    if (widget.editCallback != null) widget.editCallback();
     Navigator.push(
         ctx,
         MaterialPageRoute(
-            builder: (ctx) => ModifyContactPage(contact: widget.contact)));
+            builder: (ctx) => ModifyContactPage(
+                  contact: widget.contact,
+                  googleId: widget.googleId,
+                )));
   }
 
   void _handleDeleteContactPress(BuildContext ctx) {

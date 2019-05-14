@@ -1,14 +1,25 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:random_string/random_string.dart';
 import 'package:socialite/database/firestore/firestore.dart';
+import 'package:socialite/pages/modify_contact.dart';
 import 'package:socialite/pages/search_page.dart';
 import 'package:socialite/widgets/contact_list.dart';
 
 import '../models/contact.dart';
+import 'auth_page.dart';
 
 class ContactPage extends StatefulWidget {
+  final GoogleSignIn _googleSignIn = GoogleSignIn(
+    scopes: <String>[
+      'email',
+      'https://www.googleapis.com/auth/contacts.readonly',
+    ],
+  );
+
   @override
   State<ContactPage> createState() => _ContactPageState();
 }
@@ -16,6 +27,11 @@ class ContactPage extends StatefulWidget {
 class _ContactPageState extends State<ContactPage> {
   List<Contact> contactList;
   bool needToRefresh = true;
+
+  bool signInActive = false;
+  GoogleSignInAccount _account;
+
+  GoogleAuthWidget signIn;
 
   List<Contact> genRandomContacts(int length) {
     List<Contact> cList = List<Contact>();
@@ -63,7 +79,11 @@ class _ContactPageState extends State<ContactPage> {
   }
 
   void _handleAddContactPress(BuildContext ctx) {
-    Navigator.pushNamed(ctx, '/add_contact').then((value) {
+    Navigator.push(
+            ctx,
+            MaterialPageRoute(
+                builder: (ctx) => ModifyContactPage(googleId: _account.id)))
+        .then((value) {
       _updateContactList();
     });
   }
@@ -92,17 +112,35 @@ class _ContactPageState extends State<ContactPage> {
   @override
   void initState() {
     _syncContactList();
+
+    if (!signInActive) {
+      signIn = GoogleAuthWidget(
+        googleSignIn: widget._googleSignIn,
+        signInCallBack: _handleSignIn,
+      );
+      signInActive = true;
+    }
     super.initState();
+  }
+
+  void _handleEditCallback() {
+    setState(() {
+      needToRefresh = true;
+    });
   }
 
   Widget _buildBody(BuildContext ctx) {
     Widget optionalContactList;
 
-    if (contactList == null) {
+    if (contactList == null || _account == null) {
       optionalContactList =
           Center(child: Container(child: CircularProgressIndicator()));
     } else {
-      optionalContactList = ContactList(contacts: contactList);
+      optionalContactList = ContactList(
+        contacts: contactList,
+        googleId: _account.id,
+        editCallback: _handleEditCallback,
+      );
     }
 
     return Container(
@@ -114,14 +152,21 @@ class _ContactPageState extends State<ContactPage> {
   }
 
   Future<void> _updateContactList() async {
-    List<Map<String, dynamic>> dbData = await FirestoreDB().getContactsFromDB();
-    List<Contact> contactList = dbData.map((record) {
-      return Contact.fromMap(record);
-    }).toList();
+    if (_account != null) {
+      List<Map<String, dynamic>> dbData =
+          await FirestoreDB().getContactsFromDB(_account.id);
+      List<Contact> contactList = dbData.map((record) {
+        return Contact.fromMap(record);
+      }).toList();
 
-    setState(() {
-      this.contactList = contactList;
-    });
+      setState(() {
+        this.contactList = contactList;
+      });
+    } else {
+      setState(() {
+        this.contactList = [];
+      });
+    }
   }
 
   @override
@@ -129,19 +174,50 @@ class _ContactPageState extends State<ContactPage> {
     super.didUpdateWidget(oldPage);
   }
 
+  void _handleSignIn(GoogleSignInAccount acc) {
+    print(acc.id);
+    setState(() {
+      _account = acc;
+      _updateContactList();
+    });
+  }
+
+  void _handleSignOut(VoidCallback postSignOut) {
+    widget._googleSignIn.signOut().then((acc) => postSignOut());
+  }
+
   @override
   Widget build(BuildContext ctx) {
     _syncContactList();
 
-    return Scaffold(
-      appBar: _buildAppBar(ctx),
-      body: RefreshIndicator(
-        child: _buildBody(ctx),
-        onRefresh: () {
-          return _updateContactList();
-        },
-      ),
-      floatingActionButton: _buildAddContactBtn(ctx),
+    Stack pageContent = Stack(
+      children: <Widget>[],
     );
+
+    if (_account == null) {
+      pageContent.children.add(signIn);
+    }
+    Widget contactPageWidget = WillPopScope(
+      onWillPop: () {
+        print("popping");
+        _handleSignOut(() {
+          print("Signin out");
+          SystemNavigator.pop();
+        });
+      },
+      child: Scaffold(
+        appBar: _buildAppBar(ctx),
+        body: RefreshIndicator(
+          child: _buildBody(ctx),
+          onRefresh: () {
+            return _updateContactList();
+          },
+        ),
+        floatingActionButton: _buildAddContactBtn(ctx),
+      ),
+    );
+
+    pageContent.children.add(contactPageWidget);
+    return pageContent;
   }
 }

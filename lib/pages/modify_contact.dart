@@ -9,7 +9,9 @@ import '../widgets/info_field_multi_line.dart';
 class ModifyContactPage extends StatefulWidget {
   final Contact contact;
 
-  ModifyContactPage({this.contact});
+  final String googleId;
+
+  ModifyContactPage({@required this.googleId, this.contact});
 
   @override
   _ModifyContactPageState createState() => _ModifyContactPageState();
@@ -33,8 +35,6 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
     });
 
     var nameSplit = _nameField.info.split(" ");
-
-    print(_nameField.info);
 
     String name = _nameField.info;
 
@@ -60,7 +60,9 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
 
     print(contact.toMap());
 
-    FirestoreDB().pushContactToContactsList(contact).then((ref) {
+    FirestoreDB()
+        .pushContactToContactsList(contact, widget.googleId)
+        .then((ref) {
       setState(() {
         waitingOnDBResponse = false;
         dbResponseSuccess = true;

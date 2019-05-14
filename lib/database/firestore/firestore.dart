@@ -9,15 +9,14 @@ class FirestoreDB {
 
   FirestoreDB._internal();
 
-  final CollectionReference contacts =
-      Firestore.instance.collection('contacts');
+  final CollectionReference users = Firestore.instance.collection('users');
 
   factory FirestoreDB() {
     return _singleton;
   }
 
   String generateContactID() {
-    DocumentReference ref = contacts.document();
+    DocumentReference ref = users.document();
     return ref.documentID;
   }
 
@@ -27,7 +26,7 @@ class FirestoreDB {
     print("Deleting dbID " + dbId);
 
     try {
-      handle = contacts.document(dbId);
+      handle = users.document(dbId);
 
       if (handle == null) {
         return false;
@@ -44,12 +43,20 @@ class FirestoreDB {
     }
   }
 
-  Future<DocumentReference> pushContactToContactsList(Contact contact) async {
+  Future<DocumentReference> pushContactToContactsList(
+      Contact contact, String googleId) async {
     DocumentReference handle;
 
     try {
-      handle = contacts.document(contact.id);
-      await handle.setData(contact.toMap());
+      print(contact.id);
+      handle = users.document(googleId);
+
+      DocumentReference contactDocRef =
+          handle.collection("contacts").document(contact.id);
+
+      print(contactDocRef.path);
+
+      await contactDocRef.setData(contact.toMap());
     } catch (e) {
       print(e);
     }
@@ -57,12 +64,15 @@ class FirestoreDB {
     return handle;
   }
 
-  Future<List<Map<String, dynamic>>> getContactsFromDB() async {
-    QuerySnapshot snap = await contacts.getDocuments();
+  Future<List<Map<String, dynamic>>> getContactsFromDB(String googleId) async {
+    DocumentReference userData = users.document(googleId);
 
-    List<DocumentSnapshot> documents = snap.documents;
+    CollectionReference contactRef = userData.collection("contacts");
+    QuerySnapshot contacts = await contactRef.getDocuments();
 
-    return documents.map((DocumentSnapshot docSnap) {
+    List<DocumentSnapshot> dataList = contacts.documents;
+
+    return dataList.map((DocumentSnapshot docSnap) {
       return docSnap.data;
     }).toList();
   }

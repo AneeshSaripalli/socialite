@@ -25,8 +25,10 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-    
+
   random_string: 0.0.2
+  google_sign_in: "^3.0.4"
+  http:
 
 
 # For information on the generic Dart part of this file, see the
@@ -40,19 +42,19 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   fonts:
-  - family: Montserrat
-    fonts:
-      - asset:  assets/fonts/Montserrat/Montserrat-Regular.ttf
-      - asset:  assets/fonts/Montserrat/Montserrat-Bold.ttf
-      - asset:  assets/fonts/Montserrat/Montserrat-Thin.ttf
+    - family: Montserrat
+      fonts:
+        - asset:  assets/fonts/Montserrat/Montserrat-Regular.ttf
+        - asset:  assets/fonts/Montserrat/Montserrat-Bold.ttf
+        - asset:  assets/fonts/Montserrat/Montserrat-Thin.ttf
 
 
-  - family: Poppins
-    fonts:
-      - asset:  assets/fonts/Poppins/Poppins-Regular.ttf
-      - asset:  assets/fonts/Poppins/Poppins-Bold.ttf
-      - asset:  assets/fonts/Poppins/Poppins-Thin.ttf
-  
+    - family: Poppins
+      fonts:
+        - asset:  assets/fonts/Poppins/Poppins-Regular.ttf
+        - asset:  assets/fonts/Poppins/Poppins-Bold.ttf
+        - asset:  assets/fonts/Poppins/Poppins-Thin.ttf
+
   assets:
     - assets/images/
 

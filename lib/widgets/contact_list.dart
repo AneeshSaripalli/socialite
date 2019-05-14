@@ -8,7 +8,12 @@ import '../widgets/contact.dart';
 class ContactList extends StatelessWidget {
   final List<Contact> contacts;
 
-  ContactList({@required this.contacts});
+  final String googleId;
+
+  final VoidCallback editCallback;
+
+  ContactList(
+      {@required this.contacts, @required this.googleId, this.editCallback});
 
   ListView _buildContactList(BuildContext context) {
     return ListView.builder(
@@ -18,10 +23,12 @@ class ContactList extends StatelessWidget {
 
         if (Random().nextInt(2) == 0)
           ret = ContactWidget(
+              googleId: googleId,
               contact: contacts[index],
               imgURL: 'https://source.unsplash.com/random/144x144');
         else
           ret = ContactWidget(
+            googleId: googleId,
             contact: contacts[index],
           );
 

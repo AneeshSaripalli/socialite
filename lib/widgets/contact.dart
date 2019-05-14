@@ -7,11 +7,27 @@ class ContactWidget extends StatelessWidget {
   final Contact contact;
   final String imgURL;
 
-  ContactWidget({@required this.contact, this.imgURL});
+  final String googleId;
 
-  _handleContactPress(BuildContext ctx) {
-    Navigator.push(ctx,
-        MaterialPageRoute(builder: (ctx) => ContactViewPage(contact: contact)));
+  final VoidCallback editCallback;
+
+  ContactWidget(
+      {@required this.contact,
+      @required this.googleId,
+      this.imgURL,
+      this.editCallback});
+
+  // Handles contact press
+  // Navigates to ContactView page displaying details on the Contact
+  _handleContactBtnPress(BuildContext ctx) {
+    Navigator.push(
+        ctx,
+        MaterialPageRoute(
+            builder: (ctx) => ContactViewPage(
+                  contact: contact,
+                  googleId: googleId,
+                  editCallback: editCallback,
+                )));
   }
 
   @override
@@ -29,7 +45,7 @@ class ContactWidget extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             color: Colors.white12,
             onPressed: () {
-              _handleContactPress(ctx);
+              _handleContactBtnPress(ctx);
             },
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
