@@ -19,15 +19,15 @@ class ContactList extends StatelessWidget {
     return ListView.builder(
       itemCount: contacts.length,
       itemBuilder: (BuildContext context, int index) {
-        ContactWidget ret;
+        ContactTile ret;
 
         if (Random().nextInt(2) == 0)
-          ret = ContactWidget(
+          ret = ContactTile(
               googleId: googleId,
               contact: contacts[index],
               imgURL: 'https://source.unsplash.com/random/144x144');
         else
-          ret = ContactWidget(
+          ret = ContactTile(
             googleId: googleId,
             contact: contacts[index],
           );

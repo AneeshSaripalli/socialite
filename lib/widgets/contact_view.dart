@@ -3,6 +3,7 @@ import 'package:socialite/database/firestore/firestore.dart';
 import 'package:socialite/pages/modify_contact.dart';
 
 import '../models/contact.dart';
+import '../style/text_styles.dart';
 
 class ContactViewPage extends StatefulWidget {
   final Contact contact;
@@ -28,12 +29,6 @@ class _ContactViewPageState extends State<ContactViewPage> {
   bool deletePressed = false;
   bool deleteConfirmed = false;
 
-  final TextStyle overlayStyle =
-      TextStyle(fontFamily: "Montserrat", fontSize: 24, color: Colors.green);
-
-  final TextStyle appBarTitleStyle =
-      TextStyle(fontFamily: 'Montserrat', color: Colors.white, fontSize: 18.0);
-
   void _handleDeleteConfirmation(BuildContext ctx) async {
     setState(() {
       waitingOnDBResponse = true;
@@ -49,14 +44,17 @@ class _ContactViewPageState extends State<ContactViewPage> {
 
   void _handleEditBtnPress(BuildContext ctx) {
     print("want to edit");
-    if (widget.editCallback != null) widget.editCallback();
     Navigator.push(
-        ctx,
-        MaterialPageRoute(
-            builder: (ctx) => ModifyContactPage(
-                  contact: widget.contact,
-                  googleId: widget.googleId,
-                )));
+      ctx,
+      MaterialPageRoute(
+        builder: (ctx) => ModifyContactPage(
+              contact: widget.contact,
+              googleId: widget.googleId,
+            ),
+      ),
+    ).then((value) {
+      print(value);
+    });
   }
 
   void _handleDeleteContactPress(BuildContext ctx) {
@@ -242,7 +240,6 @@ class _ContactViewPageState extends State<ContactViewPage> {
     return GestureDetector(
       onTap: () {
         if (displayingOverlay) {
-          print("Popping off");
           Navigator.pop(ctx);
         }
       },

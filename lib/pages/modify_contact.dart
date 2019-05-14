@@ -29,6 +29,8 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
       false; // whether or not a transaction is currently in progress
   bool dbResponseSuccess; // signifies whether or not the db succeeded
 
+  bool dataChanged = false;
+
   _handleUploadPress(BuildContext context) async {
     setState(() {
       waitingOnDBResponse = true;
@@ -198,7 +200,7 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
       child: AppBar(
         title: Text(
           "Add Contact",
-          style: TextStyles.label,
+          style: label,
         ),
         backgroundColor: Colors.teal,
         actions: <Widget>[
@@ -258,7 +260,7 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
     return GestureDetector(
       onTap: () {
         if (displayingOverlay && dbResponseSuccess != null) {
-          Navigator.pop(ctx);
+          Navigator.of(ctx).pop(dataChanged);
         }
       },
       child: Scaffold(

@@ -77,7 +77,7 @@ class _InfoFieldStateMultiLine extends State<InfoFieldMultiLine> {
 
   @override
   Widget build(BuildContext context) {
-    final Widget descriptor = Text(widget.labelString, style: TextStyles.label);
+    final Widget descriptor = Text(widget.labelString, style: label);
     final Widget input = TextField(
       controller: _controller,
       onChanged: (String s) {

@@ -7,6 +7,7 @@ import 'package:random_string/random_string.dart';
 import 'package:socialite/database/firestore/firestore.dart';
 import 'package:socialite/pages/modify_contact.dart';
 import 'package:socialite/pages/search_page.dart';
+import 'package:socialite/style/text_styles.dart';
 import 'package:socialite/widgets/contact_list.dart';
 
 import '../models/contact.dart';
@@ -55,7 +56,7 @@ class _ContactPageState extends State<ContactPage> {
       child: AppBar(
         title: Text(
           "Homie List",
-          style: TextStyle(fontFamily: 'Montserrat', fontSize: 18.0),
+          style: appBarTitleStyle,
         ),
         actions: <Widget>[
           IconButton(
@@ -75,7 +76,10 @@ class _ContactPageState extends State<ContactPage> {
     Navigator.push(
         ctx,
         MaterialPageRoute(
-            builder: (ctx) => ContactSearchPage(contactList: contactList)));
+            builder: (ctx) => ContactSearchPage(
+                  contactList: contactList,
+                  googleId: _account.id,
+                )));
   }
 
   void _handleAddContactPress(BuildContext ctx) {
@@ -124,8 +128,9 @@ class _ContactPageState extends State<ContactPage> {
   }
 
   void _handleEditCallback() {
+    print("Edit called");
     setState(() {
-      needToRefresh = true;
+      _syncContactList();
     });
   }
 

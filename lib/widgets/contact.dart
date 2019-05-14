@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:socialite/style/text_styles.dart';
 
 import './contact_view.dart';
 import '../models/contact.dart';
 
-class ContactWidget extends StatelessWidget {
+class ContactTile extends StatelessWidget {
   final Contact contact;
   final String imgURL;
 
@@ -11,7 +12,7 @@ class ContactWidget extends StatelessWidget {
 
   final VoidCallback editCallback;
 
-  ContactWidget(
+  ContactTile(
       {@required this.contact,
       @required this.googleId,
       this.imgURL,
@@ -59,16 +60,9 @@ class ContactWidget extends StatelessWidget {
                 ),
                 Text(
                   contact.lastName,
-                  style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      color: Colors.teal,
-                      fontSize: 18.0),
+                  style: viewTileLastNameStyle,
                 ),
-                Text(", " + contact.firstName,
-                    style: TextStyle(
-                        fontFamily: 'Montserrat',
-                        color: Colors.white54,
-                        fontSize: 18.0)),
+                Text(", " + contact.firstName, style: viewTileFirstNameStyle),
               ],
             ),
           ),

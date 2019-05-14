@@ -58,7 +58,7 @@ class _InfoFieldState extends State<InfoFieldSingleLine> {
 
   @override
   Widget build(BuildContext context) {
-    final Widget descriptor = Text(widget.labelString, style: TextStyles.label);
+    final Widget descriptor = Text(widget.labelString, style: label);
     final Widget input = Expanded(
       child: TextField(
         onChanged: (String s) {

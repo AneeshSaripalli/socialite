@@ -1,14 +1,15 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:socialite/models/contact.dart';
-import 'package:socialite/widgets/contact.dart';
 import 'package:socialite/widgets/search_bar.dart';
+import 'package:socialite/widgets/search_tile.dart';
+
+import '../style/text_styles.dart';
 
 class ContactSearchPage extends StatefulWidget {
   final List<Contact> contactList;
+  final String googleId;
 
-  ContactSearchPage({@required this.contactList});
+  ContactSearchPage({@required this.contactList, @required this.googleId});
 
   @override
   State<ContactSearchPage> createState() => _ContactSearchPageState();
@@ -50,24 +51,43 @@ class _ContactSearchPageState extends State<ContactSearchPage> {
     super.initState();
   }
 
+  final double iconRadius = 20;
+  final double buffer = 10;
+
+  Widget _buildListTile(BuildContext ctx, int index) {
+    final Contact contact = displayList[index];
+
+    return SearchTile(contact: contact, googleId: widget.googleId);
+  }
+
   ListView _buildListView(BuildContext ctx) {
+    final array = [
+      Colors.yellow,
+      Colors.pink,
+      Colors.green,
+      Colors.teal,
+      Colors.red
+    ];
+
     return ListView.builder(
-      itemCount: displayList.length,
-      itemBuilder: (BuildContext context, int index) {
-        ContactWidget ret;
+        itemCount: displayList.length,
+        itemBuilder: (BuildContext context, int index) {
+          Color gradientColor = array[index % array.length];
 
-        if (Random().nextInt(2) == 0)
-          ret = ContactWidget(
-              contact: displayList[index],
-              imgURL: 'https://source.unsplash.com/random/144x144');
-        else
-          ret = ContactWidget(
-            contact: displayList[index],
-          );
-
-        return ret;
-      },
-    );
+          return Container(
+              margin: EdgeInsets.all(10.0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.0),
+                border: Border.all(color: Colors.white54),
+                gradient:
+                    LinearGradient(colors: [Colors.black87, gradientColor]),
+              ),
+              child: Column(
+                children: <Widget>[
+                  _buildListTile(ctx, index),
+                ],
+              ));
+        });
   }
 
   void _handleSearchTextChange(String queryText) {
@@ -84,12 +104,11 @@ class _ContactSearchPageState extends State<ContactSearchPage> {
   Widget _buildBody(BuildContext ctx) {
     return Container(
       alignment: Alignment.center,
-      margin: EdgeInsets.only(top: 50, bottom: 10),
+      margin: EdgeInsets.only(top: 50, bottom: 10.0),
       child: Column(children: <Widget>[
         Text(
           "Search",
-          style: TextStyle(
-              fontFamily: 'Montserrat', fontSize: 28.0, color: Colors.teal),
+          style: headerStyle,
         ),
         SizedBox(height: 10),
         Container(
@@ -97,6 +116,10 @@ class _ContactSearchPageState extends State<ContactSearchPage> {
           child: SearchBar(
             onChanged: _handleSearchTextChange,
           ),
+        ),
+        Divider(
+          color: Colors.white,
+          height: 10,
         ),
         Container(
             child: Expanded(
