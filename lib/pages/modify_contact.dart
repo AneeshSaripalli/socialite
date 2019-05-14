@@ -25,12 +25,19 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
   InfoFieldMultiLine _descriptionField; // contains description of person
   InfoFieldMultiLine _emailField;
 
+  String _initialName;
+  String _initialPhone;
+  String _initialDesc;
+  String _initialEmail;
+
   // state variables related to FirestoreDB transaction status
   bool waitingOnDBResponse =
       false; // whether or not a transaction is currently in progress
   bool dbResponseSuccess; // signifies whether or not the db succeeded
 
   bool dataChanged = false;
+
+  bool displayBackConfirmation = false;
 
   _handleUploadPress(BuildContext context) async {
     setState(() {
@@ -64,8 +71,6 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
       email: email,
     );
 
-    print(contact.toMap());
-
     FirestoreDB()
         .pushContactToContactsList(contact, widget.googleId)
         .then((ref) {
@@ -82,6 +87,11 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
   }
 
   void _initializeInputFieldsWithInitialValues() {
+    _initialName = widget.contact.name;
+    _initialPhone = widget.contact.phoneNumber;
+    _initialDesc = widget.contact.description;
+    _initialEmail = widget.contact.email;
+
     _descriptionField = InfoFieldMultiLine(
       labelString: "Description",
       inputLabelString: "Enter Contact Description",
@@ -126,6 +136,8 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
   }
 
   void _initialInputFieldsWithoutInitialValues() {
+    _initialPhone = _initialName = _initialEmail = _initialDesc = "";
+
     _descriptionField = InfoFieldMultiLine(
       labelString: "Description",
       inputLabelString: "Enter Contact Description",
@@ -187,6 +199,17 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
       child: Icon(iconImg),
       onPressed: () => _handleUploadPress(context),
     );
+  }
+
+  bool _evaluateDataChanged() {
+    bool changed = false;
+
+    changed |= _initialDesc != _descriptionField.info;
+    changed |= _initialEmail != _emailField.info;
+    changed |= _initialName != _nameField.info;
+    changed |= _initialPhone != _phoneField.info;
+
+    return changed;
   }
 
   Widget _buildInputForm(BuildContext context) {
@@ -281,6 +304,50 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
     );
   }
 
+  Future<bool> _handleOnWillPop(BuildContext ctx) async {
+    bool response;
+    if (!displayBackConfirmation) {
+      setState(() {
+        displayBackConfirmation = true;
+      });
+
+      response = false;
+    } else {
+      response = true;
+    }
+
+    return response;
+  }
+
+  AlertDialog _buildUnsavedChangesWarning(BuildContext ctx) {
+    return AlertDialog(
+      title: Text(
+        "Just checkin'",
+        style: confirmTitleStyle,
+      ),
+      content: Text(
+        "You have some unsaved changes. Are you sure you want to leave?",
+        style: confirmContentStyle,
+      ),
+      actions: <Widget>[
+        FlatButton(
+          child: Text("Leave anyway", style: deny),
+          onPressed: () {
+            Navigator.of(ctx).pop(false);
+          },
+        ),
+        FlatButton(
+          child: Text("Stay", style: confirm),
+          onPressed: () {
+            setState(() {
+              displayBackConfirmation = false;
+            });
+          },
+        )
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext ctx) {
     bool displayingOverlay = false;
@@ -292,16 +359,25 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
       displayingOverlay = true;
     }
 
-    return GestureDetector(
-      onTap: () {
-        if (displayingOverlay && dbResponseSuccess != null) {
-          Navigator.of(ctx).pop(dataChanged);
-        }
-      },
-      child: Scaffold(
-        appBar: _buildAppBar(ctx),
-        body: body,
-      ),
-    );
+    if (displayBackConfirmation) {
+      AlertDialog confirmBack = _buildUnsavedChangesWarning(ctx);
+      body.children.add(confirmBack);
+    }
+
+    return WillPopScope(
+        onWillPop: () {
+          return _handleOnWillPop(ctx);
+        },
+        child: GestureDetector(
+          onTap: () {
+            if (displayingOverlay && dbResponseSuccess != null) {
+              Navigator.of(ctx).pop(dataChanged);
+            }
+          },
+          child: Scaffold(
+            appBar: _buildAppBar(ctx),
+            body: body,
+          ),
+        ));
   }
 }
