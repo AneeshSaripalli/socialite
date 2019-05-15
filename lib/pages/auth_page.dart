@@ -30,6 +30,7 @@ class _GoogleAuthWidgetState extends State<GoogleAuthWidget> {
     try {
       print("Trying to sign in");
       await widget.googleSignIn.signIn();
+      print(widget.googleSignIn.currentUser);
     } catch (error) {
       print("Sign in failed");
       print(error);

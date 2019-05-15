@@ -3,11 +3,24 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:socialite/pages/contact_page.dart';
 
 void main() => runApp(MyApp());
 
+// TODO
+// Fuzzy Search
+// Birthday Sync to Google Calendar
+// Choosing themes in the application
 class MyApp extends StatelessWidget {
+  final GoogleSignIn _googleSignIn = GoogleSignIn(
+    scopes: <String>[
+      'email',
+      'https://www.googleapis.com/auth/contacts.readonly',
+      'https://www.googleapis.com/auth/calendar'
+    ],
+  );
+
   @override
   Widget build(BuildContext context) {
     WillPopScope obj = WillPopScope(
@@ -22,7 +35,9 @@ class MyApp extends StatelessWidget {
           title: 'Socialite',
           initialRoute: "/",
           routes: {
-            "/": (ctx) => ContactPage(),
+            "/": (ctx) => ContactPage(
+                  googleSignIn: _googleSignIn,
+                ),
           },
         ));
     return obj;

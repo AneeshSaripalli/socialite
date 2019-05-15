@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:socialite/style/text_styles.dart';
 
-import '../database/firestore/firestore.dart';
+import '../external/firestore/firestore.dart';
 import '../models/contact.dart';
 import '../widgets/info_field_multi_line.dart';
 
@@ -375,19 +375,25 @@ class _ModifyContactPageState extends State<ModifyContactPage> {
     }
 
     return WillPopScope(
-        onWillPop: () {
-          return _handleOnWillPop(ctx);
+      onWillPop: () {
+        return _handleOnWillPop(ctx);
+      },
+      child: GestureDetector(
+        onTap: () {
+          if (displayingOverlay && dbResponseSuccess != null) {
+            Navigator.of(ctx).pop(dataChanged);
+          }
         },
-        child: GestureDetector(
-          onTap: () {
-            if (displayingOverlay && dbResponseSuccess != null) {
-              Navigator.of(ctx).pop(dataChanged);
-            }
-          },
-          child: Scaffold(
-            appBar: _buildAppBar(ctx),
-            body: body,
+        child: Scaffold(
+          appBar: _buildAppBar(ctx),
+          body: Container(
+            child: body,
+            decoration: BoxDecoration(
+                gradient:
+                    LinearGradient(colors: [Colors.black12, Colors.black87])),
           ),
-        ));
+        ),
+      ),
+    );
   }
 }

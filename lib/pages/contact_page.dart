@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:random_string/random_string.dart';
-import 'package:socialite/database/firestore/firestore.dart';
+import 'package:socialite/external/calendar/calendar.dart';
+import 'package:socialite/external/firestore/firestore.dart';
 import 'package:socialite/pages/modify_contact.dart';
 import 'package:socialite/pages/search_page.dart';
 import 'package:socialite/style/text_styles.dart';
@@ -14,12 +15,9 @@ import '../models/contact.dart';
 import 'auth_page.dart';
 
 class ContactPage extends StatefulWidget {
-  final GoogleSignIn _googleSignIn = GoogleSignIn(
-    scopes: <String>[
-      'email',
-      'https://www.googleapis.com/auth/contacts.readonly',
-    ],
-  );
+  final GoogleSignIn googleSignIn;
+
+  ContactPage({@required this.googleSignIn});
 
   @override
   State<ContactPage> createState() => _ContactPageState();
@@ -44,7 +42,8 @@ class _ContactPageState extends State<ContactPage> {
           firstName: randomString(10),
           id: randomString(10),
           name: randomString(20),
-          phoneNumber: randomString(10)));
+          phoneNumber: randomString(10),
+          email: randomString(30)));
     }
 
     return cList;
@@ -119,7 +118,7 @@ class _ContactPageState extends State<ContactPage> {
 
     if (!signInActive) {
       signIn = GoogleAuthWidget(
-        googleSignIn: widget._googleSignIn,
+        googleSignIn: widget.googleSignIn,
         signInCallBack: _handleSignIn,
       );
       signInActive = true;
@@ -185,10 +184,12 @@ class _ContactPageState extends State<ContactPage> {
       _account = acc;
       _updateContactList();
     });
+
+    Calendar c = Calendar(acc);
   }
 
   void _handleSignOut(VoidCallback postSignOut) {
-    widget._googleSignIn.signOut().then((acc) => postSignOut());
+    widget.googleSignIn.signOut().then((acc) => postSignOut());
   }
 
   @override

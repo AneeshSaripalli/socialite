@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:socialite/database/firestore/firestore.dart';
+import 'package:socialite/external/firestore/firestore.dart';
 import 'package:socialite/pages/modify_contact.dart';
 
 import '../models/contact.dart';
