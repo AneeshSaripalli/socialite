@@ -19,11 +19,11 @@ Future<Map<String, dynamic>> parseJsonFromAssets(String assetsPath) async {
 
 const _SCOPES = const [CalendarApi.CalendarScope];
 
-class Calendar {
-  static Calendar _single;
+class CalendarWrapper {
+  static CalendarWrapper _single;
 
-  static Calendar _singleton(GoogleSignInAccount _acc) {
-    if (_single == null) _single = Calendar._internal(_acc);
+  static CalendarWrapper _singleton(GoogleSignInAccount _acc) {
+    if (_single == null) _single = CalendarWrapper._internal(_acc);
 
     return _single;
   }
@@ -57,34 +57,22 @@ class Calendar {
 
     CalendarApi calClient = CalendarApi(httpClient);
 
-    final CalendarList data = await calClient.calendarList.list();
+    final CalendarList list = await calClient.calendarList.list();
 
-    CalendarListEntry contacts;
-
-    for (CalendarListEntry cle in data.items) {
-      Map<String, Object> cleJSON = cle.toJson();
-      print(cleJSON);
-
-      if (cleJSON['id'] == contacts_id) {
-        contacts = cle;
-      }
+    for (CalendarListEntry c in list.items) {
+      print(c.toJson());
     }
 
-    String cleJSON =
-        r'''{"accessRole": "owner", "backgroundColor": "#9fe1e7", "colorId": "15", "conferenceProperties": {"allowedConferenceSolutionTypes": ["eventHangout"]}, "defaultReminders": [{"method": "popup", "minutes": 30}], "etag": "1536330683280000", "foregroundColor": "#000000", "id": "socialitecalendarx`", "kind": "calendar#calendarListEntry", "notificationSettings": {"notifications": [{"method": "email", "type": "eventCreation"}, {"method": "email", "type": "eventChange"}, {"method": "email", "type": "eventCancellation"}, {"method": "email", "type": "eventResponse"}]}, "primary": false, "selected": true, "summary": "spammail2k01@gmail.com", "timeZone": "America/Chicago"}''';
+    final Calendar data =
+        await calClient.calendars.get("spammail2k01@gmail.com");
 
-    CalendarListEntry calendarListEntry =
-        CalendarListEntry.fromJson(jsonDecode(cleJSON));
+    final id = "spammail2k01@gmail.com";
 
-    if (contacts == null) {
-      final result =
-          await calClient.calendarList.insert(calendarListEntry).then((value) {
-        print("Value ${value.toJson()}");
-      }).catchError((err) => print("Error $err"));
-      print(result);
-    } else {
-      print("existed");
-    }
+    Events events = await calClient.events.list(id);
+
+    print(events.toJson());
+
+    print(data.toJson());
   }
 
   void tryAddEvent() {
@@ -94,12 +82,12 @@ class Calendar {
     e.id = "test event";
   }
 
-  Calendar._internal(GoogleSignInAccount account) {
+  CalendarWrapper._internal(GoogleSignInAccount account) {
     this._account = account;
     useClientAcc();
   }
 
-  factory Calendar(GoogleSignInAccount _acc) {
+  factory CalendarWrapper(GoogleSignInAccount _acc) {
     return _singleton(_acc);
   }
 }

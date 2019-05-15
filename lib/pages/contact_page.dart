@@ -185,7 +185,7 @@ class _ContactPageState extends State<ContactPage> {
       _updateContactList();
     });
 
-    Calendar c = Calendar(acc);
+    CalendarWrapper c = CalendarWrapper(acc);
   }
 
   void _handleSignOut(VoidCallback postSignOut) {
