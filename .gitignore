@@ -72,3 +72,4 @@ build/
 
 # Firestore log-in
 android/app/google-services.json
+assets/googleapi/credentials.json
