@@ -48,7 +48,8 @@ class CalendarWrapper {
   }
 
   void useClientAcc() async {
-    final String contacts_id = "socialite-contacts-calendar-id";
+    final String contacts_id = _account.email;
+    final String summary = "Socialite";
 
     print("Curr user ${_account.toString()}");
 
@@ -56,23 +57,24 @@ class CalendarWrapper {
     final httpClient = new GoogleHttpClient(authHeaders);
 
     CalendarApi calClient = CalendarApi(httpClient);
+    CalendarList list = await calClient.calendarList.list();
 
-    final CalendarList list = await calClient.calendarList.list();
+    String id;
 
+    bool hasBdays = false;
     for (CalendarListEntry c in list.items) {
-      print(c.toJson());
+      print("ID is ${c.id}");
+      id = c.id;
+      hasBdays |= (c.summary == summary);
     }
 
-    final Calendar data =
-        await calClient.calendars.get("spammail2k01@gmail.com");
+    if (!hasBdays) {
+      id = (await calClient.calendars
+              .insert(Calendar.fromJson({"summary": summary})))
+          .id;
+    }
 
-    final id = "spammail2k01@gmail.com";
-
-    Events events = await calClient.events.list(id);
-
-    print(events.toJson());
-
-    print(data.toJson());
+    await calClient.events.quickAdd(id, "some text ehre");
   }
 
   void tryAddEvent() {
