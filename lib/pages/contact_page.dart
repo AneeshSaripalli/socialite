@@ -13,6 +13,7 @@ import 'package:socialite/widgets/contact_list.dart';
 
 import '../models/contact.dart';
 import 'auth_page.dart';
+import 'sign_out.dart';
 
 class ContactPage extends StatefulWidget {
   final GoogleSignIn googleSignIn;
@@ -54,7 +55,7 @@ class _ContactPageState extends State<ContactPage> {
       preferredSize: Size.fromHeight(50),
       child: AppBar(
         title: Text(
-          "Homie List",
+          "Contact List",
           style: appBarTitleStyle,
         ),
         actions: <Widget>[
@@ -64,11 +65,29 @@ class _ContactPageState extends State<ContactPage> {
               print("Fuzzy search pressed");
               _handleSearchPress(ctx);
             },
+          ),
+          IconButton(
+            icon: Icon(Icons.exit_to_app),
+            onPressed: () {
+              print('trying to logout');
+              _handleLogout(ctx);
+            },
           )
         ],
         backgroundColor: Colors.teal,
       ),
     );
+  }
+
+  void _handleLogout(BuildContext ctx) {
+    Navigator.push(
+        ctx,
+        MaterialPageRoute(
+            builder: (ctx) => GoogleSignoutWidget(
+                  googleSignIn: widget.googleSignIn,
+                  signOutCallback: (GoogleSignInAccount signInAccount) =>
+                      {SystemNavigator.pop()},
+                )));
   }
 
   void _handleSearchPress(BuildContext ctx) {

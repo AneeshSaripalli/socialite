@@ -48,9 +48,9 @@ class _ContactViewPageState extends State<ContactViewPage> {
       ctx,
       MaterialPageRoute(
         builder: (ctx) => ModifyContactPage(
-              contact: widget.contact,
-              googleId: widget.googleId,
-            ),
+          contact: widget.contact,
+          googleId: widget.googleId,
+        ),
       ),
     ).then((value) {
       print(value);
@@ -108,6 +108,39 @@ class _ContactViewPageState extends State<ContactViewPage> {
     );
   }
 
+  Widget _buildInfoPanel(BuildContext ctx) {
+    return Column(
+      children: <Widget>[
+        Container(
+          child: Text(
+            'Mobile',
+            style: label,
+            textAlign: TextAlign.left,
+          ),
+          alignment: Alignment.center,
+        ),
+        Text(
+          widget.contact.description,
+          style: label,
+        ),
+        Text(
+          widget.contact.phoneNumber,
+          style: label,
+        )
+      ],
+    );
+  }
+
+  Widget _buildShadedContainer(BuildContext ctx, Widget child) {
+    return Container(
+        padding: EdgeInsets.all(15.0),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(8.0),
+          color: Colors.black38,
+        ),
+        child: child);
+  }
+
   Widget _buildBody(BuildContext ctx) {
     return Center(
       child: Container(
@@ -116,14 +149,11 @@ class _ContactViewPageState extends State<ContactViewPage> {
           child: Column(
             children: <Widget>[
               SizedBox(height: 40),
-              Container(
-                padding: EdgeInsets.all(15.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8.0),
-                  color: Colors.black38,
-                ),
-                child: _buildNamePanel(ctx),
+              _buildShadedContainer(ctx, _buildNamePanel(ctx)),
+              SizedBox(
+                height: 40,
               ),
+              _buildShadedContainer(ctx, _buildInfoPanel(ctx))
             ],
           ),
         ),
