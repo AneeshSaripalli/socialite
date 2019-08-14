@@ -71,5 +71,5 @@ build/
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 
 # Firestore log-in
-android/app/google-services.json
-assets/googleapi/credentials.json
+**/android/app/google-services.json
+**/assets/googleapi/credentials.json
